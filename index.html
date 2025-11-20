@@ -74,6 +74,12 @@
         color: #e5e5e5;
         cursor: default;
       }
+      /* Scale down desktop view to match desired zoom level */
+      @media (min-width: 768px) {
+        html {
+          font-size: 80%;
+        }
+      }
       /* Custom Scrollbar */
       ::-webkit-scrollbar {
         width: 8px;
