@@ -18,7 +18,7 @@ const faqData = [
     question: "How long does it take?",
     answer: (
       <>
-        <p className="mb-4">Most projects take between 2 to 8 weeks, depending on the number of pages, content readiness, and level of customization.</p>
+        <p className="mb-4">Most projects take between 2 and 6 weeks, depending on the number of pages, content readiness, and level of customization.</p>
         <p>Smaller sites (like professional studios) are usually ready in a few weeks, while more creative or interactive builds may take longer.</p>
       </>
     )
@@ -42,8 +42,8 @@ const faqData = [
     question: "What makes DigitiNexus different from other agencies?",
     answer: (
       <>
-        <p className="mb-4">Every project gets a custom-built team of designers, developers, and motion or 3D artists, selected specifically for your vision.</p>
-        <p>We combine beautiful design with real strategy, your site will not only look great but also convert visitors into clients.</p>
+        <p className="mb-4">Every project gets a custom-built team of designers, developers, and motion or 3D artists, hand-picked to execute your vision.</p>
+        <p>We combine beautiful design with real strategy, so your site will not only look great but also convert visitors into clients.</p>
       </>
     )
   },
