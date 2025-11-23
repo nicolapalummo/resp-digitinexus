@@ -130,7 +130,7 @@ export const FAQ: React.FC = () => {
                       transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
                       className="overflow-hidden"
                     >
-                      <div className="pb-8 text-base md:text-lg text-gray-400 leading-relaxed max-w-3xl">
+                      <div className="pb-8 text-base md:text-lg text-gray-400 leading-relaxed max-w-3xl [&>p]:block [&>p]:md:inline [&>p]:md:mr-4 [&>p:last-child]:md:mr-0 [&>p]:mb-4 [&>p]:md:mb-0">
                         {item.answer}
                       </div>
                     </motion.div>

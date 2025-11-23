@@ -13,7 +13,7 @@ export const LetsTalk: React.FC = () => {
             transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1] }}
         >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight mb-16 max-w-6xl leading-[0.95] text-[#1a1a1a]">
-                Let’s talk about a <br className="hidden md:block" /> project together
+                Let’s talk about your <br className="hidden md:block" /> project together
             </h2>
             
             <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ" target="_blank" rel="noopener noreferrer" className="bg-black text-white rounded-2xl pl-6 pr-2 py-2 flex items-center gap-4 font-medium text-xl transition-transform hover:scale-105 duration-300 shadow-xl hover:shadow-2xl">

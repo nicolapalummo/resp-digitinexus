@@ -23,7 +23,7 @@ export const Services: React.FC = () => {
         >
             <div className="flex flex-col items-start">
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-none">
-                What I’ll help you with
+                What we’ll help you with
                 </h2>
             </div>
             <div className="max-w-md text-lg text-gray-400 pb-2">
@@ -50,7 +50,7 @@ export const Services: React.FC = () => {
                 </div>
                 
                 <p className="text-gray-400 mb-10 text-lg">
-                    I work with you from where you need it. Perfect for new website launches or rebrands.
+                    We work with you from where you need it. Perfect for new website launches or rebrands.
                 </p>
                 
                 <div className="space-y-4 mb-12 flex-1">
