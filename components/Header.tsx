@@ -35,9 +35,9 @@ export const Header: React.FC = () => {
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
 
   const languages = [
-    { code: 'en', name: 'EN', flag: '🇬🇧' },
-    { code: 'it', name: 'IT', flag: '🇮🇹' },
-    { code: 'fr', name: 'FR', flag: '🇫🇷' },
+    { code: 'en', name: 'EN' },
+    { code: 'it', name: 'IT' },
+    { code: 'fr', name: 'FR' },
   ];
 
   const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
@@ -244,52 +244,47 @@ export const Header: React.FC = () => {
                 <span className={`absolute -right-3 top-0 text-[10px] mt-[2px] ${headerTheme === 'dark' ? 'text-white/20' : 'text-black/20'}`}>|</span>
               </li>
             ))}
+            {/* Language Selector - After Services */}
+            <li className="relative language-selector">
+              <button
+                onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
+                className={`transition-colors ${headerTheme === 'dark' ? 'hover:text-white' : 'hover:text-black'}`}
+              >
+                {currentLanguage.name}
+                <ChevronDown size={14} className={`inline-block ml-1 transition-transform duration-200 ${isLangMenuOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {isLangMenuOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  className={`absolute top-full left-0 mt-2 rounded-xl border shadow-2xl overflow-hidden z-50 ${
+                    headerTheme === 'dark' 
+                      ? 'bg-black/95 backdrop-blur-xl border-white/20' 
+                      : 'bg-white/95 backdrop-blur-xl border-black/20'
+                  }`}
+                >
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => changeLanguage(lang.code)}
+                      className={`w-full px-4 py-2.5 text-left transition-colors ${
+                        i18n.language === lang.code
+                          ? headerTheme === 'dark' ? 'bg-white/10' : 'bg-black/10'
+                          : headerTheme === 'dark' ? 'hover:bg-white/5' : 'hover:bg-black/5'
+                      } ${headerTheme === 'dark' ? 'text-white' : 'text-black'}`}
+                    >
+                      <span className="text-sm font-medium">{lang.name}</span>
+                    </button>
+                  ))}
+                </motion.div>
+              )}
+            </li>
           </ul>
         </nav>
 
         <div className="flex items-center gap-4">
-          {/* Language Selector */}
-          <div className="relative language-selector">
-            <button
-              onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
-              className={`flex items-center gap-2 px-3 py-1.5 rounded-xl border transition-colors duration-500 ${
-                headerTheme === 'dark' 
-                  ? 'border-white/20 bg-white/5 hover:bg-white/10 text-white' 
-                  : 'border-black/20 bg-black/5 hover:bg-black/10 text-black'
-              }`}
-            >
-              <span className="text-sm font-medium">{currentLanguage.flag} {currentLanguage.name}</span>
-              <ChevronDown size={16} className={`transition-transform duration-200 ${isLangMenuOpen ? 'rotate-180' : ''}`} />
-            </button>
-            
-            {isLangMenuOpen && (
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                className={`absolute top-full right-0 mt-2 rounded-xl border shadow-2xl overflow-hidden z-50 ${
-                  headerTheme === 'dark' 
-                    ? 'bg-black/95 backdrop-blur-xl border-white/20' 
-                    : 'bg-white/95 backdrop-blur-xl border-black/20'
-                }`}
-              >
-                {languages.map((lang) => (
-                  <button
-                    key={lang.code}
-                    onClick={() => changeLanguage(lang.code)}
-                    className={`w-full px-4 py-2.5 text-left flex items-center gap-2 transition-colors ${
-                      i18n.language === lang.code
-                        ? headerTheme === 'dark' ? 'bg-white/10' : 'bg-black/10'
-                        : headerTheme === 'dark' ? 'hover:bg-white/5' : 'hover:bg-black/5'
-                    } ${headerTheme === 'dark' ? 'text-white' : 'text-black'}`}
-                  >
-                    <span>{lang.flag}</span>
-                    <span className="text-sm font-medium">{lang.name}</span>
-                  </button>
-                ))}
-              </motion.div>
-            )}
-          </div>
 
           {/* Minimal Scroll Ruler Indicator */}
           <div className="flex items-center gap-2">

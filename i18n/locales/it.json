@@ -4,13 +4,13 @@
     "process": "Processo",
     "reviews": "Recensioni",
     "services": "Servizi",
-    "bookCall": "Prenota una Chiamata"
+    "bookCall": "Parliamone"
   },
   "hero": {
     "badge": "Oltre 75 Progetti di Successo",
     "title": "Distinguiti con",
     "subtitle": "Costruisci fiducia, distinguiti e fai crescere la tua attività con un sito web e un brand belli e funzionali, creati per il tuo settore.",
-    "bookCall": "Prenota una Chiamata",
+    "bookCall": "Parliamone",
     "viewWork": "Vedi i Lavori"
   },
   "problem": {
@@ -121,7 +121,7 @@
         "Processo strutturato con round di revisione chiari"
       ]
     },
-    "bookCall": "Prenota una Chiamata"
+    "bookCall": "Parliamone"
   },
   "faq": {
     "tag": "FAQ",
@@ -160,7 +160,7 @@
   "letsTalk": {
     "title": "Parliamo del tuo",
     "title2": "progetto insieme",
-    "bookCall": "Prenota una Chiamata",
+    "bookCall": "Parliamone",
     "copyright": "DigitiNexus Web Agency",
     "terms": "Termini e Condizioni",
     "privacy": "Privacy"
