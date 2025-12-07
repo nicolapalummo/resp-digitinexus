@@ -27,7 +27,7 @@ export const ThreeDPopup: React.FC = () => {
     if (!isDesktop) return;
 
     const timer = setTimeout(() => {
-      const dismissed = localStorage.getItem('3d-popup-dismissed');
+      const dismissed = localStorage.getItem('3d-popup-dismissed-v2');
       if (!dismissed) {
         setIsVisible(true);
       }
@@ -69,7 +69,7 @@ export const ThreeDPopup: React.FC = () => {
   const handleDismiss = () => {
     setIsVisible(false);
     setIsDismissed(true);
-    localStorage.setItem('3d-popup-dismissed', 'true');
+    localStorage.setItem('3d-popup-dismissed-v2', 'true');
   };
 
   // Dynamic Styles based on Theme (same as Header)
