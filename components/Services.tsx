@@ -2,15 +2,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export const Services: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <section id="services" className="bg-black text-white py-20 md:py-24 px-6 md:px-12">
       <div className="container mx-auto">
         {/* Tag - Aligned to Intro */}
         <div className="inline-flex items-center gap-2 border border-white/20 rounded-lg px-3 py-1 text-xs uppercase tracking-wider text-orange-400 font-mono bg-white/5 mb-5 md:ml-[120px]">
             <span className="opacity-50">6</span>
-            <span>Services</span>
+            <span>{t('services.tag')}</span>
         </div>
         
         {/* Header */}
@@ -23,11 +25,11 @@ export const Services: React.FC = () => {
         >
             <div className="flex flex-col items-start">
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-none">
-                What we’ll help you with
+                {t('services.title')}
                 </h2>
             </div>
             <div className="max-w-md text-lg text-gray-400 pb-2">
-                Let's convert better, raise more, build more trust so you can hire better talent and charge premium prices
+                {t('services.subtitle')}
             </div>
         </motion.div>
 
@@ -43,25 +45,18 @@ export const Services: React.FC = () => {
                 transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             >
                 <div className="flex justify-between items-start mb-6">
-                    <h3 className="text-3xl md:text-4xl font-medium tracking-tight">Custom one time project</h3>
+                    <h3 className="text-3xl md:text-4xl font-medium tracking-tight">{t('services.service1.title')}</h3>
                     <span className="inline-block px-3 py-1 bg-orange-900/30 text-orange-400 text-xs font-mono rounded border border-orange-500/30 whitespace-nowrap">
-                        Starts at $2k
+                        {t('services.service1.price')}
                     </span>
                 </div>
                 
                 <p className="text-gray-400 mb-10 text-lg">
-                    We work with you from where you need it. Perfect for new website launches or rebrands.
+                    {t('services.service1.description')}
                 </p>
                 
                 <div className="space-y-4 mb-12 flex-1">
-                    {[
-                        "Custom UX & UI design",
-                        "Full website development",
-                        "Copywriting & content structure",
-                        "Mobile-first, modern, scalable build",
-                        "Integrations (CRM, automations, analytics, advanced forms)",
-                        "Clear and frequent updates"
-                    ].map((item, i) => (
+                    {(t('services.service1.features', { returnObjects: true }) as string[]).map((item, i) => (
                         <div key={i} className="flex items-center gap-3">
                             <div className="w-5 h-5 rounded bg-orange-900/30 text-orange-400 flex items-center justify-center border border-orange-500/30 flex-shrink-0">
                                 <Check size={12} />
@@ -72,7 +67,7 @@ export const Services: React.FC = () => {
                 </div>
 
                 <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ" target="_blank" rel="noopener noreferrer" className="w-full bg-[#222] text-white border border-white/10 rounded-2xl py-3 flex items-center justify-center gap-3 font-medium hover:bg-[#333] transition-colors">
-                    <span className="pl-2">Book a Call</span>
+                    <span className="pl-2">{t('services.bookCall')}</span>
                 </a>
             </motion.div>
 
@@ -85,25 +80,18 @@ export const Services: React.FC = () => {
                 transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
             >
                 <div className="flex justify-between items-start mb-6">
-                    <h3 className="text-3xl md:text-4xl font-medium tracking-tight">Branding & Identity Design</h3>
+                    <h3 className="text-3xl md:text-4xl font-medium tracking-tight">{t('services.service2.title')}</h3>
                      <span className="inline-block px-3 py-1 bg-orange-900/30 text-orange-400 text-xs font-mono rounded border border-orange-500/30 whitespace-nowrap">
-                        Starts at $1k
+                        {t('services.service2.price')}
                     </span>
                 </div>
                 
                 <p className="text-gray-400 mb-10 text-lg">
-                Your brand, elevated. Ideal for businesses needing a cohesive, premium identity.
+                {t('services.service2.description')}
                 </p>
                 
                 <div className="space-y-4 mb-12 flex-1">
-                    {[
-                        "Logo design + variations",
-                        "Color palette & typography system",
-                        "Brand assets (icons, patterns, mockups)",
-                        "Brand guidelines (delivered as PDF)",
-                        "Social brand kit (optional)",
-                        "Structured process with clear revision rounds"
-                    ].map((item, i) => (
+                    {(t('services.service2.features', { returnObjects: true }) as string[]).map((item, i) => (
                         <div key={i} className="flex items-center gap-3">
                             <div className="w-5 h-5 rounded bg-orange-900/30 text-orange-400 flex items-center justify-center border border-orange-500/30 flex-shrink-0">
                                 <Check size={12} />
@@ -114,7 +102,7 @@ export const Services: React.FC = () => {
                 </div>
 
                 <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ" target="_blank" rel="noopener noreferrer" className="w-full bg-[#222] text-white border border-white/10 rounded-2xl py-3 flex items-center justify-center gap-3 font-medium hover:bg-[#333] transition-colors">
-                    <span className="pl-2">Book a Call</span>
+                    <span className="pl-2">{t('services.bookCall')}</span>
                 </a>
             </motion.div>
 

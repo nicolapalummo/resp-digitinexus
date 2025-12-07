@@ -1,8 +1,10 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 export const LetsTalk: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <section id="lets-talk" className="bg-[#E8ECF2] text-black py-32 md:py-48 px-6 flex flex-col items-center justify-center text-center min-h-[80vh] relative rounded-t-[2rem]">
         <motion.div 
@@ -13,11 +15,11 @@ export const LetsTalk: React.FC = () => {
             transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1] }}
         >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight mb-16 max-w-6xl leading-[0.95] text-[#1a1a1a]">
-                Let’s talk about your <br className="hidden md:block" /> project together
+                {t('letsTalk.title')} <br className="hidden md:block" /> {t('letsTalk.title2')}
             </h2>
             
             <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ" target="_blank" rel="noopener noreferrer" className="bg-black text-white rounded-2xl pl-6 pr-2 py-2 flex items-center gap-4 font-medium text-xl transition-transform hover:scale-105 duration-300 shadow-xl hover:shadow-2xl">
-                  <span className="pl-2">Book a Call</span>
+                  <span className="pl-2">{t('letsTalk.bookCall')}</span>
                   <img 
                       src="/logoDN.webp" 
                       alt="DigitiNexus" 
@@ -27,7 +29,7 @@ export const LetsTalk: React.FC = () => {
         </motion.div>
          
          <div className="absolute bottom-8 text-xs md:text-sm text-gray-400 font-medium tracking-wide flex flex-col md:flex-row items-center gap-2 md:gap-0">
-             <span>&copy; {new Date().getFullYear()} DigitiNexus Web Agency</span>
+             <span>&copy; {new Date().getFullYear()} {t('letsTalk.copyright')}</span>
              <span className="hidden md:inline mx-2">|</span>
              <span className="md:mx-2 flex flex-col md:flex-row items-center gap-2 md:gap-0">
                  <a 
@@ -35,7 +37,7 @@ export const LetsTalk: React.FC = () => {
                      download
                      className="hover:text-gray-600 transition-colors cursor-pointer"
                  >
-                     Terms & Conditions
+                     {t('letsTalk.terms')}
                  </a>
                  <span className="hidden md:inline mx-2">|</span>
                  <a 
@@ -43,7 +45,7 @@ export const LetsTalk: React.FC = () => {
                      download
                      className="hover:text-gray-600 transition-colors cursor-pointer"
                  >
-                     Privacy
+                     {t('letsTalk.privacy')}
                  </a>
              </span>
          </div>

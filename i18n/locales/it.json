@@ -1,0 +1,174 @@
+{
+  "nav": {
+    "work": "Lavori",
+    "process": "Processo",
+    "reviews": "Recensioni",
+    "services": "Servizi",
+    "bookCall": "Prenota una Chiamata"
+  },
+  "hero": {
+    "badge": "Oltre 75 Progetti di Successo",
+    "title": "Distinguiti con",
+    "subtitle": "Costruisci fiducia, distinguiti e fai crescere la tua attività con un sito web e un brand belli e funzionali, creati per il tuo settore.",
+    "bookCall": "Prenota una Chiamata",
+    "viewWork": "Vedi i Lavori"
+  },
+  "problem": {
+    "tag": "Problemi",
+    "title": "Hai trazione ma il tuo sito web sembra ancora un MVP",
+    "description": "C'è un divario tra come appare il tuo prodotto e come lo presenti",
+    "issue1": {
+      "title": "Le persone non capiscono cosa fai",
+      "description": "Se il tuo sito web e il marketing non sono cristallini, i potenziali clienti non capiranno cosa fai o perché è importante."
+    },
+    "issue2": {
+      "title": "Sembri amatoriale e come se stessi ancora testando",
+      "description": "Le prime impressioni contano. Un design fai-da-te o non rifinito fa rimbalzare gli utenti il 127% più velocemente, anche se il tuo prodotto è solido."
+    },
+    "issue3": {
+      "title": "Il tuo sito non è costruito per convertire",
+      "description": "Hai un buon prodotto e una discreta trazione. Ora è il momento che la struttura della pagina e i messaggi lavorino tanto quanto te."
+    }
+  },
+  "intro": {
+    "tag": "Introduzione",
+    "text1": "Se questa è la tua situazione, possiamo aiutarti.",
+    "text2": "DigitiNexus è un'agenzia web guidata dal design che unisce creatività, strategia e tecnologia per creare siti web che si distinguono davvero.",
+    "text3": "Ogni progetto che costruiamo non solo è bello da vedere — funziona anche alla perfezione."
+  },
+  "work": {
+    "tag": "Lavori",
+    "title": "Storie di successo recenti"
+  },
+  "howItWorks": {
+    "tag": "Il Nostro Processo",
+    "title": "Come lavoriamo insieme",
+    "subtitle": "Avvio senza intoppi, collaborazione senza intoppi",
+    "step1": {
+      "title": "Prenota una chiamata veloce",
+      "description": "Iniziamo con una chiamata veloce per capire i tuoi obiettivi, il pubblico e le priorità. Nessun impegno + saprai cosa fare dopo.",
+      "duration": "~30 min"
+    },
+    "step2": {
+      "title": "Design e Sviluppo",
+      "description": "Esploriamo idee, creiamo moodboard e allineiamo identità visiva e tono. Costruiamo il tuo sito web con aggiornamenti costanti.",
+      "duration": "2-6 settimane"
+    },
+    "step3": {
+      "title": "Lancio, costruisci fiducia, converti di più",
+      "description": "Andiamo online e monitoriamo le prestazioni del tuo sito, offrendo supporto post-lancio e ottimizzazione.",
+      "duration": "Supporto continuo disponibile"
+    }
+  },
+  "reviews": {
+    "title": "Recensioni"
+  },
+  "whyMe": {
+    "tag": "Perché noi",
+    "title": "Perché lavorare con noi",
+    "feature1": {
+      "title": "Una Rete Curata di Esperti",
+      "description": "Ogni progetto è costruito attorno alle persone giuste. Dai designer di motion e 3D agli sviluppatori e brand strategist, assembliamo un team personalizzato che si adatta ai tuoi obiettivi, settore e visione creativa."
+    },
+    "feature2": {
+      "title": "Esperti di Animazione",
+      "description": "Usiamo un design motion avanzato per trasformare pagine statiche in esperienze immersive che elevano la presenza del tuo brand."
+    },
+    "feature3": {
+      "title": "Design Orientato alla Conversione",
+      "description": "Progettiamo con uno scopo, combinando eccellenza visiva e pensiero strategico per costruire siti web che attirano, coinvolgono e convertono."
+    },
+    "feature4": {
+      "title": "Personalizzato per il Tuo Settore",
+      "description": "Che tu gestisca un ristorante, uno studio professionale o uno studio creativo, adattiamo il nostro processo al tuo tono, pubblico e esigenze aziendali."
+    },
+    "feature5": {
+      "title": "Mobile-First per Design",
+      "description": "Progettiamo dal mobile in su, ottimizzando layout, velocità e interazioni per i dispositivi che le persone usano di più. Questo garantisce un'esperienza fluida, veloce e ad alta conversione su tutti gli schermi."
+    },
+    "feature6": {
+      "title": "Costruito per il Lungo Termine",
+      "description": "Le nostre relazioni non finiscono al lancio. Restiamo vicini ai nostri clienti con aggiornamenti continui, perfezionamenti creativi e supporto proattivo per mantenere i loro siti web in crescita e performanti nel tempo."
+    }
+  },
+  "services": {
+    "tag": "Servizi",
+    "title": "Con cosa ti aiuteremo",
+    "subtitle": "Convertiamo meglio, aumentiamo di più, costruiamo più fiducia così puoi assumere talenti migliori e applicare prezzi premium",
+    "service1": {
+      "title": "Progetto personalizzato una tantum",
+      "price": "A partire da $2k",
+      "description": "Lavoriamo con te da dove ne hai bisogno. Perfetto per nuovi lanci di siti web o rebranding.",
+      "features": [
+        "Design UX & UI personalizzato",
+        "Sviluppo completo del sito web",
+        "Copywriting e struttura dei contenuti",
+        "Build mobile-first, moderna e scalabile",
+        "Integrazioni (CRM, automazioni, analytics, moduli avanzati)",
+        "Aggiornamenti chiari e frequenti"
+      ]
+    },
+    "service2": {
+      "title": "Branding e Design dell'Identità",
+      "price": "A partire da $1k",
+      "description": "Il tuo brand, elevato. Ideale per aziende che necessitano di un'identità coerente e premium.",
+      "features": [
+        "Design logo + varianti",
+        "Palette colori e sistema tipografico",
+        "Asset di brand (icone, pattern, mockup)",
+        "Linee guida del brand (consegnate come PDF)",
+        "Kit brand social (opzionale)",
+        "Processo strutturato con round di revisione chiari"
+      ]
+    },
+    "bookCall": "Prenota una Chiamata"
+  },
+  "faq": {
+    "tag": "FAQ",
+    "title": "Le tue domande, risposte",
+    "q1": {
+      "question": "Quali servizi offrite?",
+      "answer1": "Progettiamo e sviluppiamo siti web completi, dalla strategia e branding al design e lancio.",
+      "answer2": "Che tu abbia bisogno di un sito per il tuo ristorante, il tuo studio o il tuo brand creativo, adattiamo ogni progetto ai tuoi obiettivi.",
+      "answer3": "Hai già un design? Possiamo occuparci anche di sviluppo e ottimizzazione."
+    },
+    "q2": {
+      "question": "Quanto tempo ci vuole?",
+      "answer1": "La maggior parte dei progetti richiede tra 2 e 6 settimane, a seconda del numero di pagine, della prontezza dei contenuti e del livello di personalizzazione.",
+      "answer2": "I siti più piccoli (come studi professionali) sono di solito pronti in poche settimane, mentre build più creative o interattive possono richiedere più tempo."
+    },
+    "q3": {
+      "question": "Vi occupate anche di branding?",
+      "answer": "Sì. Molti dei nostri clienti partono da zero, quindi offriamo design dell'identità di brand — logo, palette colori, tipografia e una mini guida di stile — per garantire un'immagine coerente e professionale in tutti i punti di contatto."
+    },
+    "q4": {
+      "question": "Lavorate solo con certi settori?",
+      "answer1": "Ci specializziamo in ristoranti, studi professionali e attività creative, ma collaboriamo anche con aziende basate sui servizi e startup.",
+      "answer2": "Il nostro approccio si adatta al tuo tono, pubblico ed esigenze del settore."
+    },
+    "q5": {
+      "question": "Cosa rende DigitiNexus diverso da altre agenzie?",
+      "answer1": "Ogni progetto ottiene un team personalizzato di designer, sviluppatori e artisti motion o 3D, selezionati a mano per eseguire la tua visione.",
+      "answer2": "Combiniamo un design bellissimo con una strategia reale, così il tuo sito non solo avrà un bell'aspetto ma convertirà anche i visitatori in clienti."
+    },
+    "q6": {
+      "question": "Cosa succede dopo il lancio?",
+      "answer1": "Non scomparemo una volta che il tuo sito web è online.",
+      "answer2": "Offriamo supporto continuo, miglioramenti del design e aggiornamenti per mantenere il tuo sito veloce, sicuro e rilevante man mano che la tua attività cresce."
+    }
+  },
+  "letsTalk": {
+    "title": "Parliamo del tuo",
+    "title2": "progetto insieme",
+    "bookCall": "Prenota una Chiamata",
+    "copyright": "DigitiNexus Web Agency",
+    "terms": "Termini e Condizioni",
+    "privacy": "Privacy"
+  },
+  "popup3d": {
+    "title": "Cerchi Qualcosa di Più Immersivo?",
+    "description": "Esplora la versione interattiva 3D del sito web.",
+    "cta": "Prova l'Esperienza 3D"
+  }
+}
+

@@ -1,0 +1,174 @@
+{
+  "nav": {
+    "work": "Work",
+    "process": "Process",
+    "reviews": "Reviews",
+    "services": "Services",
+    "bookCall": "Book a Call"
+  },
+  "hero": {
+    "badge": "Over 75 Successful Projects",
+    "title": "Stand Out with",
+    "subtitle": "Build trust, stand out, and grow your business with a beautifully functional website and brand made for your industry.",
+    "bookCall": "Book a Call",
+    "viewWork": "View Work"
+  },
+  "problem": {
+    "tag": "Problems",
+    "title": "You have traction but your website still looks MVP",
+    "description": "There's a gap between how your product looks and how you present it",
+    "issue1": {
+      "title": "People don't understand what you do",
+      "description": "If your website and marketing aren't crystal clear, potential customers won't get what you do or why it matters."
+    },
+    "issue2": {
+      "title": "You look amateur and like you're still testing",
+      "description": "First impressions matter. A DIY or unpolished design makes users bounce 127% faster, even if your product is solid."
+    },
+    "issue3": {
+      "title": "Your site isn't built to convert",
+      "description": "You've got a good product and decent traction. Now it's time for your page structure and messaging to work as hard as you do."
+    }
+  },
+  "intro": {
+    "tag": "Intro",
+    "text1": "If that sounds like your situation, We can help.",
+    "text2": "DigitiNexus is a design-driven web agency that blends creativity, strategy, and technology to craft websites that truly stand out.",
+    "text3": "Every project we build doesn't just look beautiful — it performs beautifully too."
+  },
+  "work": {
+    "tag": "Work",
+    "title": "Recent success stories"
+  },
+  "howItWorks": {
+    "tag": "Our Process",
+    "title": "How we work together",
+    "subtitle": "Seamless kick-off, seamless collaboration",
+    "step1": {
+      "title": "Book a quick call",
+      "description": "We start with a quick call to understand your goals, audience, and priorities. No commitments + you'll know what to do next.",
+      "duration": "~30 min"
+    },
+    "step2": {
+      "title": "Design & Development",
+      "description": "We explore ideas, create moodboards, and align on visual identity and tone. We build your website with constant updates.",
+      "duration": "2-6 weeks"
+    },
+    "step3": {
+      "title": "Launch, build trust, convert more",
+      "description": "We go live and monitor your site's performance, offering post-launch support and optimization.",
+      "duration": "On-going support available"
+    }
+  },
+  "reviews": {
+    "title": "Reviews"
+  },
+  "whyMe": {
+    "tag": "Why us",
+    "title": "Why work with us",
+    "feature1": {
+      "title": "A Curated Network of Experts",
+      "description": "Every project is built around the right people. From motion and 3D designers to developers and brand strategists, we assemble a custom team that fits your goals, industry, and creative vision."
+    },
+    "feature2": {
+      "title": "Animation Pro",
+      "description": "We use advanced motion design to turn static pages into immersive experiences that elevate your brand's presence."
+    },
+    "feature3": {
+      "title": "Conversion-Driven Design",
+      "description": "We design with purpose, combining visual excellence and strategic thinking to build websites that attract, engage, and convert."
+    },
+    "feature4": {
+      "title": "Tailored to Your Industry",
+      "description": "Whether you run a restaurant, a professional practice, or a creative studio, we adapt our process to your tone, audience, and business needs."
+    },
+    "feature5": {
+      "title": "Mobile-First by Design",
+      "description": "We design from mobile upward, optimizing layouts, speed, and interactions for the devices people use most. This ensures a seamless, fast, and high-converting experience across all screens."
+    },
+    "feature6": {
+      "title": "Built for the Long Run",
+      "description": "Our relationships don't end at launch. We stay close to our clients with ongoing updates, creative refinements, and proactive support to keep their websites growing and performing over time."
+    }
+  },
+  "services": {
+    "tag": "Services",
+    "title": "What we'll help you with",
+    "subtitle": "Let's convert better, raise more, build more trust so you can hire better talent and charge premium prices",
+    "service1": {
+      "title": "Custom one time project",
+      "price": "Starts at $2k",
+      "description": "We work with you from where you need it. Perfect for new website launches or rebrands.",
+      "features": [
+        "Custom UX & UI design",
+        "Full website development",
+        "Copywriting & content structure",
+        "Mobile-first, modern, scalable build",
+        "Integrations (CRM, automations, analytics, advanced forms)",
+        "Clear and frequent updates"
+      ]
+    },
+    "service2": {
+      "title": "Branding & Identity Design",
+      "price": "Starts at $1k",
+      "description": "Your brand, elevated. Ideal for businesses needing a cohesive, premium identity.",
+      "features": [
+        "Logo design + variations",
+        "Color palette & typography system",
+        "Brand assets (icons, patterns, mockups)",
+        "Brand guidelines (delivered as PDF)",
+        "Social brand kit (optional)",
+        "Structured process with clear revision rounds"
+      ]
+    },
+    "bookCall": "Book a Call"
+  },
+  "faq": {
+    "tag": "FAQs",
+    "title": "Your questions, answered",
+    "q1": {
+      "question": "What services do you offer?",
+      "answer1": "We design and develop complete websites, from strategy and branding to design and launch.",
+      "answer2": "Whether you need a site for your restaurant, your studio, or your creative brand, we tailor every project to your goals.",
+      "answer3": "Already have a design? We can handle development and optimization too."
+    },
+    "q2": {
+      "question": "How long does it take?",
+      "answer1": "Most projects take between 2 and 6 weeks, depending on the number of pages, content readiness, and level of customization.",
+      "answer2": "Smaller sites (like professional studios) are usually ready in a few weeks, while more creative or interactive builds may take longer."
+    },
+    "q3": {
+      "question": "Do you also handle branding?",
+      "answer": "Yes. Many of our clients start from scratch, so we offer brand identity design — logo, color palette, typography, and a mini style guide — to ensure a consistent, professional image across all touchpoints."
+    },
+    "q4": {
+      "question": "Do you work only with certain industries?",
+      "answer1": "We specialize in restaurants, professional studios, and creative businesses, but we also collaborate with service-based companies and startups.",
+      "answer2": "Our approach adapts to your tone, audience, and industry needs."
+    },
+    "q5": {
+      "question": "What makes DigitiNexus different from other agencies?",
+      "answer1": "Every project gets a custom-built team of designers, developers, and motion or 3D artists, hand-picked to execute your vision.",
+      "answer2": "We combine beautiful design with real strategy, so your site will not only look great but also convert visitors into clients."
+    },
+    "q6": {
+      "question": "What happens after launch?",
+      "answer1": "We don't disappear once your website is live.",
+      "answer2": "We offer continuous support, design improvements, and updates to keep your site fast, secure, and relevant as your business grows."
+    }
+  },
+  "letsTalk": {
+    "title": "Let's talk about your",
+    "title2": "project together",
+    "bookCall": "Book a Call",
+    "copyright": "DigitiNexus Web Agency",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy"
+  },
+  "popup3d": {
+    "title": "Looking for Something More Immersive?",
+    "description": "Explore our 3D interactive version of the website.",
+    "cta": "Try the 3D Experience"
+  }
+}
+

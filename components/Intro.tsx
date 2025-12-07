@@ -1,14 +1,16 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 export const Intro: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <section id="intro" className="bg-black text-white py-20 md:py-24 px-6 md:px-12 border-t border-white/5">
       <div className="container mx-auto ">
         <div className="inline-flex items-center gap-2 border border-white/20 rounded-2xl px-3 py-1 text-xs uppercase tracking-wider mb-12 text-orange-400 md:ml-[120px]">
             <span className="opacity-50">2</span>
-            <span>Intro</span>
+            <span>{t('intro.tag')}</span>
         </div>
 
         <motion.div
@@ -19,16 +21,15 @@ export const Intro: React.FC = () => {
             className="md:ml-[120px]"
         >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-light leading-tight mb-8 text-gray-200">
-                If that sounds like your situation, We can help.
+                {t('intro.text1')}
             </h2>
             
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-light leading-tight mb-8 text-gray-200">
-                DigitiNexus is a design-driven web agency that blends creativity, strategy, and technology to craft websites that truly stand out.
-
+                {t('intro.text2')}
             </h2>
 
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-light leading-tight text-white">
-                Every project we build doesn’t just look beautiful — it performs beautifully too.
+                {t('intro.text3')}
             </h2>
         </motion.div>
       </div>

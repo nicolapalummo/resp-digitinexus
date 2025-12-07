@@ -2,12 +2,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Zap, Award, Smartphone, Layout, Code2, Layers, Palette, Box, Fingerprint, Lightbulb } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export const WhyMe: React.FC = () => {
+  const { t } = useTranslation();
   const features = [
     {
-      title: "A Curated Network of Experts",
-      desc: "Every project is built around the right people. From motion and 3D designers to developers and brand strategists, we assemble a custom team that fits your goals, industry, and creative vision.",
+      title: t('whyMe.feature1.title'),
+      desc: t('whyMe.feature1.description'),
       icon: <Layers size={24} />,
       visual: (
         <div className="w-full h-full flex items-center justify-center relative group cursor-pointer bg-gray-50/50 overflow-hidden">
@@ -82,8 +84,8 @@ export const WhyMe: React.FC = () => {
       )
     },
     {
-      title: "Animation Pro",
-      desc: "We use advanced motion design to turn static pages into immersive experiences that elevate your brand’s presence.",
+      title: t('whyMe.feature2.title'),
+      desc: t('whyMe.feature2.description'),
       icon: <Zap size={24} />,
       visual: (
         <div className="w-full h-full bg-gray-50 flex items-center justify-center relative overflow-hidden group perspective-1000">
@@ -126,8 +128,8 @@ export const WhyMe: React.FC = () => {
       )
     },
     {
-      title: "Conversion-Driven Design",
-      desc: "We design with purpose, combining visual excellence and strategic thinking to build websites that attract, engage, and convert.",
+      title: t('whyMe.feature3.title'),
+      desc: t('whyMe.feature3.description'),
       icon: <Code2 size={24} />,
       visual: (
         <div className="w-full h-full bg-gray-50 flex items-center justify-center p-6 relative overflow-hidden group">
@@ -167,8 +169,8 @@ export const WhyMe: React.FC = () => {
       )
     },
     {
-      title: "Tailored to Your Industry",
-      desc: "Whether you run a restaurant, a professional practice, or a creative studio, we adapt our process to your tone, audience, and business needs.",
+      title: t('whyMe.feature4.title'),
+      desc: t('whyMe.feature4.description'),
       icon: <Award size={24} />,
       visual: (
         <div className="w-full h-full bg-gray-50 flex items-center justify-center relative overflow-hidden group">
@@ -227,8 +229,8 @@ export const WhyMe: React.FC = () => {
       )
     },
     {
-      title: "Mobile-First by Design",
-      desc: "We design from mobile upward, optimizing layouts, speed, and interactions for the devices people use most. This ensures a seamless, fast, and high-converting experience across all screens.",
+      title: t('whyMe.feature5.title'),
+      desc: t('whyMe.feature5.description'),
       icon: <Smartphone size={24} />,
       visual: (
          <div className="w-full h-full bg-gray-50 flex items-center justify-center relative overflow-hidden group">
@@ -282,8 +284,8 @@ export const WhyMe: React.FC = () => {
       )
     },
     {
-      title: "Built for the Long Run",
-      desc: "Our relationships don’t end at launch. We stay close to our clients with ongoing updates, creative refinements, and proactive support to keep their websites growing and performing over time.",
+      title: t('whyMe.feature6.title'),
+      desc: t('whyMe.feature6.description'),
       icon: <Layout size={24} />,
       visual: (
         <div className="w-full h-full bg-gray-50 flex items-center justify-center p-6 overflow-hidden group">
@@ -375,13 +377,13 @@ export const WhyMe: React.FC = () => {
             {/* Tag - Aligned to Intro */}
             <div className="inline-flex items-center gap-2 border border-orange-200 rounded-lg px-3 py-1 text-xs uppercase tracking-wider text-orange-700 bg-orange-50 font-mono mb-5 md:ml-[120px]">
                 <span className="opacity-50">5</span>
-                <span>Why us</span>
+                <span>{t('whyMe.tag')}</span>
             </div>
             
             {/* Header */}
             <div className="mb-16 md:ml-[120px]">
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium leading-tight text-black tracking-tight">
-                    Why work with us
+                    {t('whyMe.title')}
                 </h2>
             </div>
         </motion.div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 // Mapping of Section IDs to Header Themes (same as Header component)
 const themeMap: Record<string, 'dark' | 'light'> = {
@@ -17,6 +18,7 @@ const themeMap: Record<string, 'dark' | 'light'> = {
 };
 
 export const ThreeDPopup: React.FC = () => {
+  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
   const [popupTheme, setPopupTheme] = useState<'dark' | 'light'>('dark');
@@ -105,10 +107,10 @@ export const ThreeDPopup: React.FC = () => {
           {/* Content */}
           <div className="pr-6">
             <h3 className={`text-lg font-semibold mb-2 tracking-tight transition-colors duration-500 ${textColor}`}>
-              Looking for Something More Immersive?
+              {t('popup3d.title')}
             </h3>
             <p className={`text-sm mb-4 leading-relaxed transition-colors duration-500 ${popupTheme === 'dark' ? 'text-white/80' : 'text-black/80'}`}>
-              Explore our 3D interactive version of the website.
+              {t('popup3d.description')}
             </p>
             <a
               href="https://immersive.digitinexus.com"
@@ -116,7 +118,7 @@ export const ThreeDPopup: React.FC = () => {
               rel="noopener noreferrer"
               className={`inline-flex items-center gap-2 ${buttonBg} ${buttonText} rounded-2xl px-4 py-2 text-sm font-medium hover:opacity-90 transition-all duration-500 shadow-sm`}
             >
-              Try the 3D Experience
+              {t('popup3d.cta')}
               <span>→</span>
             </a>
           </div>

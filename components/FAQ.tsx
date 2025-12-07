@@ -2,64 +2,66 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus } from 'lucide-react';
-
-const faqData = [
-  {
-    question: "What services do you offer?",
-    answer: (
-      <>
-        <p className="mb-4">We design and develop complete websites, from strategy and branding to design and launch.</p>
-        <p className="mb-4">Whether you need a site for your restaurant, your studio, or your creative brand, we tailor every project to your goals.</p>
-        <p>Already have a design? We can handle development and optimization too.</p>
-      </>
-    )
-  },
-  {
-    question: "How long does it take?",
-    answer: (
-      <>
-        <p className="mb-4">Most projects take between 2 and 6 weeks, depending on the number of pages, content readiness, and level of customization.</p>
-        <p>Smaller sites (like professional studios) are usually ready in a few weeks, while more creative or interactive builds may take longer.</p>
-      </>
-    )
-  },
-  {
-    question: "Do you also handle branding?",
-    answer: (
-      <p>Yes. Many of our clients start from scratch, so we offer brand identity design — logo, color palette, typography, and a mini style guide — to ensure a consistent, professional image across all touchpoints.</p>
-    )
-  },
-  {
-    question: "Do you work only with certain industries?",
-    answer: (
-      <>
-        <p className="mb-4">We specialize in restaurants, professional studios, and creative businesses, but we also collaborate with service-based companies and startups.</p>
-        <p>Our approach adapts to your tone, audience, and industry needs.</p>
-      </>
-    )
-  },
-  {
-    question: "What makes DigitiNexus different from other agencies?",
-    answer: (
-      <>
-        <p className="mb-4">Every project gets a custom-built team of designers, developers, and motion or 3D artists, hand-picked to execute your vision.</p>
-        <p>We combine beautiful design with real strategy, so your site will not only look great but also convert visitors into clients.</p>
-      </>
-    )
-  },
-  {
-    question: "What happens after launch?",
-    answer: (
-      <>
-        <p className="mb-4">We don’t disappear once your website is live.</p>
-        <p>We offer continuous support, design improvements, and updates to keep your site fast, secure, and relevant as your business grows.</p>
-      </>
-    )
-  }
-];
+import { useTranslation } from 'react-i18next';
 
 export const FAQ: React.FC = () => {
+  const { t } = useTranslation();
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+  const faqData = [
+    {
+      question: t('faq.q1.question'),
+      answer: (
+        <>
+          <p className="mb-4">{t('faq.q1.answer1')}</p>
+          <p className="mb-4">{t('faq.q1.answer2')}</p>
+          <p>{t('faq.q1.answer3')}</p>
+        </>
+      )
+    },
+    {
+      question: t('faq.q2.question'),
+      answer: (
+        <>
+          <p className="mb-4">{t('faq.q2.answer1')}</p>
+          <p>{t('faq.q2.answer2')}</p>
+        </>
+      )
+    },
+    {
+      question: t('faq.q3.question'),
+      answer: (
+        <p>{t('faq.q3.answer')}</p>
+      )
+    },
+    {
+      question: t('faq.q4.question'),
+      answer: (
+        <>
+          <p className="mb-4">{t('faq.q4.answer1')}</p>
+          <p>{t('faq.q4.answer2')}</p>
+        </>
+      )
+    },
+    {
+      question: t('faq.q5.question'),
+      answer: (
+        <>
+          <p className="mb-4">{t('faq.q5.answer1')}</p>
+          <p>{t('faq.q5.answer2')}</p>
+        </>
+      )
+    },
+    {
+      question: t('faq.q6.question'),
+      answer: (
+        <>
+          <p className="mb-4">{t('faq.q6.answer1')}</p>
+          <p>{t('faq.q6.answer2')}</p>
+        </>
+      )
+    }
+  ];
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -78,13 +80,13 @@ export const FAQ: React.FC = () => {
             {/* Tag - Aligned to Intro */}
             <div className="inline-flex items-center gap-2 border border-white/20 rounded-lg px-3 py-1 text-xs uppercase tracking-wider text-orange-400 font-mono bg-white/5 mb-5 md:ml-[120px]">
                 <span className="opacity-50">7</span>
-                <span>FAQs</span>
+                <span>{t('faq.tag')}</span>
             </div>
             
             <div className="flex flex-col md:flex-row justify-between items-start md:items-start mb-24 gap-12 md:ml-[120px]">
             <div className="text-left w-full md:w-auto">
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.1] md:whitespace-nowrap">
-                        Your questions, answered
+                        {t('faq.title')}
                     </h2>
             </div>
             </div>

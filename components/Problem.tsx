@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { X, ArrowRight, Pencil } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export const Problem: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <section id="problems" className="bg-black text-white py-24 md:py-32 px-6 md:px-12 overflow-hidden">
       <div className="container mx-auto">
@@ -18,14 +20,14 @@ export const Problem: React.FC = () => {
             >
                 <div className="inline-flex items-center gap-2 border border-white/20 rounded-lg px-3 py-1 text-xs uppercase tracking-wider mb-8 text-red-400 font-mono bg-white/5">
                     <span className="opacity-50">1</span>
-                    <span>Problems</span>
+                    <span>{t('problem.tag')}</span>
                 </div>
 
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium mb-4 leading-tight">
-                    You have traction but your website still looks MVP
+                    {t('problem.title')}
                 </h2>
                 <p className="text-lg text-gray-400">
-                    There's a gap between how your product looks and how you present it
+                    {t('problem.description')}
                 </p>
             </motion.div>
 
@@ -137,9 +139,9 @@ export const Problem: React.FC = () => {
                             <X size={16} />
                         </div>
                         <div>
-                            <h3 className="text-xl font-semibold mb-2">People don't understand what you do</h3>
+                            <h3 className="text-xl font-semibold mb-2">{t('problem.issue1.title')}</h3>
                             <p className="text-gray-400 leading-relaxed">
-                                If your website and marketing aren't crystal clear, potential customers won't get what you do or why it matters.
+                                {t('problem.issue1.description')}
                             </p>
                         </div>
                     </motion.div>
@@ -155,9 +157,9 @@ export const Problem: React.FC = () => {
                             <X size={16} />
                         </div>
                         <div>
-                            <h3 className="text-xl font-semibold mb-2">You look amateur and like you're still testing</h3>
+                            <h3 className="text-xl font-semibold mb-2">{t('problem.issue2.title')}</h3>
                             <p className="text-gray-400 leading-relaxed">
-                                First impressions matter. A DIY or unpolished design makes users bounce 127% faster, even if your product is solid.
+                                {t('problem.issue2.description')}
                             </p>
                         </div>
                     </motion.div>
@@ -173,9 +175,9 @@ export const Problem: React.FC = () => {
                             <X size={16} />
                         </div>
                         <div>
-                            <h3 className="text-xl font-semibold mb-2">Your site isn't built to convert</h3>
+                            <h3 className="text-xl font-semibold mb-2">{t('problem.issue3.title')}</h3>
                             <p className="text-gray-400 leading-relaxed">
-                                You've got a good product and decent traction. Now it's time for your page structure and messaging to work as hard as you do.
+                                {t('problem.issue3.description')}
                             </p>
                         </div>
                     </motion.div>

@@ -1,13 +1,14 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useSpring, useTransform, AnimatePresence } from 'framer-motion';
-import { X } from 'lucide-react';
+import { X, ChevronDown } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const navItems = [
-  { label: 'Work', href: '#work' },
-  { label: 'Process', href: '#how-it-works' },
-  { label: 'Reviews', href: '#reviews' },
-  { label: 'Services', href: '#services' },
+  { key: 'work', href: '#work' },
+  { key: 'process', href: '#how-it-works' },
+  { key: 'reviews', href: '#reviews' },
+  { key: 'services', href: '#services' },
 ];
 
 // Mapping of Section IDs to Header Themes
@@ -27,9 +28,25 @@ const themeMap: Record<string, 'dark' | 'light'> = {
 };
 
 export const Header: React.FC = () => {
+  const { t, i18n } = useTranslation();
   const { scrollYProgress } = useScroll();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [headerTheme, setHeaderTheme] = useState<'dark' | 'light'>('dark');
+  const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
+
+  const languages = [
+    { code: 'en', name: 'EN', flag: '🇬🇧' },
+    { code: 'it', name: 'IT', flag: '🇮🇹' },
+    { code: 'fr', name: 'FR', flag: '🇫🇷' },
+  ];
+
+  const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
+
+  const changeLanguage = (langCode: string) => {
+    i18n.changeLanguage(langCode);
+    setIsLangMenuOpen(false);
+    localStorage.setItem('i18nextLng', langCode);
+  };
   
   // Smooth out the progress value
   const smoothProgress = useSpring(scrollYProgress, {
@@ -49,6 +66,18 @@ export const Header: React.FC = () => {
     }
     return () => { document.body.style.overflow = 'unset'; };
   }, [isMenuOpen]);
+
+  // Close language menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (isLangMenuOpen && !target.closest('.language-selector')) {
+        setIsLangMenuOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isLangMenuOpen]);
 
   // Intersection Observer for Theme Switching
   useEffect(() => {
@@ -123,7 +152,7 @@ export const Header: React.FC = () => {
           </div>
 
           <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ" target="_blank" rel="noopener noreferrer" className={`${buttonBg} ${buttonText} rounded-3xl pl-4 pr-1 py-1 flex items-center gap-3 font-medium text-sm transition-colors duration-500`}>
-              <span className="pl-1">Book a Call</span>
+              <span className="pl-1">{t('nav.bookCall')}</span>
               <img 
                   src="/logoDN.webp" 
                   alt="DigitiNexus" 
@@ -160,7 +189,7 @@ export const Header: React.FC = () => {
             <nav className="relative z-10 flex flex-col items-center gap-8">
                 {navItems.map((item, idx) => (
                     <motion.a
-                        key={item.label}
+                        key={item.key}
                         href={item.href}
                         initial={{ y: 20, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
@@ -168,7 +197,7 @@ export const Header: React.FC = () => {
                         onClick={() => setIsMenuOpen(false)}
                         className={`text-4xl font-light tracking-tight hover:opacity-60 transition-all duration-300 ${overlayTextColor}`}
                     >
-                        {item.label}
+                        {t(`nav.${item.key}`)}
                     </motion.a>
                 ))}
                 
@@ -181,7 +210,7 @@ export const Header: React.FC = () => {
                     transition={{ delay: 0.4 }}
                     className={`mt-8 px-8 py-4 rounded-3xl text-xl font-medium transition-colors duration-500 ${overlayBtnBg} ${overlayBtnText}`}
                 >
-                    Book a Call
+                    {t('nav.bookCall')}
                 </motion.a>
             </nav>
           </motion.div>
@@ -205,12 +234,12 @@ export const Header: React.FC = () => {
         <nav className="mx-8">
           <ul className={`flex space-x-6 text-base font-medium transition-colors duration-500 ${headerTheme === 'dark' ? 'text-white/90' : 'text-black/100'}`}>
             {navItems.map((item) => (
-              <li key={item.label} className="relative group">
+              <li key={item.key} className="relative group">
                 <a 
                   href={item.href} 
                   className={`transition-colors ${headerTheme === 'dark' ? 'hover:text-white' : 'hover:text-black'}`}
                 >
-                  {item.label}
+                  {t(`nav.${item.key}`)}
                 </a>
                 <span className={`absolute -right-3 top-0 text-[10px] mt-[2px] ${headerTheme === 'dark' ? 'text-white/20' : 'text-black/20'}`}>|</span>
               </li>
@@ -219,6 +248,49 @@ export const Header: React.FC = () => {
         </nav>
 
         <div className="flex items-center gap-4">
+          {/* Language Selector */}
+          <div className="relative language-selector">
+            <button
+              onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
+              className={`flex items-center gap-2 px-3 py-1.5 rounded-xl border transition-colors duration-500 ${
+                headerTheme === 'dark' 
+                  ? 'border-white/20 bg-white/5 hover:bg-white/10 text-white' 
+                  : 'border-black/20 bg-black/5 hover:bg-black/10 text-black'
+              }`}
+            >
+              <span className="text-sm font-medium">{currentLanguage.flag} {currentLanguage.name}</span>
+              <ChevronDown size={16} className={`transition-transform duration-200 ${isLangMenuOpen ? 'rotate-180' : ''}`} />
+            </button>
+            
+            {isLangMenuOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                className={`absolute top-full right-0 mt-2 rounded-xl border shadow-2xl overflow-hidden z-50 ${
+                  headerTheme === 'dark' 
+                    ? 'bg-black/95 backdrop-blur-xl border-white/20' 
+                    : 'bg-white/95 backdrop-blur-xl border-black/20'
+                }`}
+              >
+                {languages.map((lang) => (
+                  <button
+                    key={lang.code}
+                    onClick={() => changeLanguage(lang.code)}
+                    className={`w-full px-4 py-2.5 text-left flex items-center gap-2 transition-colors ${
+                      i18n.language === lang.code
+                        ? headerTheme === 'dark' ? 'bg-white/10' : 'bg-black/10'
+                        : headerTheme === 'dark' ? 'hover:bg-white/5' : 'hover:bg-black/5'
+                    } ${headerTheme === 'dark' ? 'text-white' : 'text-black'}`}
+                  >
+                    <span>{lang.flag}</span>
+                    <span className="text-sm font-medium">{lang.name}</span>
+                  </button>
+                ))}
+              </motion.div>
+            )}
+          </div>
+
           {/* Minimal Scroll Ruler Indicator */}
           <div className="flex items-center gap-2">
               <span className={`text-[10px] font-mono transition-colors duration-500 ${headerTheme === 'dark' ? 'text-white/40' : 'text-black/40'}`}>00</span>
@@ -249,7 +321,7 @@ export const Header: React.FC = () => {
           </div>
 
           <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ" target="_blank" rel="noopener noreferrer" className={`${buttonBg} ${buttonText} rounded-2xl pl-1 pr-1 py-1.5 flex items-center gap-3 font-medium text-base hover:opacity-90 transition-all duration-500 shadow-sm`}>
-              <span className="pl-3">Book a Call</span>
+              <span className="pl-3">{t('nav.bookCall')}</span>
               <img 
                   src="/logoDN.webp" 
                   alt="DigitiNexus" 

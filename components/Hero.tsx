@@ -2,8 +2,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, ArrowDown } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export const Hero: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <section id="hero" className="relative w-full bg-black text-white md:h-screen md:overflow-hidden flex flex-col">
       
@@ -31,7 +33,7 @@ export const Hero: React.FC = () => {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="mb-8 inline-flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-1.5 shadow-lg"
         >
-            <span className="text-xs font-medium tracking-wide text-white/90">Over 75 Successful Projects</span>
+            <span className="text-xs font-medium tracking-wide text-white/90">{t('hero.badge')}</span>
             <div className="w-px h-3 bg-white/20 mx-1"></div>
             <div className="flex text-orange-400 gap-0.5">
                 {[...Array(5)].map((_, i) => (
@@ -48,7 +50,7 @@ export const Hero: React.FC = () => {
             className="max-w-5xl mx-auto"
         >
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[7rem] font-medium tracking-tight leading-[0.95] mb-6 md:mb-8 drop-shadow-2xl text-white">
-                Stand Out with <br className="hidden md:block" />
+                {t('hero.title')} <br className="hidden md:block" />
                 <span className="text-white block md:inline mt-2 md:mt-0">
                     DigitiNexus
                 </span>
@@ -62,7 +64,7 @@ export const Hero: React.FC = () => {
             transition={{ delay: 0.9, duration: 0.8 }}
             className="text-lg md:text-2xl text-gray-200 max-w-2xl mx-auto mb-10 md:mb-12 leading-relaxed font-light drop-shadow-md"
         >
-            Build trust, stand out, and grow your business with a beautifully functional website and brand made for your industry.
+            {t('hero.subtitle')}
         </motion.p>
 
         {/* CTA Buttons - Side by Side on Mobile */}
@@ -73,11 +75,11 @@ export const Hero: React.FC = () => {
             className="flex flex-row w-full md:w-auto items-center gap-4 md:gap-6 mb-12 md:mb-0"
         >
             <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ" target="_blank" rel="noopener noreferrer" className="flex-1 md:flex-none bg-white text-black hover:bg-gray-100 transition-all duration-300 rounded-2xl px-6 py-4 font-semibold text-base md:text-lg flex justify-center items-center gap-2 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] hover:scale-105 active:scale-95">
-                Book a Call
+                {t('hero.bookCall')}
             </a>
             
             <a href="#work" className="flex-1 md:flex-none text-white border border-white/30 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 rounded-2xl px-6 py-4 font-medium text-base md:text-lg flex justify-center items-center gap-2 hover:border-white/60">
-                View Work 
+                {t('hero.viewWork')} 
                 <ArrowDown size={18} />
             </a>
         </motion.div>

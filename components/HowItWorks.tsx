@@ -2,15 +2,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Video, Mic, MessageSquare, Hand, Settings, Rocket } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export const HowItWorks: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <section id="how-it-works" className="bg-[#F3F4F6] text-black py-20 md:py-24 px-6 md:px-12 relative overflow-hidden font-sans rounded-t-[2rem]">
       <div className="container mx-auto relative z-10">
         {/* Tag - Aligned to Intro */}
         <div className="inline-flex items-center gap-2 border border-orange-200 rounded-lg px-3 py-1 text-xs uppercase tracking-wider text-orange-700 bg-orange-50 font-mono mb-5 md:ml-[120px]">
             <span className="opacity-50">4</span>
-            <span>Our Process</span>
+            <span>{t('howItWorks.tag')}</span>
         </div>
         
         {/* Header Section - Grid Layout for Tablet/Desktop to prevent overlap */}
@@ -24,10 +26,10 @@ export const HowItWorks: React.FC = () => {
             {/* Title & Subtitle - Spans remaining width, left aligned */}
             <div className="md:col-span-12 flex flex-col items-start text-left">
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium mb-4 leading-tight text-black tracking-tight whitespace-nowrap">
-                    How we work together
+                    {t('howItWorks.title')}
                 </h2>
                 <p className="text-lg text-gray-500">
-                    Seamless kick-off, seamless collaboration
+                    {t('howItWorks.subtitle')}
                 </p>
             </div>
         </motion.div>
@@ -96,11 +98,11 @@ export const HowItWorks: React.FC = () => {
                     </div>
                 </div>
 
-                <h3 className="text-2xl font-semibold mb-3 text-gray-900">Book a quick call</h3>
+                <h3 className="text-2xl font-semibold mb-3 text-gray-900">{t('howItWorks.step1.title')}</h3>
                 <p className="text-gray-500 leading-relaxed text-base mb-4 pr-4">
-                    We start with a quick call to understand your goals, audience, and priorities. No commitments + you'll know what to do next.
+                    {t('howItWorks.step1.description')}
                 </p>
-                <span className="inline-block px-3 py-1 bg-orange-500/5 text-orange-700 text-xs font-mono rounded border border-orange-500/20 w-fit">~30 min</span>
+                <span className="inline-block px-3 py-1 bg-orange-500/5 text-orange-700 text-xs font-mono rounded border border-orange-500/20 w-fit">{t('howItWorks.step1.duration')}</span>
             </motion.div>
 
              {/* Step 2 */}
@@ -185,12 +187,11 @@ export const HowItWorks: React.FC = () => {
                     </div>
                 </div>
 
-                <h3 className="text-2xl font-semibold mb-3 text-gray-900">Design & Development</h3>
+                <h3 className="text-2xl font-semibold mb-3 text-gray-900">{t('howItWorks.step2.title')}</h3>
                 <p className="text-gray-500 leading-relaxed text-base mb-4 pr-4">
-                    We explore ideas, create moodboards, and align on visual identity and tone. We build your website with constant updates.
-
+                    {t('howItWorks.step2.description')}
                 </p>
-                <span className="inline-block px-3 py-1 bg-orange-500/5 text-orange-700 text-xs font-mono rounded border border-orange-500/20 w-fit">2-6 weeks</span>
+                <span className="inline-block px-3 py-1 bg-orange-500/5 text-orange-700 text-xs font-mono rounded border border-orange-500/20 w-fit">{t('howItWorks.step2.duration')}</span>
             </motion.div>
 
              {/* Step 3 */}
@@ -236,12 +237,11 @@ export const HowItWorks: React.FC = () => {
                     </div>
                 </div>
 
-                <h3 className="text-2xl font-semibold mb-3 text-gray-900">Launch, build trust, convert more</h3>
+                <h3 className="text-2xl font-semibold mb-3 text-gray-900">{t('howItWorks.step3.title')}</h3>
                 <p className="text-gray-500 leading-relaxed text-base mb-4 pr-4">
-                    We go live and monitor your site’s performance, offering post-launch support and optimization. 
-
+                    {t('howItWorks.step3.description')}
                 </p>
-                <span className="inline-block px-3 py-1 bg-orange-500/5 text-orange-700 text-xs font-mono rounded border border-orange-500/20 w-fit">On-going support available</span>
+                <span className="inline-block px-3 py-1 bg-orange-500/5 text-orange-700 text-xs font-mono rounded border border-orange-500/20 w-fit">{t('howItWorks.step3.duration')}</span>
             </motion.div>
 
         </div>
