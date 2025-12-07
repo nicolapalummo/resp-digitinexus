@@ -1,53 +1,55 @@
 
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
-const reviews = [
+export const Reviews: React.FC = () => {
+  const { t } = useTranslation();
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const reviews = useMemo(() => [
     {
         id: 1,
-        company: "Voldz Law",
+        company: t('reviews.review1.company'),
         logo: "V",
-        quote: "Our priority was to give clients a sense of trust and professionalism from the very first click. The new website is elegant and highly functional. Potential clients can finally understand who we are and what we offer in just a few seconds. A significant step forward.",
-        highlight: "understand who we are and what we offer in just a few seconds",
-        author: "Mila Anderson",
-        role: "Client Relations Director – Voldz Law P.C.",
+        quote: t('reviews.review1.quote'),
+        highlight: t('reviews.review1.highlight'),
+        author: t('reviews.review1.author'),
+        role: t('reviews.review1.role'),
         image: "/avatar/Mila Anderson.webp"
     },
     {
         id: 2,
-        company: "The Antler Room",
+        company: t('reviews.review2.company'),
         logo: "A",
-        quote: "Capturing the soul of a restaurant is no easy task, yet the new website does it perfectly. The photography stands out, the navigation is smooth, and everything communicates our culinary identity. Online reservations have increased, and many guests tell us they discovered us thanks to the website.",
-        highlight: "Online reservations have increased",
-        author: "Sarah Whitmore",
-        role: "General Manager – The Antler Room",
+        quote: t('reviews.review2.quote'),
+        highlight: t('reviews.review2.highlight'),
+        author: t('reviews.review2.author'),
+        role: t('reviews.review2.role'),
         image: "/avatar/Sarah Whitmore.webp"
     },
     {
         id: 3,
-        company: "Delizia Trattoria",
+        company: t('reviews.review3.company'),
         logo: "D",
-        quote: "We wanted a website that felt as welcoming as our restaurant. The design is warm, clean, and showcases our dishes beautifully. Guests often tell us that the first impression they got from the website convinced them to visit in person — and that means everything to us.",
-        highlight: "first impression they got from the website convinced them to visit in person",
-        author: "Julien Caradec",
-        role: "Owner – Delizia Trattoria",
+        quote: t('reviews.review3.quote'),
+        highlight: t('reviews.review3.highlight'),
+        author: t('reviews.review3.author'),
+        role: t('reviews.review3.role'),
         image: "/avatar/Julien Caradec.webp"
     },
     {
         id: 4,
-        company: "Mark Harford Law",
+        company: t('reviews.review4.company'),
         logo: "M",
-        quote: "The new website has completely transformed how clients perceive us. The structure is clear, modern, and conveys real authority. Thanks to this redesign, consultation requests increased by 25% in the first few weeks. Our online presence finally reflects the quality of our firm.",
-        highlight: "consultation requests increased by 25% in the first few weeks",
-        author: "Erin Matthews",
-        role: "Operations Manager – Mark Harford Law",
+        quote: t('reviews.review4.quote'),
+        highlight: t('reviews.review4.highlight'),
+        author: t('reviews.review4.author'),
+        role: t('reviews.review4.role'),
         image: "/avatar/Erin Matthews.webp"
     }
-];
-
-export const Reviews: React.FC = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  ], [t]);
 
   const nextSlide = () => {
     setActiveIndex((prev) => (prev + 1) % reviews.length);

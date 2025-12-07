@@ -61,7 +61,35 @@
     }
   },
   "reviews": {
-    "title": "Avis"
+    "title": "Avis",
+    "review1": {
+      "company": "Voldz Law",
+      "quote": "Notre priorité était de donner aux clients un sentiment de confiance et de professionnalisme dès le premier clic. Le nouveau site web est élégant et hautement fonctionnel. Les clients potentiels peuvent enfin comprendre qui nous sommes et ce que nous offrons en quelques secondes. Un pas en avant significatif.",
+      "highlight": "comprendre qui nous sommes et ce que nous offrons en quelques secondes",
+      "author": "Mila Anderson",
+      "role": "Directrice des Relations Clients – Voldz Law P.C."
+    },
+    "review2": {
+      "company": "The Antler Room",
+      "quote": "Capturer l'âme d'un restaurant n'est pas une tâche facile, pourtant le nouveau site web le fait parfaitement. La photographie ressort, la navigation est fluide et tout communique notre identité culinaire. Les réservations en ligne ont augmenté et de nombreux clients nous disent qu'ils nous ont découverts grâce au site web.",
+      "highlight": "Les réservations en ligne ont augmenté",
+      "author": "Sarah Whitmore",
+      "role": "Directrice Générale – The Antler Room"
+    },
+    "review3": {
+      "company": "Delizia Trattoria",
+      "quote": "Nous voulions un site web qui soit aussi accueillant que notre restaurant. Le design est chaleureux, épuré et met en valeur nos plats magnifiquement. Les clients nous disent souvent que la première impression qu'ils ont eue du site web les a convaincus de nous rendre visite en personne — et cela signifie tout pour nous.",
+      "highlight": "la première impression qu'ils ont eue du site web les a convaincus de nous rendre visite en personne",
+      "author": "Julien Caradec",
+      "role": "Propriétaire – Delizia Trattoria"
+    },
+    "review4": {
+      "company": "Mark Harford Law",
+      "quote": "Le nouveau site web a complètement transformé la façon dont les clients nous perçoivent. La structure est claire, moderne et transmet une véritable autorité. Grâce à cette refonte, les demandes de consultation ont augmenté de 25% dans les premières semaines. Notre présence en ligne reflète enfin la qualité de notre cabinet.",
+      "highlight": "les demandes de consultation ont augmenté de 25% dans les premières semaines",
+      "author": "Erin Matthews",
+      "role": "Responsable des Opérations – Mark Harford Law"
+    }
   },
   "whyMe": {
     "tag": "Pourquoi nous",
