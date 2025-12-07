@@ -34,7 +34,8 @@ export const LetsTalk: React.FC = () => {
              <span className="md:mx-2 flex flex-col md:flex-row items-center gap-2 md:gap-0">
                  <a 
                      href="/Terms & Conditions DigitiNexus LLC.pdf" 
-                     download
+                     target="_blank"
+                     rel="noopener noreferrer"
                      className="hover:text-gray-600 transition-colors cursor-pointer"
                  >
                      {t('letsTalk.terms')}
@@ -42,7 +43,8 @@ export const LetsTalk: React.FC = () => {
                  <span className="hidden md:inline mx-2">|</span>
                  <a 
                      href="/Privacy Policy DigitiNexus LLC.pdf" 
-                     download
+                     target="_blank"
+                     rel="noopener noreferrer"
                      className="hover:text-gray-600 transition-colors cursor-pointer"
                  >
                      {t('letsTalk.privacy')}
