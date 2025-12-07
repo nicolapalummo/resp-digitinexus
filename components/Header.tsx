@@ -201,6 +201,52 @@ export const Header: React.FC = () => {
                     </motion.a>
                 ))}
                 
+                {/* Language Selector - Mobile */}
+                <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: navItems.length * 0.1 }}
+                    className="relative language-selector"
+                >
+                    <button
+                        onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
+                        className={`text-4xl font-light tracking-tight hover:opacity-60 transition-all duration-300 ${overlayTextColor} flex items-center gap-3`}
+                    >
+                        {currentLanguage.name}
+                        <ChevronDown size={24} className={`transition-transform duration-200 ${isLangMenuOpen ? 'rotate-180' : ''}`} />
+                    </button>
+                    
+                    {isLangMenuOpen && (
+                        <motion.div
+                            initial={{ opacity: 0, y: -10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -10 }}
+                            className={`absolute top-full left-1/2 -translate-x-1/2 mt-4 rounded-xl border shadow-2xl overflow-hidden z-50 ${
+                                headerTheme === 'dark' 
+                                    ? 'bg-black/95 backdrop-blur-xl border-white/20' 
+                                    : 'bg-white/95 backdrop-blur-xl border-black/20'
+                            }`}
+                        >
+                            {languages.map((lang) => (
+                                <button
+                                    key={lang.code}
+                                    onClick={() => {
+                                        changeLanguage(lang.code);
+                                        setIsLangMenuOpen(false);
+                                    }}
+                                    className={`w-full px-6 py-3 text-left transition-colors ${
+                                        i18n.language === lang.code
+                                            ? headerTheme === 'dark' ? 'bg-white/10' : 'bg-black/10'
+                                            : headerTheme === 'dark' ? 'hover:bg-white/5' : 'hover:bg-black/5'
+                                    } ${headerTheme === 'dark' ? 'text-white' : 'text-black'}`}
+                                >
+                                    <span className="text-2xl font-light">{lang.name}</span>
+                                </button>
+                            ))}
+                        </motion.div>
+                    )}
+                </motion.div>
+                
                 <motion.a
                     href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ"
                     target="_blank"
