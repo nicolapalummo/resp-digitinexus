@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
 
 interface WorkItem {
     id: number;
@@ -21,7 +20,6 @@ const workItems: WorkItem[] = [
 ];
 
 export const RecentWork: React.FC = () => {
-  const { t } = useTranslation();
   return (
     <section id="work" className="bg-black text-white py-20 md:py-24 px-6 md:px-12 border-t border-white/5">
       <div className="container mx-auto">
@@ -35,14 +33,14 @@ export const RecentWork: React.FC = () => {
             {/* Tag - Aligned to Intro */}
             <div className="inline-flex items-center gap-2 border border-white/20 rounded-lg px-3 py-1 text-xs uppercase tracking-wider text-orange-400 font-mono bg-white/5 mb-5 md:ml-[120px]">
                 <span className="opacity-50">3</span>
-                <span>{t('work.tag')}</span>
+                <span>Work</span>
             </div>
             
             {/* Header Layout - Title Below */}
             <div className="mb-16 md:mb-15 md:ml-[120px]">
                 {/* Heading - Single Line */}
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-none text-left">
-                    {t('work.title')}
+                    Recent success stories
                 </h2>
             </div>
         </motion.div>

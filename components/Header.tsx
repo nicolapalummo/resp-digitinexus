@@ -5,10 +5,11 @@ import { X, ChevronDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const navItems = [
-  { key: 'work', href: '#work' },
-  { key: 'process', href: '#how-it-works' },
-  { key: 'reviews', href: '#reviews' },
-  { key: 'services', href: '#services' },
+  { key: 'work', href: '/#work' },
+  { key: 'process', href: '/#how-it-works' },
+  { key: 'reviews', href: '/#reviews' },
+  { key: 'services', href: '/#services' },
+  { key: 'resources', href: '/risorse-gratuite' },
 ];
 
 // Mapping of Section IDs to Header Themes
@@ -37,7 +38,6 @@ export const Header: React.FC = () => {
   const languages = [
     { code: 'en', name: 'EN' },
     { code: 'it', name: 'IT' },
-    { code: 'fr', name: 'FR' },
   ];
 
   const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
@@ -272,7 +272,7 @@ export const Header: React.FC = () => {
         style={{ maxWidth: '1200px', margin: '0 auto' }}
       >
         <div>
-          <a href="#" className={`text-2xl font-medium tracking-tight hover:opacity-70 transition-opacity ${textColor}`}>
+          <a href="/" className={`text-2xl font-medium tracking-tight hover:opacity-70 transition-opacity ${textColor}`}>
             DigitiNexus
           </a>
         </div>

@@ -4,10 +4,11 @@
     "process": "Processo",
     "reviews": "Recensioni",
     "services": "Servizi",
-    "bookCall": "Parliamone"
+    "bookCall": "Parliamone",
+    "resources": "Risorse"
   },
   "hero": {
-    "badge": "Oltre 75 Progetti di Successo",
+    "badge": "Oltre 43 Progetti di Successo",
     "title": "Distinguiti con",
     "subtitle": "Costruisci fiducia, distinguiti e fai crescere la tua attività con un sito web e un brand belli e funzionali, creati per il tuo settore.",
     "bookCall": "Parliamone",
@@ -38,7 +39,7 @@
   },
   "work": {
     "tag": "Lavori",
-    "title": "Storie di successo recenti"
+    "title": "I nostri lavori più recenti"
   },
   "howItWorks": {
     "tag": "Il Nostro Processo",
@@ -46,7 +47,7 @@
     "subtitle": "Avvio senza intoppi, collaborazione senza intoppi",
     "step1": {
       "title": "Prenota una chiamata veloce",
-      "description": "Iniziamo con una chiamata veloce per capire i tuoi obiettivi, il pubblico e le priorità. Nessun impegno + saprai cosa fare dopo.",
+      "description": "Iniziamo con una chiamata veloce per capire i tuoi obiettivi, il target e le priorità. Nessun impegno + saprai cosa fare dopo.",
       "duration": "~30 min"
     },
     "step2": {
@@ -122,7 +123,7 @@
   "services": {
     "tag": "Servizi",
     "title": "Con cosa ti aiuteremo",
-    "subtitle": "Convertiamo meglio, aumentiamo di più, costruiamo più fiducia così puoi assumere talenti migliori e applicare prezzi premium",
+    "subtitle": "Miglioriamo la tua presenza online per darti più credibilità. Così potrai attirare clienti migliori, giustificare i tuoi prezzi e trovare collaboratori di valore",
     "service1": {
       "title": "Progetto personalizzato una tantum",
       "price": "A partire da $2k",
@@ -197,6 +198,34 @@
     "title": "Cerchi Qualcosa di Più Immersivo?",
     "description": "Esplora la versione interattiva 3D del sito web.",
     "cta": "Prova l'Esperienza 3D"
+  },
+  "freemium": {
+    "pageTitle": "Hub Risorse DigitiNexus",
+    "pageSubtitle": "Sblocca la tua strategia, un passo alla volta.",
+    "progress": "Progresso",
+    "backHome": "Torna alla Home",
+    "downloaded": "COMPLETATO",
+    "step1": {
+      "title": "Ottimizzazione Google Business Profile",
+      "description": "La guida completa per ottimizzare il tuo profilo Google Business e aumentare la visibilità locale della tua attività.",
+      "status": "SCARICA ORA"
+    },
+    "step2": {
+      "title": "10 Pilastri del Marketing per Imprese e Studi Professionali",
+      "description": "Fondamenta per Imprese e Professionisti. Scopri i 10 pilastri essenziali per costruire una strategia di marketing solida.",
+      "statusLocked": "SBLOCCA DOPO STEP 01",
+      "status": "SCARICA ORA"
+    },
+    "step3": {
+      "title": "Strategie di marketing offline per PMI (con esempi reali)",
+      "description": "Strategie pratiche con esempi reali per integrare il marketing offline nella tua strategia aziendale.",
+      "statusLocked": "SBLOCCA DOPO STEP 02",
+      "status": "SCARICA ORA"
+    },
+    "finalTitle": "Analisi Finale",
+    "finalDescription": "Hai i materiali. Ora serve il piano d'azione.",
+    "finalCta": "RICHIEDI AUDIT GRATUITO",
+    "finalLocked": "Completa tutti gli step per sbloccare"
   }
 }
 

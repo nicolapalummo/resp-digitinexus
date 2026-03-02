@@ -4,7 +4,6 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 
 import enTranslations from './locales/en.json';
 import itTranslations from './locales/it.json';
-import frTranslations from './locales/fr.json';
 
 // Initialize i18n
 i18n
@@ -14,10 +13,9 @@ i18n
     resources: {
       en: { translation: enTranslations },
       it: { translation: itTranslations },
-      fr: { translation: frTranslations },
     },
-    lng: 'en', // Always start with English
-    fallbackLng: 'en',
+    supportedLngs: ['en', 'it'],
+    fallbackLng: 'it', // Default to Italian
     interpolation: {
       escapeValue: false, // React already escapes values
     },
@@ -29,4 +27,3 @@ i18n
   });
 
 export default i18n;
-

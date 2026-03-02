@@ -4,10 +4,11 @@
     "process": "Process",
     "reviews": "Reviews",
     "services": "Services",
-    "bookCall": "Book a Call"
+    "bookCall": "Book a Call",
+    "resources": "Resources"
   },
   "hero": {
-    "badge": "Over 75 Successful Projects",
+    "badge": "Over 43 Successful Projects",
     "title": "Stand Out with",
     "subtitle": "Build trust, stand out, and grow your business with a beautifully functional website and brand made for your industry.",
     "bookCall": "Book a Call",
@@ -197,6 +198,34 @@
     "title": "Looking for Something More Immersive?",
     "description": "Explore our 3D interactive version of the website.",
     "cta": "Try the 3D Experience"
+  },
+  "freemium": {
+    "pageTitle": "DigitiNexus Resource Hub",
+    "pageSubtitle": "Unlock your strategy, one step at a time.",
+    "progress": "Progress",
+    "backHome": "Back to Home",
+    "downloaded": "COMPLETED",
+    "step1": {
+      "title": "Google Business Profile Optimization",
+      "description": "The complete guide to optimizing your Google Business profile and increasing your local visibility.",
+      "status": "DOWNLOAD NOW"
+    },
+    "step2": {
+      "title": "10 Marketing Pillars for Businesses and Professional Firms",
+      "description": "Foundations for Businesses and Professionals. Discover the 10 essential pillars for building a solid marketing strategy.",
+      "statusLocked": "UNLOCK AFTER STEP 01",
+      "status": "DOWNLOAD NOW"
+    },
+    "step3": {
+      "title": "Offline Marketing Strategies for SMBs (with Real Examples)",
+      "description": "Practical strategies with real examples to integrate offline marketing into your business strategy.",
+      "statusLocked": "UNLOCK AFTER STEP 02",
+      "status": "DOWNLOAD NOW"
+    },
+    "finalTitle": "Final Analysis",
+    "finalDescription": "You have the materials. Now you need the action plan.",
+    "finalCta": "REQUEST FREE AUDIT",
+    "finalLocked": "Complete all steps to unlock"
   }
 }
 
