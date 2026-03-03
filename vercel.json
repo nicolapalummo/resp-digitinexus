@@ -6,6 +6,10 @@
   "framework": "vite",
   "rewrites": [
     {
+      "source": "/risorse-gratuite",
+      "destination": "/index.html"
+    },
+    {
       "source": "/((?!.*\\.).*)$",
       "destination": "/index.html"
     }
