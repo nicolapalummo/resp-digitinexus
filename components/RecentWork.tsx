@@ -14,9 +14,9 @@ const workItems: WorkItem[] = [
     { id: 1, title: 'Mark Harford Law', category: 'Law Firm', image: '/portfolio/mark harford.webp', url: 'https://markharfordlaw.com' },
     { id: 2, title: "Phil's Finest", category: 'Food Products', image: "/portfolio/phils finest.webp", url: 'https://www.philsfinest.com/?ref=httpster.net' },
     { id: 3, title: 'Voldz Law', category: 'Law Firm', image: '/portfolio/Voldz law.webp', url: 'https://voldzlaw.com' },
-    { id: 4, title: 'The Antler Room', category: 'Restaurant', image: '/portfolio/the antler room.webp', url: 'https://www.theantlerroomkc.com' },
-    { id: 5, title: 'Bombance Paris', category: 'Restaurant', image: '/portfolio/bombace.webp', url: 'https://www.bombanceparis.fr' },
-    { id: 6, title: 'Delizia Trattoria', category: 'Restaurant', image: '/portfolio/delizia trattoria.webp', url: 'https://www.deliziatrattoria.com' },
+    { id: 4, title: 'Fixary', category: 'Startup', image: '/portfolio/Fixary-_-DigitiNexus.webp', url: 'https://fixary.up.railway.app' },
+    { id: 5, title: 'CF.media', category: 'Agency', image: '/portfolio/cfmedia-_-DigitiNexus.webp', url: 'https://www.cfmedia.agency' },
+    { id: 6, title: 'Héloïse Charon', category: 'Portfolio', image: '/portfolio/portfolio-Heloise-C-2-_-DigitiNexus.webp', url: 'https://heloise-charon-portfolio-production.up.railway.app' },
 ];
 
 export const RecentWork: React.FC = () => {
