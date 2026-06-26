@@ -25,7 +25,7 @@ export const HowItWorks: React.FC = () => {
         >
             {/* Title & Subtitle - Spans remaining width, left aligned */}
             <div className="md:col-span-12 flex flex-col items-start text-left">
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium mb-4 leading-tight text-black tracking-tight whitespace-nowrap">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium mb-4 leading-tight text-black tracking-tight md:whitespace-nowrap">
                     {t('howItWorks.title')}
                 </h2>
                 <p className="text-lg text-gray-500">

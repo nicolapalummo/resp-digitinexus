@@ -44,7 +44,7 @@ export const Services: React.FC = () => {
                 viewport={{ once: true, margin: "-10%" }}
                 transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             >
-                <div className="flex justify-between items-start mb-6">
+                <div className="flex flex-col items-start gap-3 sm:flex-row sm:justify-between mb-6">
                     <h3 className="text-3xl md:text-4xl font-medium tracking-tight">{t('services.service1.title')}</h3>
                     <span className="inline-block px-3 py-1 bg-orange-900/30 text-orange-400 text-xs font-mono rounded border border-orange-500/30 whitespace-nowrap">
                         {t('services.service1.price')}
@@ -79,7 +79,7 @@ export const Services: React.FC = () => {
                 viewport={{ once: true, margin: "-10%" }}
                 transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
             >
-                <div className="flex justify-between items-start mb-6">
+                <div className="flex flex-col items-start gap-3 sm:flex-row sm:justify-between mb-6">
                     <h3 className="text-3xl md:text-4xl font-medium tracking-tight">{t('services.service2.title')}</h3>
                      <span className="inline-block px-3 py-1 bg-orange-900/30 text-orange-400 text-xs font-mono rounded border border-orange-500/30 whitespace-nowrap">
                         {t('services.service2.price')}
