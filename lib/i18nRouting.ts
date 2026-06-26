@@ -42,12 +42,12 @@ interface PageMeta {
 export const PAGE_META: Record<string, PageMeta> = {
   '/': {
     it: {
-      title: 'Realizzazione siti web su misura per studi e PMI | DigitiNexus',
+      title: 'DigitiNexus Web Agency | Siti su misura per studi e PMI',
       description:
         'Agenzia web italiana: progettiamo e realizziamo siti su misura per studi professionali, PMI e startup. Design premium, consegna in 1–4 settimane.',
     },
     en: {
-      title: 'Custom websites for professional firms and SMEs | DigitiNexus',
+      title: 'DigitiNexus Web Agency | Custom websites for firms & SMEs',
       description:
         'Italian web agency: we design and build custom websites for professional firms, SMEs and startups. Premium design, delivered in 1–4 weeks.',
     },
