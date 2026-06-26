@@ -31,13 +31,13 @@ const CLUSTERS = {
 const META = {
   it: {
     lang: 'it', home: '/',
-    title: 'Realizzazione siti web su misura per studi e PMI | DigitiNexus',
+    title: 'DigitiNexus Web Agency',
     desc: 'Agenzia web italiana: progettiamo e realizziamo siti su misura per studi professionali, PMI e startup. Design premium, consegna in 1–4 settimane.',
     blogLabel: 'Vai al blog',
   },
   en: {
     lang: 'en', home: '/en',
-    title: 'Custom websites for professional firms and SMEs | DigitiNexus',
+    title: 'DigitiNexus Web Agency',
     desc: 'Italian web agency: we design and build custom websites for professional firms, SMEs and startups. Premium design, delivered in 1–4 weeks.',
     blogLabel: 'Go to the blog',
   },
