@@ -11,7 +11,7 @@ export const Services: React.FC = () => {
       <div className="container mx-auto">
         {/* Tag - Aligned to Intro */}
         <div className="inline-flex items-center gap-2 border border-white/20 rounded-lg px-3 py-1 text-xs uppercase tracking-wider text-orange-400 font-mono bg-white/5 mb-5 md:ml-[120px]">
-            <span className="opacity-50">6</span>
+            <span className="opacity-50">7</span>
             <span>{t('services.tag')}</span>
         </div>
         

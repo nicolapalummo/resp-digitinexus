@@ -71,7 +71,7 @@ export const HowItWorks: React.FC = () => {
                                 className="absolute top-8 left-8 bg-white p-2 rounded-2xl shadow-[0_8px_16px_rgba(0,0,0,0.08)] flex flex-col items-center gap-1 z-20 w-20 border border-gray-50"
                             >
                                 <img src="/logoDN.webp" className="w-10 h-10 object-contain p-1 bg-gray-50 rounded-xl" alt="DigitiNexus" />
-                                <span className="text-[10px] font-medium text-gray-500 uppercase tracking-wide mt-1">US</span>
+                                <span className="text-[10px] font-medium text-gray-500 uppercase tracking-wide mt-1">{t('howItWorks.us')}</span>
                             </motion.div>
 
                             {/* Avatar You */}
@@ -83,7 +83,7 @@ export const HowItWorks: React.FC = () => {
                                 <div className="w-10 h-10 rounded-xl bg-gray-100 flex items-center justify-center text-gray-400">
                                     <div className="w-4 h-4 rounded-full border-2 border-current"></div>
                                 </div>
-                                <span className="text-[10px] font-medium text-gray-500 uppercase tracking-wide mt-1">You</span>
+                                <span className="text-[10px] font-medium text-gray-500 uppercase tracking-wide mt-1">{t('howItWorks.you')}</span>
                             </motion.div>
 
                             {/* Bottom Bar */}

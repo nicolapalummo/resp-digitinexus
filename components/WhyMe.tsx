@@ -22,7 +22,7 @@ export const WhyMe: React.FC = () => {
                 whileHover={{ scale: 1.1, boxShadow: "0 0 40px rgba(251,146,60,0.5)" }}
                 transition={{ type: "spring", stiffness: 300 }}
              >
-                <img src="/logoDN.webp" className="w-8 h-8 object-contain" alt="DN" />
+                <img src="/logoDN.webp" className="w-8 h-8 object-contain" alt="Logo DigitiNexus" />
              </motion.div>
 
              {/* Orbit 1 (Inner) - Design & 3D */}
@@ -376,7 +376,7 @@ export const WhyMe: React.FC = () => {
         >
             {/* Tag - Aligned to Intro */}
             <div className="inline-flex items-center gap-2 border border-orange-200 rounded-lg px-3 py-1 text-xs uppercase tracking-wider text-orange-700 bg-orange-50 font-mono mb-5 md:ml-[120px]">
-                <span className="opacity-50">5</span>
+                <span className="opacity-50">6</span>
                 <span>{t('whyMe.tag')}</span>
             </div>
             

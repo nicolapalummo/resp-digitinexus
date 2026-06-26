@@ -17,16 +17,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
     <!-- Theme color for iOS UI bars -->
     <meta name="theme-color" content="#000000" />
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@200;400;600&display=swap" rel="stylesheet">
-    
+    <!-- Manrope is self-hosted (see index.css @font-face); preload for fast first paint -->
+    <link rel="preload" href="/fonts/Manrope-Variable.woff2" as="font" type="font/woff2" crossorigin>
+
     <!-- Primary Meta Tags -->
-    <title>Stand Out With DigitiNexus | Web Agency</title>
-    <meta name="description" content="Tailor-made websites, fast, elegant, and optimized for growth.">
-    <meta name="keywords" content="website creation, web agency, website development, web design, business website, e-commerce website, digital agency, web development, website redesign, professional websites, SEO optimization, Google ranking, communication agency, website management, responsive websites, mobile-friendly websites, custom websites, landing page creation, front-end development, back-end development, creazione siti web, agenzia web, sviluppo siti internet, realizzazione siti web, design sito web, sito vetrina, sito e-commerce, agenzia digitale, sviluppo web, restyling sito web, siti professionali, ottimizzazione SEO, posizionamento Google, agenzia di comunicazione, gestione sito web, siti responsive, siti mobile friendly, siti personalizzati, creazione landing page, sviluppo front-end, sviluppo back-end">
+    <title>Realizzazione siti web su misura per studi e PMI | DigitiNexus</title>
+    <meta name="description" content="Agenzia web italiana: progettiamo e realizziamo siti su misura per studi professionali, PMI e startup. Design premium, consegna in 1–4 settimane.">
     
     <!-- Additional meta tags for better Google indexing -->
     <meta name="robots" content="index, follow" />
@@ -34,7 +30,7 @@
     <meta name="author" content="DigitiNexus" />
     <meta name="publisher" content="DigitiNexus" />
     <meta name="copyright" content="DigitiNexus" />
-    <meta name="language" content="en, it" />
+    <meta name="language" content="it" />
     <meta name="revisit-after" content="7 days" />
     <meta name="rating" content="general" />
     <meta name="distribution" content="global" />
@@ -45,94 +41,122 @@
 
     <!-- Canonical & hreflang -->
     <link rel="canonical" href="https://digitinexus.com" />
-    <link rel="alternate" href="https://digitinexus.com/en" hreflang="en" />
-    <link rel="alternate" href="https://digitinexus.com/it" hreflang="it" />
-    <link rel="alternate" href="https://digitinexus.com" hreflang="x-default" />
     
     <!-- Open Graph Meta Tags for Social Media -->
-    <meta property="og:title" content="Stand Out With DigitiNexus | Web Agency" />
-    <meta property="og:description" content="Tailor-made websites, fast, elegant, and optimized for growth." />
+    <meta property="og:title" content="Realizzazione siti web su misura per studi e PMI | DigitiNexus" />
+    <meta property="og:description" content="Agenzia web italiana: siti su misura per studi professionali, PMI e startup. Design premium, consegna in 1–4 settimane." />
     <meta property="og:image" content="https://digitinexus.com/Logo%20DN%20Mongolfiera.webp" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://digitinexus.com" />
+    <meta property="og:locale" content="it_IT" />
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Stand Out With DigitiNexus | Web Agency" />
-    <meta name="twitter:description" content="Tailor-made websites, fast, elegant, and optimized for growth." />
+    <meta name="twitter:title" content="Realizzazione siti web su misura per studi e PMI | DigitiNexus" />
+    <meta name="twitter:description" content="Agenzia web italiana: siti su misura per studi professionali, PMI e startup. Design premium, consegna in 1–4 settimane." />
     <meta name="twitter:image" content="https://digitinexus.com/Logo%20DN%20Mongolfiera.webp" />
-    <style>
-      html {
-        -webkit-text-size-adjust: 100%;
-        -moz-text-size-adjust: 100%;
-        -ms-text-size-adjust: 100%;
-        text-size-adjust: 100%;
-      }
-      body {
-        font-family: 'Manrope', sans-serif;
-        background-color: #0a0a0a;
-        color: #e5e5e5;
-        cursor: default;
-      }
-      /* Scale down desktop view to match desired zoom level */
-      @media (min-width: 768px) {
-        html {
-          font-size: 80%;
-        }
-      }
-      /* Custom Scrollbar */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #0a0a0a;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #333;
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #555;
-      }
-      
-      .smooth-text {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      }
-    </style>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        background: '#0a0a0a',
-                        foreground: '#e5e5e5',
-                        muted: '#737373',
-                    },
-                    fontFamily: {
-                        sans: ['Manrope', 'sans-serif'],
-                    },
-                    transitionTimingFunction: {
-                        'expo': 'cubic-bezier(0.19, 1, 0.22, 1)',
-                    }
-                }
-            }
-        }
-    </script>
-  <script type="importmap">
+    <!-- Structured data: Organization, WebSite, ProfessionalService + Services, Reviews, FAQPage -->
+    <script type="application/ld+json">
 {
-  "imports": {
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
-  }
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://digitinexus.com/#organization",
+      "name": "DigitiNexus",
+      "url": "https://digitinexus.com",
+      "logo": { "@type": "ImageObject", "url": "https://digitinexus.com/logo.png" },
+      "image": "https://digitinexus.com/Logo%20DN%20Mongolfiera.webp",
+      "description": "Agenzia web italiana che progetta e realizza siti su misura per studi professionali, PMI e startup, con design premium e consegna in 1–4 settimane.",
+      "areaServed": { "@type": "Country", "name": "Italia" },
+      "knowsAbout": ["Realizzazione siti web", "Web design", "Siti e-commerce", "Landing page", "SEO", "Generative Engine Optimization", "Branding"],
+      "sameAs": ["https://maps.app.goo.gl/Q4Su2Uwb38CFKdYg7"],
+      "founder": [
+        { "@type": "Person", "name": "Nicola Palummo", "jobTitle": "Cofounder & Web Designer", "sameAs": ["https://www.linkedin.com/in/nicola-palummo"] },
+        { "@type": "Person", "name": "Filippo Gentili", "jobTitle": "Cofounder", "sameAs": ["https://www.linkedin.com/in/filippo-gentili-390615279/"] }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://digitinexus.com/#website",
+      "url": "https://digitinexus.com",
+      "name": "DigitiNexus",
+      "inLanguage": "it-IT",
+      "publisher": { "@id": "https://digitinexus.com/#organization" }
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://digitinexus.com/#business",
+      "name": "DigitiNexus",
+      "url": "https://digitinexus.com",
+      "image": "https://digitinexus.com/Logo%20DN%20Mongolfiera.webp",
+      "description": "Agenzia web e design: siti su misura per studi professionali, PMI e startup in Italia.",
+      "areaServed": { "@type": "Country", "name": "Italia" },
+      "serviceType": ["Realizzazione siti web", "Web design", "E-commerce", "Branding", "SEO"],
+      "sameAs": ["https://maps.app.goo.gl/Q4Su2Uwb38CFKdYg7"],
+      "hasMap": "https://maps.app.goo.gl/Q4Su2Uwb38CFKdYg7",
+      "parentOrganization": { "@id": "https://digitinexus.com/#organization" },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servizi DigitiNexus",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Realizzazione siti web su misura", "serviceType": "Web design e sviluppo" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Siti e-commerce" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Landing page" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Branding e identità visiva" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO e GEO (ottimizzazione per Google e AI)" } }
+        ]
+      }
+    },
+    {
+      "@type": "Review",
+      "itemReviewed": { "@id": "https://digitinexus.com/#organization" },
+      "author": { "@type": "Person", "name": "Mila Anderson", "jobTitle": "Direttore Relazioni Clienti, Voldz Law P.C." },
+      "reviewBody": "La nostra priorità era dare ai clienti un senso di fiducia e professionalità fin dal primo click. Il nuovo sito web è elegante e altamente funzionale. I potenziali clienti possono finalmente capire chi siamo e cosa offriamo in pochi secondi. Un passo avanti significativo."
+    },
+    {
+      "@type": "Review",
+      "itemReviewed": { "@id": "https://digitinexus.com/#organization" },
+      "author": { "@type": "Person", "name": "Sarah Whitmore", "jobTitle": "Direttore Generale, The Antler Room" },
+      "reviewBody": "Catturare l'anima di un ristorante non è un compito facile, eppure il nuovo sito web lo fa perfettamente. La fotografia spicca, la navigazione è fluida e tutto comunica la nostra identità culinaria. Le prenotazioni online sono aumentate e molti ospiti ci dicono che ci hanno scoperto grazie al sito web."
+    },
+    {
+      "@type": "Review",
+      "itemReviewed": { "@id": "https://digitinexus.com/#organization" },
+      "author": { "@type": "Person", "name": "Julien Caradec", "jobTitle": "Proprietario, Delizia Trattoria" },
+      "reviewBody": "Volevamo un sito web che fosse accogliente come il nostro ristorante. Il design è caldo, pulito e mette in mostra i nostri piatti in modo bellissimo. Gli ospiti spesso ci dicono che la prima impressione che hanno avuto dal sito web li ha convinti a visitarci di persona, e questo significa tutto per noi."
+    },
+    {
+      "@type": "Review",
+      "itemReviewed": { "@id": "https://digitinexus.com/#organization" },
+      "author": { "@type": "Person", "name": "Erin Matthews", "jobTitle": "Responsabile Operativo, Mark Harford Law" },
+      "reviewBody": "Il nuovo sito web ha completamente trasformato il modo in cui i clienti ci percepiscono. La struttura è chiara, moderna e trasmette una vera autorità. La nostra presenza online riflette finalmente la qualità del nostro studio."
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://digitinexus.com/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "Quali servizi offrite?", "acceptedAnswer": { "@type": "Answer", "text": "Progettiamo e sviluppiamo siti web completi, dalla strategia e branding al design e lancio. Che tu gestisca uno studio professionale, una PMI di servizi o una startup, adattiamo ogni progetto ai tuoi obiettivi. Hai già un design? Possiamo occuparci anche di sviluppo e ottimizzazione." } },
+        { "@type": "Question", "name": "Quanto tempo ci vuole?", "acceptedAnswer": { "@type": "Answer", "text": "La maggior parte dei progetti richiede tra 1 e 4 settimane, a seconda del numero di pagine, della prontezza dei contenuti e del livello di personalizzazione. I siti più piccoli (come studi professionali) sono di solito pronti in poche settimane, mentre build più creative o interattive possono richiedere più tempo." } },
+        { "@type": "Question", "name": "Vi occupate anche di branding?", "acceptedAnswer": { "@type": "Answer", "text": "Sì. Molti dei nostri clienti partono da zero, quindi offriamo design dell'identità di brand: logo, palette colori, tipografia e una mini guida di stile, per garantire un'immagine coerente e professionale in tutti i punti di contatto." } },
+        { "@type": "Question", "name": "Lavorate solo con certi settori?", "acceptedAnswer": { "@type": "Answer", "text": "Ci specializziamo in studi professionali (avvocati, commercialisti, architetti), PMI di servizi e startup, e collaboriamo anche con altre realtà basate sui servizi. Il nostro approccio si adatta al tuo tono, pubblico ed esigenze del settore." } },
+        { "@type": "Question", "name": "Cosa rende DigitiNexus diverso da altre agenzie?", "acceptedAnswer": { "@type": "Answer", "text": "A ogni progetto dedichiamo un team su misura di designer, sviluppatori e artisti motion o 3D, selezionato con cura per realizzare la tua visione. Combiniamo un design bellissimo con una strategia reale, così il tuo sito non solo avrà un bell'aspetto, ma convertirà anche i visitatori in clienti." } },
+        { "@type": "Question", "name": "Cosa succede dopo il lancio?", "acceptedAnswer": { "@type": "Answer", "text": "Non scompariremo una volta che il tuo sito web sarà online. Offriamo supporto continuo, miglioramenti del design e aggiornamenti per mantenere il tuo sito veloce, sicuro e rilevante man mano che la tua attività cresce." } }
+      ]
+    }
+  ]
 }
 </script>
+    <!-- Brand loader shown while the Resources page boots (replaced when React mounts) -->
+    <style>
+      .app-loader{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#0a0a0a;z-index:9999}
+      .app-loader .loader{width:40px;aspect-ratio:1;--c:linear-gradient(#f97316 0 0);--m:radial-gradient(farthest-side,#f97316 92%,#0000);background:var(--c),var(--m),var(--c),var(--m),var(--c),var(--m);background-size:8px 15px,8px 8px;background-repeat:no-repeat;animation:l14 1s infinite alternate}
+      @keyframes l14{0%,10%{background-position:0 0,0 100%,50% 0,50% 100%,100% 0,100% 100%}33%{background-position:0 100%,0 0,50% 0,50% 100%,100% 0,100% 100%}66%{background-position:0 100%,0 0,50% 100%,50% 0,100% 0,100% 100%}90%,100%{background-position:0 100%,0 0,50% 100%,50% 0,100% 100%,100% 0}}
+    </style>
 </head>
   <body>
     <div id="root"></div>
+    <script src="/loader.js"></script>
   <script type="module" src="/index.tsx"></script>
 </body>
 </html>

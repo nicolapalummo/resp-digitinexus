@@ -93,7 +93,7 @@ export const Hero: React.FC = () => {
         >
              <img 
                 src="/Logo DN Ombrelli 4.webp"
-                alt="DigitiNexus Ombrelli"
+                alt="DigitiNexus, agenzia web e design"
                 className="w-full h-full object-cover"
             />
         </motion.div>

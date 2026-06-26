@@ -12,6 +12,17 @@ dist
 dist-ssr
 *.local
 
+# Secrets (use .env.example as template; never commit real keys)
+.env
+.env.*
+!.env.example
+
+# Raw AI cover output (cached source PNGs — never committed)
+public/blog/covers/_raw/
+
+# Font source files (raw TTF, ~21MB). The optimized woff2 actually served is in public/fonts/.
+assets/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

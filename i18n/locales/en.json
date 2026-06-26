@@ -3,12 +3,14 @@
     "work": "Work",
     "process": "Process",
     "reviews": "Reviews",
+    "about": "About us",
     "services": "Services",
+    "blog": "Blog",
     "bookCall": "Book a Call",
     "resources": "Resources"
   },
   "hero": {
-    "badge": "Over 43 Successful Projects",
+    "badge": "Over 25 Successful Projects",
     "title": "Stand Out with",
     "subtitle": "Build trust, stand out, and grow your business with a beautifully functional website and brand made for your industry.",
     "bookCall": "Book a Call",
@@ -45,6 +47,8 @@
     "tag": "Our Process",
     "title": "How we work together",
     "subtitle": "Seamless kick-off, seamless collaboration",
+    "us": "Us",
+    "you": "You",
     "step1": {
       "title": "Book a quick call",
       "description": "We start with a quick call to understand your goals, audience, and priorities. No commitments + you'll know what to do next.",
@@ -53,7 +57,7 @@
     "step2": {
       "title": "Design & Development",
       "description": "We explore ideas, create moodboards, and align on visual identity and tone. We build your website with constant updates.",
-      "duration": "2-6 weeks"
+      "duration": "1-4 weeks"
     },
     "step3": {
       "title": "Launch, build trust, convert more",
@@ -91,6 +95,16 @@
       "author": "Erin Matthews",
       "role": "Operations Manager – Mark Harford Law"
     }
+  },
+  "about": {
+    "tag": "About us",
+    "title": "The DigitiNexus Founders",
+    "text": [
+      "We are a young web agency born from the desire to create websites that truly stand out.",
+      "Tired of seeing identical, forgettable projects, we brought together branding, design and digital strategy to craft online experiences that combine beauty, function and performance.",
+      "Every detail, from proportions and color to typography and navigation, is designed to communicate clearly and leave a lasting impression."
+    ],
+    "imageAlt": "Filippo Gentili and Nicola Palummo, founders of DigitiNexus"
   },
   "whyMe": {
     "tag": "Why us",
@@ -158,13 +172,13 @@
     "q1": {
       "question": "What services do you offer?",
       "answer1": "We design and develop complete websites, from strategy and branding to design and launch.",
-      "answer2": "Whether you need a site for your restaurant, your studio, or your creative brand, we tailor every project to your goals.",
+      "answer2": "Whether you run a professional firm, a service-based small business, or a startup, we tailor every project to your goals.",
       "answer3": "Already have a design? We can handle development and optimization too."
     },
     "q2": {
       "question": "How long does it take?",
-      "answer1": "Most projects take between 2 and 6 weeks, depending on the number of pages, content readiness, and level of customization.",
-      "answer2": "Smaller sites (like professional studios) are usually ready in a few weeks, while more creative or interactive builds may take longer."
+      "answer1": "Most projects take between 1 and 4 weeks, depending on the number of pages, content readiness, and level of customization.",
+      "answer2": "Smaller sites (like those for professional firms) are usually ready in a few weeks, while more complex or interactive builds may take longer."
     },
     "q3": {
       "question": "Do you also handle branding?",
@@ -172,7 +186,7 @@
     },
     "q4": {
       "question": "Do you work only with certain industries?",
-      "answer1": "We specialize in restaurants, professional studios, and creative businesses, but we also collaborate with service-based companies and startups.",
+      "answer1": "We specialize in professional firms (attorneys, CPAs, architects), service-based small businesses, and startups, and we also work with other service-based companies.",
       "answer2": "Our approach adapts to your tone, audience, and industry needs."
     },
     "q5": {
@@ -185,6 +199,12 @@
       "answer1": "We don't disappear once your website is live.",
       "answer2": "We offer continuous support, design improvements, and updates to keep your site fast, secure, and relevant as your business grows."
     }
+  },
+  "guides": {
+    "tag": "Resources",
+    "title": "Practical guides for your online presence",
+    "subtitle": "Real costs and timelines, design quality, SEO and GEO, AI for business. Pick the area that fits you and go deeper on our blog.",
+    "cta": "Go to the blog"
   },
   "letsTalk": {
     "title": "Let's talk about your",
@@ -208,19 +228,22 @@
     "step1": {
       "title": "Google Business Profile Optimization",
       "description": "The complete guide to optimizing your Google Business profile and increasing your local visibility.",
-      "status": "DOWNLOAD NOW"
+      "status": "DOWNLOAD NOW",
+      "category": "Local"
     },
     "step2": {
       "title": "10 Marketing Pillars for Businesses and Professional Firms",
       "description": "Foundations for Businesses and Professionals. Discover the 10 essential pillars for building a solid marketing strategy.",
       "statusLocked": "UNLOCK AFTER STEP 01",
-      "status": "DOWNLOAD NOW"
+      "status": "DOWNLOAD NOW",
+      "category": "Strategy"
     },
     "step3": {
       "title": "Offline Marketing Strategies for SMBs (with Real Examples)",
       "description": "Practical strategies with real examples to integrate offline marketing into your business strategy.",
       "statusLocked": "UNLOCK AFTER STEP 02",
-      "status": "DOWNLOAD NOW"
+      "status": "DOWNLOAD NOW",
+      "category": "Integration"
     },
     "finalTitle": "Final Analysis",
     "finalDescription": "You have the materials. Now you need the action plan.",

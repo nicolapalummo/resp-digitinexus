@@ -3,12 +3,16 @@ import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useSpring, useTransform, AnimatePresence } from 'framer-motion';
 import { X, ChevronDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { langFromPath, urlForLang } from '../lib/i18nRouting';
+import { blogAltLocalePath } from '../lib/blogRouting';
 
 const navItems = [
   { key: 'work', href: '/#work' },
   { key: 'process', href: '/#how-it-works' },
-  { key: 'reviews', href: '/#reviews' },
+  { key: 'about', href: '/#about' },
   { key: 'services', href: '/#services' },
+  { key: 'blog', href: '/blog' },
   { key: 'resources', href: '/risorse-gratuite' },
 ];
 
@@ -22,14 +26,29 @@ const themeMap: Record<string, 'dark' | 'light'> = {
   'work': 'dark',
   'how-it-works': 'light',
   'reviews': 'light',
+  'about': 'light',
   'why-me': 'light',
   'services': 'dark',
   'faq': 'dark',
+  'guides': 'dark',
   'lets-talk': 'light'
 };
 
 export const Header: React.FC = () => {
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const lang = langFromPath(location.pathname);
+  const homeHref = lang === 'en' ? '/en' : '/';
+  // Make nav links language-aware. EN now has its own blog, so map /blog → /en/blog.
+  const navHref = (href: string): string => {
+    if (lang !== 'en') return href;
+    if (href === '/') return '/en';
+    if (href.startsWith('/#')) return '/en' + href.slice(1);
+    if (href === '/blog') return '/en/blog';
+    if (href === '/risorse-gratuite') return '/en/risorse-gratuite';
+    return href;
+  };
   const { scrollYProgress } = useScroll();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [headerTheme, setHeaderTheme] = useState<'dark' | 'light'>('dark');
@@ -43,9 +62,34 @@ export const Header: React.FC = () => {
   const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
 
   const changeLanguage = (langCode: string) => {
-    i18n.changeLanguage(langCode);
+    // Navigate to the same page in the chosen language; LocaleManager syncs i18n + meta.
+    // On blog paths, map to the translated counterpart article/category via the registry.
+    const target = langCode as 'it' | 'en';
+    const blogPath = blogAltLocalePath(location.pathname, target);
+    navigate(blogPath ?? urlForLang(location.pathname, target));
+    setIsMenuOpen(false);
     setIsLangMenuOpen(false);
-    localStorage.setItem('i18nextLng', langCode);
+  };
+
+  // Client-side nav (no full reload). For "/#section" links, scroll if already on
+  // that home, otherwise navigate and let ScrollToHash (in App) handle the scroll.
+  const handleNavClick = (e: React.MouseEvent, rawHref: string) => {
+    e.preventDefault();
+    setIsMenuOpen(false);
+    setIsLangMenuOpen(false);
+    const href = navHref(rawHref);
+    const hashIdx = href.indexOf('#');
+    if (hashIdx >= 0) {
+      const path = href.slice(0, hashIdx) || '/';
+      const id = href.slice(hashIdx + 1);
+      if (location.pathname === path) {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        navigate(href);
+      }
+    } else {
+      navigate(href);
+    }
   };
   
   // Smooth out the progress value
@@ -79,36 +123,51 @@ export const Header: React.FC = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [isLangMenuOpen]);
 
-  // Intersection Observer for Theme Switching
+  // Header theme switching (robust): re-runs on every route change, and retries
+  // until the landing sections are actually mounted, so the theme always tracks
+  // the section under the header (fixes the header staying dark over light sections).
   useEffect(() => {
-    const observerOptions = {
-        root: null,
-        rootMargin: '-10% 0px -80% 0px', // Trigger when section is near top
-        threshold: 0
-    };
+    const onHome = location.pathname === '/' || location.pathname === '/en';
+    if (!onHome) {
+      // Blog and resources pages are dark-themed → white text.
+      setHeaderTheme('dark');
+      return;
+    }
+
+    let observer: IntersectionObserver | null = null;
+    let raf = 0;
 
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const id = entry.target.id;
-                const theme = themeMap[id];
-                if (theme) {
-                    setHeaderTheme(theme);
-                }
-            }
-        });
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const theme = themeMap[entry.target.id];
+          if (theme) setHeaderTheme(theme);
+        }
+      });
     };
 
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-    
-    // Observe all sections in themeMap
-    Object.keys(themeMap).forEach(id => {
-        const el = document.getElementById(id);
-        if (el) observer.observe(el);
-    });
+    const setup = (tries = 0) => {
+      const els = Object.keys(themeMap)
+        .map((id) => document.getElementById(id))
+        .filter((el): el is HTMLElement => Boolean(el));
+      if (els.length === 0 && tries < 30) {
+        raf = requestAnimationFrame(() => setup(tries + 1));
+        return;
+      }
+      observer = new IntersectionObserver(observerCallback, {
+        root: null,
+        rootMargin: '-10% 0px -80% 0px',
+        threshold: 0,
+      });
+      els.forEach((el) => observer!.observe(el));
+    };
+    setup();
 
-    return () => observer.disconnect();
-  }, []);
+    return () => {
+      if (observer) observer.disconnect();
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, [location.pathname]);
 
 
   // Dynamic Styles based on Theme
@@ -133,7 +192,7 @@ export const Header: React.FC = () => {
          initial={{ y: -100, opacity: 0 }}
          animate={{ y: 0, opacity: 1 }}
          transition={{ duration: 0.8, ease: [0.19, 1, 0.22, 1] }}
-         className={`md:hidden fixed top-6 left-4 right-4 z-50 flex items-center justify-between rounded-3xl p-1.5 pl-6 shadow-2xl border transition-colors duration-500 ${mobileBg}`}
+         className={`lg:hidden fixed top-6 left-4 right-4 z-50 flex items-center justify-between rounded-3xl p-1.5 pl-6 shadow-2xl border transition-colors duration-500 ${mobileBg}`}
       >
           <div className="flex items-center gap-4">
               <span className={`text-xl font-semibold tracking-tight transition-colors duration-500 ${textColor}`}>
@@ -169,7 +228,7 @@ export const Header: React.FC = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[60] flex flex-col justify-center items-center md:hidden"
+            className="fixed inset-0 z-[60] flex flex-col justify-center items-center lg:hidden"
           >
             {/* Backdrop Blur Background - Minimal Tint to let content show through */}
             <div 
@@ -190,11 +249,11 @@ export const Header: React.FC = () => {
                 {navItems.map((item, idx) => (
                     <motion.a
                         key={item.key}
-                        href={item.href}
+                        href={navHref(item.href)}
                         initial={{ y: 20, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: idx * 0.1 }}
-                        onClick={() => setIsMenuOpen(false)}
+                        onClick={(e) => handleNavClick(e, item.href)}
                         className={`text-4xl font-light tracking-tight hover:opacity-60 transition-all duration-300 ${overlayTextColor}`}
                     >
                         {t(`nav.${item.key}`)}
@@ -268,21 +327,22 @@ export const Header: React.FC = () => {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: [0.19, 1, 0.22, 1] }}
-        className={`hidden md:flex fixed top-6 left-[12.5%] right-[12.5%] z-50 px-8 py-2.5 justify-between items-center rounded-3xl shadow-2xl border transition-colors duration-500 ${mobileBg}`}
+        className={`hidden lg:flex fixed top-6 left-6 right-6 z-50 px-6 xl:px-8 py-2.5 justify-between items-center rounded-3xl shadow-2xl border transition-colors duration-500 ${mobileBg}`}
         style={{ maxWidth: '1200px', margin: '0 auto' }}
       >
         <div>
-          <a href="/" className={`text-2xl font-medium tracking-tight hover:opacity-70 transition-opacity ${textColor}`}>
+          <a href={homeHref} onClick={(e) => handleNavClick(e, '/')} className={`text-2xl font-medium tracking-tight hover:opacity-70 transition-opacity ${textColor}`}>
             DigitiNexus
           </a>
         </div>
 
-        <nav className="mx-8">
-          <ul className={`flex space-x-6 text-base font-medium transition-colors duration-500 ${headerTheme === 'dark' ? 'text-white/90' : 'text-black/100'}`}>
+        <nav className="mx-4 xl:mx-8">
+          <ul className={`flex space-x-4 xl:space-x-6 text-base font-medium transition-colors duration-500 ${headerTheme === 'dark' ? 'text-white/90' : 'text-black/100'}`}>
             {navItems.map((item) => (
               <li key={item.key} className="relative group">
-                <a 
-                  href={item.href} 
+                <a
+                  href={navHref(item.href)}
+                  onClick={(e) => handleNavClick(e, item.href)}
                   className={`transition-colors ${headerTheme === 'dark' ? 'hover:text-white' : 'hover:text-black'}`}
                 >
                   {t(`nav.${item.key}`)}
@@ -332,8 +392,8 @@ export const Header: React.FC = () => {
 
         <div className="flex items-center gap-4">
 
-          {/* Minimal Scroll Ruler Indicator */}
-          <div className="flex items-center gap-2">
+          {/* Minimal Scroll Ruler Indicator — solo da xl per non comprimere la navbar su tablet */}
+          <div className="hidden xl:flex items-center gap-2">
               <span className={`text-[10px] font-mono transition-colors duration-500 ${headerTheme === 'dark' ? 'text-white/40' : 'text-black/40'}`}>00</span>
               <div className={`relative w-[80px] h-[2px] rounded-full overflow-visible flex items-center transition-colors duration-500 ${headerTheme === 'dark' ? 'bg-white/10' : 'bg-black/10'}`}>
                   {/* Track ticks */}

@@ -1,73 +1,73 @@
-# DigitiNexus - Responsive Website
+# DigitiNexus — Sito web
 
-Responsive version of the DigitiNexus website built with React, TypeScript, and Vite.
+Sito di DigitiNexus (agenzia web IT) costruito con **React 19 + TypeScript + Vite 6**.
+SPA con **blog bilingue (IT/EN) prerenderizzato**, pubblicazione programmata per data e deploy su Vercel.
 
-## 🚀 Features
+## 🚀 Funzionalità
 
-- Fully responsive design
-- Modern UI with smooth animations (Framer Motion, GSAP)
-- SEO optimized with comprehensive metadata
-- Progressive Web App (PWA) support
-- Custom cursor interactions
-- 3D experience popup for desktop users
+- Design responsive, animazioni (Framer Motion, GSAP)
+- **Blog bilingue** IT (`/blog`) ed EN (`/en/blog`) con HTML **prerenderizzato** (indicizzabile), sitemap e RSS generati
+- **Pubblicazione programmata**: ogni articolo ha una `publishDate`; quelli con data futura restano nascosti finché non arriva il giorno (gating build-time)
+- SEO/GEO: title/meta/OG per pagina, JSON-LD (Article, FAQPage, Person, Organization, Breadcrumb), hreflang reciproci, canonical
+- Font **self-hosted** (Manrope, nessun Google Fonts → niente IP a terzi)
+- Security headers + CSP in `vercel.json`
 
-## 📦 Installation
+## 📦 Comandi
 
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
+```bash
+npm install        # dipendenze
+npm run dev        # dev server
+npm run build      # build di produzione (vite + prerender blog + prerender home)
+npm run preview    # anteprima della build
+```
 
-2. Run development server:
-   ```bash
-   npm run dev
-   ```
+> Per vedere in locale anche gli articoli con data futura: `BLOG_PREVIEW=1 npm run build` (oppure sono tutti visibili in `npm run dev`).
 
-3. Build for production:
-   ```bash
-   npm run build
-   ```
+## 🛠️ Stack
 
-4. Preview production build:
-   ```bash
-   npm run preview
-   ```
+- **React 19** + **TypeScript** + **Vite 6**
+- **Tailwind CSS** (compilato in build con PostCSS/purge — non da CDN)
+- **react-router-dom v7** (routing client), **i18next** (IT/EN)
+- **Framer Motion** / **GSAP** (animazioni), **Lucide** (icone)
+- **sharp** (generazione copertine blog, build-time)
+- Deploy: **Vercel** (`vercel.json`)
 
-## 🛠️ Tech Stack
-
-- **React 19** - UI library
-- **TypeScript** - Type safety
-- **Vite** - Build tool and dev server
-- **Framer Motion** - Animations
-- **GSAP** - Advanced animations
-- **Tailwind CSS** - Styling (via CDN)
-- **Lucide React** - Icons
-
-## 📁 Project Structure
+## 📁 Struttura
 
 ```
 resp.digitinexus.com/
-├── components/          # React components
-│   ├── Header.tsx      # Navigation header
-│   ├── Hero.tsx        # Hero section
-│   ├── ThreeDPopup.tsx # 3D experience popup
-│   └── ...
-├── App.tsx             # Main app component
-├── index.html          # HTML entry point
-├── index.tsx           # React entry point
-└── vite.config.ts      # Vite configuration
+├── components/              # Componenti React (Hero, Header, ChiSiamo, blog/, ...)
+├── content/blog/            # Contenuti blog come moduli .ts
+│   ├── articles/            # Articoli IT + en/ per gli EN; index.ts = registro
+│   ├── authors.ts, covers.ts, types.ts
+├── lib/blog.ts              # Logica blog (gating per data, alternates, schema)
+├── i18n/locales/            # it.json, en.json
+├── scripts/                 # prerender-blog, prerender-home, generate-covers
+├── public/                  # asset statici (font/, blog/covers/, PDF, loader.js)
+├── .github/workflows/       # blog-schedule.yml (cron → Vercel Deploy Hook)
+├── docs/                    # documentazione di progetto (brief, voice, brand, calendario, audit)
+├── App.tsx, index.html, index.tsx, vite.config.ts, vercel.json
 ```
 
-## 🌐 Deployment
+## 🗓️ Pubblicazione programmata
 
-This project is configured to be deployed on:
-- **Vercel** (recommended)
-- **Netlify**
-- Any static hosting service
+Una **GitHub Action** (`.github/workflows/blog-schedule.yml`) gira ogni mattina e fa ribuildare il sito su Vercel tramite **Deploy Hook**. Al rebuild, gli articoli la cui `publishDate` è arrivata diventano visibili. Richiede il secret di repository `VERCEL_DEPLOY_HOOK_URL`.
 
-The site will be available at `digitinexus.com` (main domain).
+## 🔑 Variabili d'ambiente
 
-## 📝 Notes
+Copia `.env.example` in `.env` (mai committato). Serve solo per la generazione delle copertine:
 
-- The 3D interactive version is available at `immersive.digitinexus.com`
-- Mobile users visiting the immersive version are automatically redirected to the main site
+```
+OPENAI_API_KEY=sk-...
+```
+
+## 📚 Documentazione
+
+La documentazione editoriale e di brand è in **`docs/`**: calendario editoriale, brief SEO/GEO, voice/tone (IT+EN), brand, autori, prompt copertine, audit SEO/GEO.
+
+## 🌐 Deploy
+
+Configurato per **Vercel** (`buildCommand: npm run build`, output `dist/`). Dominio: `digitinexus.com`.
+```bash
+npm i -g vercel   # opzionale, per deploy/preview da CLI
+```

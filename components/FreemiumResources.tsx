@@ -126,11 +126,10 @@ export const FreemiumResources: React.FC = () => {
     key: keyof ProgressState;
     fileIndex: number;
     number: string;
-    category: string;
   }> = [
-    { key: 'step1', fileIndex: 0, number: '01', category: 'Local' },
-    { key: 'step2', fileIndex: 1, number: '02', category: 'Strategy' },
-    { key: 'step3', fileIndex: 2, number: '03', category: 'Integration' },
+    { key: 'step1', fileIndex: 0, number: '01' },
+    { key: 'step2', fileIndex: 1, number: '02' },
+    { key: 'step3', fileIndex: 2, number: '03' },
   ];
 
   // ── Render ───────────────────────────────────────────────────────
@@ -205,7 +204,7 @@ export const FreemiumResources: React.FC = () => {
                       progress[step.key] ? 'text-orange-400/70' : 'text-white/20'
                     }`}
                   >
-                    {step.category}
+                    {t(`freemium.${step.key}.category`)}
                   </span>
                 </div>
               ))}
@@ -344,7 +343,7 @@ export const FreemiumResources: React.FC = () => {
                                 : 'border-white/[0.06] text-white/20'
                           }`}
                         >
-                          {step.category}
+                          {t(`freemium.${step.key}.category`)}
                         </span>
                       </div>
 

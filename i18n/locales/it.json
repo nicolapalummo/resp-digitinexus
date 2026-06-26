@@ -3,12 +3,14 @@
     "work": "Lavori",
     "process": "Processo",
     "reviews": "Recensioni",
+    "about": "Chi siamo",
     "services": "Servizi",
+    "blog": "Blog",
     "bookCall": "Parliamone",
     "resources": "Risorse"
   },
   "hero": {
-    "badge": "Oltre 43 Progetti di Successo",
+    "badge": "Oltre 25 Progetti di Successo",
     "title": "Distinguiti con",
     "subtitle": "Costruisci fiducia, distinguiti e fai crescere la tua attività con un sito web e un brand belli e funzionali, creati per il tuo settore.",
     "bookCall": "Parliamone",
@@ -16,7 +18,7 @@
   },
   "problem": {
     "tag": "Problemi",
-    "title": "Hai trazione ma il tuo sito web sembra ancora un MVP",
+    "title": "Hai già clienti, ma il tuo sito web sembra ancora un MVP",
     "description": "C'è un divario tra come appare il tuo prodotto e come lo presenti",
     "issue1": {
       "title": "Le persone non capiscono cosa fai",
@@ -24,27 +26,29 @@
     },
     "issue2": {
       "title": "Sembri amatoriale e come se stessi ancora testando",
-      "description": "Le prime impressioni contano. Un design fai-da-te o non rifinito fa rimbalzare gli utenti il 127% più velocemente, anche se il tuo prodotto è solido."
+      "description": "Le prime impressioni contano. Un design fai-da-te o non rifinito allontana gli utenti del 127% più velocemente, anche se il tuo prodotto è solido."
     },
     "issue3": {
       "title": "Il tuo sito non è costruito per convertire",
-      "description": "Hai un buon prodotto e una discreta trazione. Ora è il momento che la struttura della pagina e i messaggi lavorino tanto quanto te."
+      "description": "Hai un buon prodotto e un discreto riscontro. Ora è il momento che la struttura della pagina e i messaggi lavorino tanto quanto te."
     }
   },
   "intro": {
     "tag": "Introduzione",
     "text1": "Se questa è la tua situazione, possiamo aiutarti.",
-    "text2": "DigitiNexus è un'agenzia web guidata dal design che unisce creatività, strategia e tecnologia per creare siti web che si distinguono davvero.",
+    "text2": "DigitiNexus è un'agenzia web orientata al design che unisce creatività, strategia e tecnologia per creare siti web che si distinguono davvero.",
     "text3": "Ogni progetto che costruiamo non solo è bello da vedere — funziona anche alla perfezione."
   },
   "work": {
     "tag": "Lavori",
-    "title": "I nostri lavori più recenti"
+    "title": "Storie di successo recenti"
   },
   "howItWorks": {
     "tag": "Il Nostro Processo",
     "title": "Come lavoriamo insieme",
-    "subtitle": "Avvio senza intoppi, collaborazione senza intoppi",
+    "subtitle": "Avvio semplice, collaborazione senza intoppi",
+    "us": "Noi",
+    "you": "Tu",
     "step1": {
       "title": "Prenota una chiamata veloce",
       "description": "Iniziamo con una chiamata veloce per capire i tuoi obiettivi, il target e le priorità. Nessun impegno + saprai cosa fare dopo.",
@@ -53,10 +57,10 @@
     "step2": {
       "title": "Design e Sviluppo",
       "description": "Esploriamo idee, creiamo moodboard e allineiamo identità visiva e tono. Costruiamo il tuo sito web con aggiornamenti costanti.",
-      "duration": "2-6 settimane"
+      "duration": "1-4 settimane"
     },
     "step3": {
-      "title": "Lancio, costruisci fiducia, converti di più",
+      "title": "Lancia, costruisci fiducia e converti di più",
       "description": "Andiamo online e monitoriamo le prestazioni del tuo sito, offrendo supporto post-lancio e ottimizzazione.",
       "duration": "Supporto continuo disponibile"
     }
@@ -92,6 +96,16 @@
       "role": "Responsabile Operativo – Mark Harford Law"
     }
   },
+  "about": {
+    "tag": "Chi siamo",
+    "title": "I Founder DigitiNexus",
+    "text": [
+      "Siamo una giovane web agency nata dal desiderio di creare siti web che si distinguano davvero.",
+      "Stanchi di vedere progetti identici e facilmente dimenticabili, abbiamo unito competenze in branding, design e strategia digitale per dare vita a esperienze online che uniscono bellezza, funzionalità e performance.",
+      "Ogni dettaglio, dalle proporzioni al colore, dalla tipografia alla navigazione, è pensato per comunicare in modo chiaro e lasciare un'impressione duratura."
+    ],
+    "imageAlt": "Filippo Gentili e Nicola Palummo, founder di DigitiNexus"
+  },
   "whyMe": {
     "tag": "Perché noi",
     "title": "Perché lavorare con noi",
@@ -112,7 +126,7 @@
       "description": "Che tu gestisca un ristorante, uno studio professionale o uno studio creativo, adattiamo il nostro processo al tuo tono, pubblico e esigenze aziendali."
     },
     "feature5": {
-      "title": "Mobile-First per Design",
+      "title": "Mobile-First per scelta",
       "description": "Progettiamo dal mobile in su, ottimizzando layout, velocità e interazioni per i dispositivi che le persone usano di più. Questo garantisce un'esperienza fluida, veloce e ad alta conversione su tutti gli schermi."
     },
     "feature6": {
@@ -126,8 +140,8 @@
     "subtitle": "Miglioriamo la tua presenza online per darti più credibilità. Così potrai attirare clienti migliori, giustificare i tuoi prezzi e trovare collaboratori di valore",
     "service1": {
       "title": "Progetto personalizzato una tantum",
-      "price": "A partire da $2k",
-      "description": "Lavoriamo con te da dove ne hai bisogno. Perfetto per nuovi lanci di siti web o rebranding.",
+      "price": "A partire da 2k €",
+      "description": "Ti affianchiamo dal punto in cui ti trovi. Perfetto per nuovi lanci di siti web o rebranding.",
       "features": [
         "Design UX & UI personalizzato",
         "Sviluppo completo del sito web",
@@ -139,8 +153,8 @@
     },
     "service2": {
       "title": "Branding e Design dell'Identità",
-      "price": "A partire da $1k",
-      "description": "Il tuo brand, elevato. Ideale per aziende che necessitano di un'identità coerente e premium.",
+      "price": "A partire da 1k €",
+      "description": "Il tuo brand, valorizzato. Ideale per aziende che necessitano di un'identità coerente e premium.",
       "features": [
         "Design logo + varianti",
         "Palette colori e sistema tipografico",
@@ -158,13 +172,13 @@
     "q1": {
       "question": "Quali servizi offrite?",
       "answer1": "Progettiamo e sviluppiamo siti web completi, dalla strategia e branding al design e lancio.",
-      "answer2": "Che tu abbia bisogno di un sito per il tuo ristorante, il tuo studio o il tuo brand creativo, adattiamo ogni progetto ai tuoi obiettivi.",
+      "answer2": "Che tu gestisca uno studio professionale, una PMI di servizi o una startup, adattiamo ogni progetto ai tuoi obiettivi.",
       "answer3": "Hai già un design? Possiamo occuparci anche di sviluppo e ottimizzazione."
     },
     "q2": {
       "question": "Quanto tempo ci vuole?",
-      "answer1": "La maggior parte dei progetti richiede tra 2 e 6 settimane, a seconda del numero di pagine, della prontezza dei contenuti e del livello di personalizzazione.",
-      "answer2": "I siti più piccoli (come studi professionali) sono di solito pronti in poche settimane, mentre build più creative o interattive possono richiedere più tempo."
+      "answer1": "La maggior parte dei progetti richiede tra 1 e 4 settimane, a seconda del numero di pagine, della prontezza dei contenuti e del livello di personalizzazione.",
+      "answer2": "I siti più piccoli (come quelli per studi professionali) sono di solito pronti in poche settimane, mentre i progetti più articolati o interattivi possono richiedere più tempo."
     },
     "q3": {
       "question": "Vi occupate anche di branding?",
@@ -172,19 +186,25 @@
     },
     "q4": {
       "question": "Lavorate solo con certi settori?",
-      "answer1": "Ci specializziamo in ristoranti, studi professionali e attività creative, ma collaboriamo anche con aziende basate sui servizi e startup.",
+      "answer1": "Ci specializziamo in studi professionali (avvocati, commercialisti, architetti), PMI di servizi e startup, e collaboriamo anche con altre realtà basate sui servizi.",
       "answer2": "Il nostro approccio si adatta al tuo tono, pubblico ed esigenze del settore."
     },
     "q5": {
       "question": "Cosa rende DigitiNexus diverso da altre agenzie?",
-      "answer1": "Ogni progetto ottiene un team personalizzato di designer, sviluppatori e artisti motion o 3D, selezionati a mano per eseguire la tua visione.",
-      "answer2": "Combiniamo un design bellissimo con una strategia reale, così il tuo sito non solo avrà un bell'aspetto ma convertirà anche i visitatori in clienti."
+      "answer1": "A ogni progetto dedichiamo un team su misura di designer, sviluppatori e artisti motion o 3D, selezionato con cura per realizzare la tua visione.",
+      "answer2": "Combiniamo un design bellissimo con una strategia reale, così il tuo sito non solo avrà un bell'aspetto, ma convertirà anche i visitatori in clienti."
     },
     "q6": {
       "question": "Cosa succede dopo il lancio?",
-      "answer1": "Non scomparemo una volta che il tuo sito web è online.",
+      "answer1": "Non scompariremo una volta che il tuo sito web sarà online.",
       "answer2": "Offriamo supporto continuo, miglioramenti del design e aggiornamenti per mantenere il tuo sito veloce, sicuro e rilevante man mano che la tua attività cresce."
     }
+  },
+  "guides": {
+    "tag": "Approfondimenti",
+    "title": "Guide pratiche per la tua presenza online",
+    "subtitle": "Costi e tempi reali, qualità del design, SEO e GEO, AI per il business. Scegli l'area che ti interessa e approfondisci sul nostro blog.",
+    "cta": "Vai al blog"
   },
   "letsTalk": {
     "title": "Parliamo del tuo",
@@ -208,19 +228,22 @@
     "step1": {
       "title": "Ottimizzazione Google Business Profile",
       "description": "La guida completa per ottimizzare il tuo profilo Google Business e aumentare la visibilità locale della tua attività.",
-      "status": "SCARICA ORA"
+      "status": "SCARICA ORA",
+      "category": "Locale"
     },
     "step2": {
       "title": "10 Pilastri del Marketing per Imprese e Studi Professionali",
       "description": "Fondamenta per Imprese e Professionisti. Scopri i 10 pilastri essenziali per costruire una strategia di marketing solida.",
       "statusLocked": "SBLOCCA DOPO STEP 01",
-      "status": "SCARICA ORA"
+      "status": "SCARICA ORA",
+      "category": "Strategia"
     },
     "step3": {
       "title": "Strategie di marketing offline per PMI (con esempi reali)",
       "description": "Strategie pratiche con esempi reali per integrare il marketing offline nella tua strategia aziendale.",
       "statusLocked": "SBLOCCA DOPO STEP 02",
-      "status": "SCARICA ORA"
+      "status": "SCARICA ORA",
+      "category": "Integrazione"
     },
     "finalTitle": "Analisi Finale",
     "finalDescription": "Hai i materiali. Ora serve il piano d'azione.",

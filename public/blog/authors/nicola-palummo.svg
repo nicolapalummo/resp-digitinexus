@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" role="img" aria-label="Nicola Palummo">
+  <defs>
+    <linearGradient id="a" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f97316"/>
+      <stop offset="1" stop-color="#1a1206"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="160" rx="80" fill="url(#a)"/>
+  <text x="80" y="100" font-family="Manrope, Arial, sans-serif" font-size="56" font-weight="700" fill="#ffffff" text-anchor="middle">NP</text>
+</svg>
