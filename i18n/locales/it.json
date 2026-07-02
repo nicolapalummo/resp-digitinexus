@@ -9,6 +9,18 @@
     "bookCall": "Parliamone",
     "resources": "Risorse"
   },
+  "confirmation": {
+    "badge": "Prenotazione confermata",
+    "title": "Grazie di aver prenotato!",
+    "titleNamed": "Grazie {{name}}, è tutto confermato!",
+    "appointmentLabel": "Il tuo appuntamento",
+    "subtitle": "Abbiamo ricevuto la tua richiesta e ti abbiamo inviato una mail di conferma con tutti i dettagli dell'appuntamento.",
+    "emailNote": "Non trovi l'email? Controlla la cartella spam o promozioni.",
+    "nextTitle": "Cosa succede ora",
+    "step1": "Riceverai l'invito con data, ora e link alla videochiamata.",
+    "step3": "Ci sentiamo all'orario fissato. A presto!",
+    "cta": "Torna alla home"
+  },
   "hero": {
     "badge": "Oltre 25 Progetti di Successo",
     "title": "Distinguiti con",

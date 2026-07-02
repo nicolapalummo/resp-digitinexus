@@ -9,6 +9,18 @@
     "bookCall": "Book a Call",
     "resources": "Resources"
   },
+  "confirmation": {
+    "badge": "Booking confirmed",
+    "title": "Thank you for booking!",
+    "titleNamed": "Thank you {{name}}, all set!",
+    "appointmentLabel": "Your appointment",
+    "subtitle": "We've received your request and sent you a confirmation email with all the appointment details.",
+    "emailNote": "Can't find the email? Check your spam or promotions folder.",
+    "nextTitle": "What happens next",
+    "step1": "You'll receive the invite with date, time and the video call link.",
+    "step3": "We meet at the scheduled time. See you soon!",
+    "cta": "Back home"
+  },
   "hero": {
     "badge": "Over 25 Successful Projects",
     "title": "Stand Out with",
