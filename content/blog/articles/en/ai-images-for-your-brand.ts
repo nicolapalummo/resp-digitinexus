@@ -148,7 +148,7 @@ const article: Article = {
       type: 'cta',
       text: 'Want a library of on-brand visuals, produced with AI but controlled where it counts? Let\'s build the right workflow for you together.',
       label: 'Let\'s talk',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

@@ -163,7 +163,7 @@ const article: Article = {
       type: 'cta',
       text: 'Want a quote that names every line item, recurring costs and ownership included, with no surprises later? Let us talk it through with real numbers.',
       label: 'Let us talk',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

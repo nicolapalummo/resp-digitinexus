@@ -169,7 +169,7 @@ const article: Article = {
       type: 'cta',
       text: 'Have a company website that brings no qualified requests? We build custom B2B sites designed to generate real leads, from the structure to the calls to action.',
       label: 'Let\'s talk',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

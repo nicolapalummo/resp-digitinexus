@@ -134,7 +134,7 @@ const article: Article = {
       type: 'cta',
       text: 'Vuoi capire quali attività ripetitive puoi automatizzare con l\'AI nei tuoi strumenti, partendo da un solo processo concreto? Ne parliamo e mappiamo insieme il primo flusso.',
       label: 'Parliamone',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

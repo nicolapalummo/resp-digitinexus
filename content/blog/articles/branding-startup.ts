@@ -153,7 +153,7 @@ const article: Article = {
       type: 'cta',
       text: 'La tua startup ha bisogno di un\'identità coerente e credibile, pronta in fretta? Costruiamo brand e siti su misura, curati sull\'essenziale e pensati per crescere con te.',
       label: 'Parliamone',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

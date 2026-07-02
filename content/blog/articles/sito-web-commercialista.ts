@@ -141,7 +141,7 @@ const article: Article = {
       type: 'cta',
       text: 'Sei un commercialista e vuoi un sito che porti richieste di consulenza, non solo presenza online? Costruiamo siti su misura per studi, in 1–4 settimane.',
       label: 'Parliamone',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

@@ -128,7 +128,7 @@ const article: Article = {
       type: 'cta',
       text: 'Vuoi usare l\'AI nel tuo lavoro senza esporti agli errori? Costruiamo un assistente alimentato dai tuoi dati reali, con il controllo dove serve.',
       label: 'Parliamone',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

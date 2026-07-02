@@ -180,7 +180,7 @@ const article: Article = {
       type: 'cta',
       text: 'Want to understand what adopting AI would really cost in your business and which process to start from? We talk it through together and give you a concrete direction, without selling you tools you will not use.',
       label: 'Let\'s talk',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

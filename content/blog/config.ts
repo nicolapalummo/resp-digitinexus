@@ -20,7 +20,7 @@ export const SITE = {
   ],
   // CTA destination reused across articles
   bookCallUrl:
-    'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+    'https://calendly.com/digitinexus/30min',
 } as const;
 
 // ── Byline a fine articolo (organizzazione, non persona) ────────────────────

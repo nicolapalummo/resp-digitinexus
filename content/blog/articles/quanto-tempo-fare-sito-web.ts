@@ -156,7 +156,7 @@ const article: Article = {
       type: 'cta',
       text: 'Vuoi sapere in quanto tempo possiamo consegnare il tuo sito? Ti diamo una stima realistica con date precise.',
       label: 'Prenota una call',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

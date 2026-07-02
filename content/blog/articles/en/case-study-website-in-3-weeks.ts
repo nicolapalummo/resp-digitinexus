@@ -170,7 +170,7 @@ const article: Article = {
       type: 'cta',
       text: 'Have a deadline and want a premium website in a few weeks? We will tell you right away whether it is doable and with which dates.',
       label: 'Let\'s talk',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

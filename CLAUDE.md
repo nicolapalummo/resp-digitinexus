@@ -44,10 +44,18 @@ Le pagine blog usano `components/blog/useDocumentMeta.ts` per title/meta.
 - **Header theme**: `components/Header.tsx` ha un `themeMap` (id sezione → `dark`/`light`) e un IntersectionObserver robusto (ri-parte al cambio rotta) che colora il testo dell'header. Le nuove sezioni con id vanno aggiunte a `themeMap`.
 - **Numeri tag sezioni** (landing, in ordine): Problem 1 · Intro 2 · RecentWork 3 · HowItWorks 4 · ChiSiamo 5 · WhyMe 6 · Services 7 · FAQ 8 · ExploreGuides 9.
 - **Font**: Manrope **self-hosted** (`public/fonts/Manrope-Variable.woff2`, `@font-face` in `index.css`). Niente Google Fonts (GDPR). I sorgenti TTF in `assets/` sono **gitignored**.
-- **Favicon**: `public/favicon.svg` (vettoriale, primario — necessario per Safari, che non decodifica i PNG dentro `.ico`) + `favicon.ico` reale + PNG. Riferimenti in `index.html`.
+- **Favicon**: `public/favicon.svg` (vettoriale, primario — necessario per Safari, che non decodifica i PNG dentro `.ico`) + `favicon.ico` reale + PNG. Riferimenti in `index.html` con `?v=N` per **bustare la cache favicon di Safari** (per-pagina e ostinatissima): se cambi le icone, incrementa `v`.
+- **Rotte client-only** (non prerenderizzate, `noindex`): `/confirmation`, 404 (`NotFound`). Servite dal rewrite catch-all di `vercel.json` → `index.html` → SPA.
+
+## Integrazioni terze parti
+- **Booking = Calendly** (`https://calendly.com/digitinexus/30min`). URL centralizzato in `content/blog/config.ts` → `SITE.bookCallUrl` (tutte le CTA blog/articoli); nei componenti landing (Hero, Header, Services, LetsTalk, FreemiumResources) è hardcodato lo stesso URL. La sezione **LetsTalk** incorpora il **widget inline Calendly** (script `assets.calendly.com/.../widget.js` caricato in `useEffect`).
+- **Pagina conferma** `/confirmation` (`Confirmation.tsx`): thank-you post-prenotazione, legge i parametri del redirect Calendly (`invitee_full_name`/`invitee_first_name`, `event_start_time`) per personalizzare titolo + data. Su Calendly: Confirmation page → "Redirect to an external site" + "Pass event details".
+- **Email gate su `/risorse-gratuite`** (`FreemiumResources.tsx`): per accedere alle risorse serve lasciare la mail → inviata a **Web3Forms** (`api.web3forms.com`). Chiave in `WEB3FORMS_ACCESS_KEY` (chiave *pubblica* Web3Forms — va messa quella reale). Sblocco salvato in localStorage (`digitinexus-resources-email`).
 
 ## Sicurezza / deploy
-- **CSP** in `vercel.json`: `script-src 'self'` **senza `unsafe-inline`** → **non aggiungere `<script>` inline eseguibili** in `index.html`/prerender (il loader sta in `public/loader.js` esterno). Il JSON-LD `application/ld+json` è dato, non eseguito → consentito. `img/font/connect/style` self-hosted.
+- **CSP** in `vercel.json`: `script-src 'self'` **senza `unsafe-inline`** → **non aggiungere `<script>` inline eseguibili** in `index.html`/prerender (il loader sta in `public/loader.js` esterno). Il JSON-LD `application/ld+json` è dato, non eseguito → consentito.
+- Domini terzi in whitelist nella CSP: **Calendly** (`script-src assets.calendly.com`, `frame-src calendly.com`, `style/img/connect` per `*.calendly.com`) e **Web3Forms** (`connect-src api.web3forms.com`). Se aggiungi un servizio esterno, ricordati di aggiornare la CSP o verrà bloccato in produzione.
+- ⚠️ La CSP si applica **solo su Vercel**, non in `dev`/`vite preview`: testa i servizi esterni (widget, form) su un deploy e controlla la console per violazioni.
 - Altri header: HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy.
 - **Segreti**: mai hardcodare; `.env` gitignored; `.env.example` solo placeholder; nessuna `VITE_*` sensibile (finirebbe nel bundle).
 

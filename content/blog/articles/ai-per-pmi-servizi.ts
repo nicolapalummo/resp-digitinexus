@@ -138,7 +138,7 @@ const article: Article = {
       type: 'cta',
       text: 'Vuoi capire quale di queste cinque automazioni conviene partire per la tua attività, e che ritorno aspettarti? Guardiamo insieme i tuoi processi e scegliamo il primo caso ad alto valore.',
       label: 'Parliamone',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

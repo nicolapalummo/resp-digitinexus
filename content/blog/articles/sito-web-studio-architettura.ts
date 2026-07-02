@@ -116,7 +116,7 @@ const article: Article = {
       type: 'cta',
       text: 'Hai uno studio di architettura o ingegneria e vuoi un sito che valorizzi i tuoi progetti senza sacrificare la velocità? Costruiamo siti su misura, con portfolio curati e pagine rapide.',
       label: 'Parliamone',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

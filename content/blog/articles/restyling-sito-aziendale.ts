@@ -151,7 +151,7 @@ const article: Article = {
       type: 'cta',
       text: 'Hai un sito datato, lento o che non porta richieste? Valutiamo insieme se serve un restyling mirato o un sito nuovo, partendo da quello che già funziona.',
       label: 'Parliamone',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

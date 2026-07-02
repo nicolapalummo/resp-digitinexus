@@ -207,7 +207,7 @@ const article: Article = {
       type: 'cta',
       text: 'Want a clear quote, with transparent timelines and line items? We answer with real numbers, no obligation.',
       label: 'Request a quote',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

@@ -144,7 +144,7 @@ const article: Article = {
       type: 'cta',
       text: 'Hai un\'idea da validare e vuoi una landing pronta in pochi giorni? Ti diciamo subito come impostare il test e cosa misurare.',
       label: 'Parliamone',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

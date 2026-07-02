@@ -151,7 +151,7 @@ const article: Article = {
       type: 'cta',
       text: 'Vuoi usare l\'AI in azienda senza esporre i dati dei tuoi clienti? Mettiamo a punto strumenti, regole e adempimenti su misura, in modo chiaro e applicabile dal team.',
       label: 'Parliamone',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

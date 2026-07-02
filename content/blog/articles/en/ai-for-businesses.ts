@@ -201,7 +201,7 @@ const article: Article = {
       type: 'cta',
       text: 'Want to figure out where AI actually pays off in your business, without buying tools you will never use? Let us talk it through and give you a concrete direction.',
       label: 'Let\'s talk',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

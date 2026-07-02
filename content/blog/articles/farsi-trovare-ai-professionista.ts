@@ -125,7 +125,7 @@ const article: Article = {
       type: 'cta',
       text: 'Vuoi un sito che ti faccia consigliare dalle AI quando un cliente cerca un professionista nella tua zona? Costruiamo siti su misura per studi, pronti per la GEO.',
       label: 'Parliamone',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

@@ -169,7 +169,7 @@ const article: Article = {
       type: 'cta',
       text: 'Not sure whether you need a template or a custom website? We will help you figure it out based on your goals and budget, with no pressure.',
       label: 'Let\'s talk',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

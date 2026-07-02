@@ -134,7 +134,7 @@ const article: Article = {
       type: 'cta',
       text: 'Want to find where AI can actually save you time in your day-to-day work? We start from your processes and pin down the concrete uses, no hype.',
       label: "Let's talk",
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

@@ -126,7 +126,7 @@ const article: Article = {
       type: 'cta',
       text: 'Not sure whether you need a chatbot or an agent? Let us look at your real workflows together and figure out the best place to start.',
       label: "Let's talk",
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

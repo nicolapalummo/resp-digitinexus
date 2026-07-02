@@ -155,7 +155,7 @@ const article: Article = {
       type: 'cta',
       text: 'Have a quote in hand and want to know whether the line items add up? Send it over and we will read it together, line by line, no strings attached: we will tell you what to ask before you sign.',
       label: 'Let\'s talk',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

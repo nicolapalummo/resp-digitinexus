@@ -149,7 +149,7 @@ const article: Article = {
       type: 'cta',
       text: 'Are you a CPA or accounting firm that wants a site that brings in consultation requests, not just an online presence? We build custom websites for firms, in 1 to 4 weeks.',
       label: 'Let\'s talk',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

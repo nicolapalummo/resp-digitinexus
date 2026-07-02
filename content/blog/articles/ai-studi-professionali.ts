@@ -150,7 +150,7 @@ const article: Article = {
       type: 'cta',
       text: 'Vuoi capire quali attività del tuo studio l\'AI può alleggerire davvero, senza rischi su riservatezza e deontologia? Ne parliamo insieme e ti diamo una direzione concreta.',
       label: 'Parliamone',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

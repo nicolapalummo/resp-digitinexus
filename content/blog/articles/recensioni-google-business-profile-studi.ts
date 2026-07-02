@@ -134,7 +134,7 @@ const article: Article = {
       type: 'cta',
       text: 'Vuoi una scheda Google e un sito che lavorano insieme per farti trovare in zona e dalle AI? Costruiamo presenze digitali coerenti per studi professionali.',
       label: 'Parliamone',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

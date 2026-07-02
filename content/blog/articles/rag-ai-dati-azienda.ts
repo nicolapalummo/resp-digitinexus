@@ -123,7 +123,7 @@ const article: Article = {
       type: 'cta',
       text: 'Vuoi un assistente AI che risponda con i dati reali della tua azienda, sul sito o all\'interno del team? Partiamo dai tuoi documenti e costruiamo qualcosa di concreto.',
       label: 'Parliamone',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

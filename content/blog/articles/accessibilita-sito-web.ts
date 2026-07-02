@@ -139,7 +139,7 @@ const article: Article = {
       type: 'cta',
       text: 'Vuoi capire se il tuo sito è accessibile e quali interventi hanno la priorità, oppure partire da un progetto già pensato per tutti? Ne parliamo con esempi concreti, senza tecnicismi inutili.',
       label: 'Parliamone',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

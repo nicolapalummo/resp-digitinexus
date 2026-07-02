@@ -155,7 +155,7 @@ const article: Article = {
       type: 'cta',
       text: 'Want content and a website built to be cited by Google and AI, not just to "be online"? We write and build them citable, in 1 to 4 weeks.',
       label: "Let's talk",
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

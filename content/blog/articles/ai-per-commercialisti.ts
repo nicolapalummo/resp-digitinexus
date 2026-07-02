@@ -154,7 +154,7 @@ const article: Article = {
       type: 'cta',
       text: 'Vuoi capire quali processi del tuo studio conviene davvero automatizzare, senza esporre i dati dei clienti né comprare strumenti che non userai? Ne parliamo insieme e ti diamo una direzione concreta.',
       label: 'Parliamone',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

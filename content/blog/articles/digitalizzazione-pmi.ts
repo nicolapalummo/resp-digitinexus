@@ -143,7 +143,7 @@ const article: Article = {
       type: 'cta',
       text: 'Vuoi digitalizzare la tua PMI partendo dalle fondamenta giuste? Costruiamo siti su misura pensati per farti trovare e portare contatti veri, un passo alla volta.',
       label: 'Parliamone',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

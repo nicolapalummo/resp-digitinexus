@@ -119,7 +119,7 @@ const article: Article = {
       type: 'cta',
       text: 'Want a website that conveys your authority and makes you citable by Google and AI? We build custom sites for professional firms, with bylined authors, credentials, and trust signals done right.',
       label: 'Let\'s talk',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

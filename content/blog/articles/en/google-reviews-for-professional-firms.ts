@@ -128,7 +128,7 @@ const article: Article = {
       type: 'cta',
       text: 'Want a Google profile and a website that work together to get you found in your area and by AI? We build consistent digital presences for professional firms.',
       label: 'Let\'s talk',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

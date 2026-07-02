@@ -1,10 +1,26 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
+const CALENDLY_URL = 'https://calendly.com/digitinexus/30min';
+
 export const LetsTalk: React.FC = () => {
   const { t } = useTranslation();
+
+  // Load the Calendly inline-widget script once; re-init on later mounts (SPA nav).
+  useEffect(() => {
+    const SRC = 'https://assets.calendly.com/assets/external/widget.js';
+    const w = window as unknown as { Calendly?: { initInlineWidgets?: () => void } };
+    if (document.querySelector(`script[src="${SRC}"]`)) {
+      w.Calendly?.initInlineWidgets?.();
+      return;
+    }
+    const s = document.createElement('script');
+    s.src = SRC;
+    s.async = true;
+    document.body.appendChild(s);
+  }, []);
   return (
     <section id="lets-talk" className="bg-[#E8ECF2] text-black py-32 md:py-48 px-6 flex flex-col items-center justify-center text-center min-h-[80vh] relative rounded-t-[2rem]">
         <motion.div 
@@ -18,13 +34,21 @@ export const LetsTalk: React.FC = () => {
                 {t('letsTalk.title')} <br className="hidden md:block" /> {t('letsTalk.title2')}
             </h2>
             
-            <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ" target="_blank" rel="noopener noreferrer" className="bg-black text-white rounded-2xl pl-6 pr-2 py-2 flex items-center gap-4 font-medium text-xl transition-transform hover:scale-105 duration-300 shadow-xl hover:shadow-2xl">
-                  <span className="pl-2">{t('letsTalk.bookCall')}</span>
-                  <img 
-                      src="/logoDN.webp" 
-                      alt="DigitiNexus" 
-                      className="w-12 h-12 rounded-2xl object-cover"
-                  />
+            {/* Calendly inline booking widget */}
+            <div
+              className="calendly-inline-widget w-full max-w-3xl overflow-hidden rounded-3xl bg-white shadow-2xl"
+              data-url={`${CALENDLY_URL}?hide_gdpr_banner=1&primary_color=f97316`}
+              style={{ minWidth: '320px', height: '700px' }}
+            />
+
+            {/* Fallback link if the widget can't load */}
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 text-sm text-gray-500 underline underline-offset-4 hover:text-gray-800 transition-colors"
+            >
+              {t('letsTalk.bookCall')}
             </a>
         </motion.div>
          

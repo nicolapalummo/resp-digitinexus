@@ -141,7 +141,7 @@ const article: Article = {
       type: 'cta',
       text: 'Want a website built to rank on Google and get cited by AI Overviews? We build it schema-ready and quotable, in 1 to 4 weeks.',
       label: 'Let\'s talk',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

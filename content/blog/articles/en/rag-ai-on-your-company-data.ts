@@ -129,7 +129,7 @@ const article: Article = {
       type: 'cta',
       text: 'Want an AI assistant that answers with your company\'s real data, on your site or inside your team? We start from your documents and build something concrete.',
       label: 'Let\'s talk',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

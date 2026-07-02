@@ -157,7 +157,7 @@ const article: Article = {
       type: 'cta',
       text: 'Want to know how long it would take to deliver your site? We give you a realistic estimate with specific dates.',
       label: 'Book a call',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

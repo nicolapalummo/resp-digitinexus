@@ -140,7 +140,7 @@ const article: Article = {
       type: 'cta',
       text: 'Running your whole business out of a social feed? We build small business websites you own: fast, found on Google and AI search, and designed to turn followers into customers.',
       label: 'Let\'s talk',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

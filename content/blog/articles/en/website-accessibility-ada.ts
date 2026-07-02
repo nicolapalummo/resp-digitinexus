@@ -122,7 +122,7 @@ const article: Article = {
       type: 'cta',
       text: 'Want to know whether your site is accessible and which fixes come first, or start from a project built for everyone from day one? We will walk through it with concrete examples, no needless jargon.',
       label: 'Let\'s talk',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

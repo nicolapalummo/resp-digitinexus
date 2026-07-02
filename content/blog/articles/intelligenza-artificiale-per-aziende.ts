@@ -199,7 +199,7 @@ const article: Article = {
       type: 'cta',
       text: 'Vuoi capire dove l\'AI conviene davvero nella tua attività, senza acquistare strumenti che non userai? Ne parliamo insieme e ti diamo una direzione concreta.',
       label: 'Parliamone',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

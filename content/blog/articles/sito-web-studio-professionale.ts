@@ -162,7 +162,7 @@ const article: Article = {
       type: 'cta',
       text: 'Sei un professionista e vuoi un sito che trasmetta autorità e porti clienti? Costruiamo siti su misura per studi, in 1–4 settimane.',
       label: 'Parliamone',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

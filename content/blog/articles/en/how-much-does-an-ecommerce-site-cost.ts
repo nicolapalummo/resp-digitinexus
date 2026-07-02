@@ -142,7 +142,7 @@ const article: Article = {
       type: 'cta',
       text: 'Want to know what your store will cost based on your products, integrations, and how you sell? Let\'s talk and build a tailored estimate, with no standard packages.',
       label: 'Let\'s talk',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

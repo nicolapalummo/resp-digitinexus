@@ -118,7 +118,7 @@ const article: Article = {
       type: 'cta',
       text: 'Run an architecture or design firm and want a site that showcases your projects without sacrificing speed? We build custom websites with curated portfolios and fast pages.',
       label: 'Let\'s talk',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

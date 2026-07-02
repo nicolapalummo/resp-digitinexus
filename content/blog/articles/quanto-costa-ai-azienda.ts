@@ -178,7 +178,7 @@ const article: Article = {
       type: 'cta',
       text: 'Vuoi capire quanto ti costerebbe davvero adottare l\'AI nella tua attività e da quale processo partire? Ne parliamo insieme e ti diamo una direzione concreta, senza venderti strumenti che non userai.',
       label: 'Parliamone',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

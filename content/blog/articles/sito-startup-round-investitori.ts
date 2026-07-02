@@ -167,7 +167,7 @@ const article: Article = {
       type: 'cta',
       text: 'Stai preparando un round e il sito non comunica ancora la credibilità che la tua startup merita? Costruiamo siti su misura, chiari e veloci, che mostrano valore, risultati e team in pochi secondi.',
       label: 'Parliamone',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

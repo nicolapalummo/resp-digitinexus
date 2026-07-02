@@ -234,12 +234,23 @@
   "freemium": {
     "pageTitle": "DigitiNexus Resource Hub",
     "pageSubtitle": "Unlock your strategy, one step at a time.",
+    "gate": {
+      "title": "Unlock the free resources",
+      "subtitle": "Leave your email and get instant access to all the guides.",
+      "placeholder": "Your email",
+      "button": "Unlock access",
+      "sending": "Sending…",
+      "unlocked": "Access unlocked! Enjoy.",
+      "error": "Something went wrong. Please try again.",
+      "invalid": "Please enter a valid email."
+    },
     "progress": "Progress",
     "backHome": "Back to Home",
     "downloaded": "COMPLETED",
     "step1": {
       "title": "Google Business Profile Optimization",
       "description": "The complete guide to optimizing your Google Business profile and increasing your local visibility.",
+      "statusLocked": "UNLOCK AFTER EMAIL",
       "status": "DOWNLOAD NOW",
       "category": "Local"
     },

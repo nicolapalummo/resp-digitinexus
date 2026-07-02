@@ -74,7 +74,7 @@ export const Hero: React.FC = () => {
             transition={{ delay: 1.1, duration: 0.8 }}
             className="flex flex-row w-full md:w-auto items-center gap-4 md:gap-6 mb-12 md:mb-0"
         >
-            <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ" target="_blank" rel="noopener noreferrer" className="flex-1 md:flex-none bg-white text-black hover:bg-gray-100 transition-all duration-300 rounded-2xl px-6 py-4 font-semibold text-base md:text-lg flex justify-center items-center gap-2 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] hover:scale-105 active:scale-95">
+            <a href="https://calendly.com/digitinexus/30min" target="_blank" rel="noopener noreferrer" className="flex-1 md:flex-none bg-white text-black hover:bg-gray-100 transition-all duration-300 rounded-2xl px-6 py-4 font-semibold text-base md:text-lg flex justify-center items-center gap-2 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] hover:scale-105 active:scale-95">
                 {t('hero.bookCall')}
             </a>
             

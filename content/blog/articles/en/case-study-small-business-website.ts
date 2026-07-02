@@ -171,7 +171,7 @@ const article: Article = {
       type: 'cta',
       text: 'Have a small business with a website that brings no leads? We will tell you right away what to change and on what timeline, with no obligation.',
       label: 'Let\'s talk',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

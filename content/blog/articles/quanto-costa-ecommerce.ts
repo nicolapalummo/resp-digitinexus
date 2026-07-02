@@ -140,7 +140,7 @@ const article: Article = {
       type: 'cta',
       text: 'Vuoi capire quanto costa il tuo e-commerce in base ai prodotti, alle integrazioni e a come vendi? Parliamone e costruiamo un preventivo su misura, senza pacchetti standard.',
       label: 'Parliamone',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

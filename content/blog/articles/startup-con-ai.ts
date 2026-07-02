@@ -126,7 +126,7 @@ const article: Article = {
       type: 'cta',
       text: 'Stai costruendo una startup e vuoi capire dove l\'AI ti fa davvero guadagnare tempo, e dove invece rischia di farti saltare passaggi che contano? Guardiamo insieme la tua idea e impostiamo i primi passi giusti.',
       label: 'Parliamone',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

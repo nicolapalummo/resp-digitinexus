@@ -175,7 +175,7 @@ const article: Article = {
       type: 'cta',
       text: 'Does your startup have real traction but a site that still looks like an MVP? We build custom websites that are clear and credible for customers and investors, ready in a few weeks.',
       label: 'Let\'s talk',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

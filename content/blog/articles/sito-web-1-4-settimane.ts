@@ -177,7 +177,7 @@ const article: Article = {
       type: 'cta',
       text: 'Hai una scadenza e vuoi un sito premium in poche settimane? Ti diciamo subito se è fattibile e con quali date.',
       label: 'Prenota una call',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

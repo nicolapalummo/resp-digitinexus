@@ -146,7 +146,7 @@ const article: Article = {
       type: 'cta',
       text: 'Vuoi una libreria di visual coerenti col tuo brand, prodotti con l\'AI ma controllati dove conta? Costruiamo insieme il flusso giusto per te.',
       label: 'Parliamone',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

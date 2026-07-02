@@ -153,7 +153,7 @@ const article: Article = {
       type: 'cta',
       text: 'Do you have a site that is dated, slow, or simply not bringing in requests? Let us figure out together whether you need a targeted redesign or a new site, starting from what already works.',
       label: 'Let us talk',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

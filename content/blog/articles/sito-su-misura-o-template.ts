@@ -168,7 +168,7 @@ const article: Article = {
       type: 'cta',
       text: 'Non sai se ti serve un template o un sito su misura? Ti aiutiamo a capirlo in base a obiettivi e budget, senza forzature.',
       label: 'Parliamone',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

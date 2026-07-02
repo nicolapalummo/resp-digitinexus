@@ -164,7 +164,7 @@ const article: Article = {
       type: 'cta',
       text: 'Vuoi capire se per il tuo progetto conviene un freelance, un\'agenzia o uno studio come il nostro? Parliamone e ragioniamo insieme sul caso concreto, senza promesse a vuoto.',
       label: 'Parliamone',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

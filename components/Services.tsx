@@ -66,7 +66,7 @@ export const Services: React.FC = () => {
                     ))}
                 </div>
 
-                <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ" target="_blank" rel="noopener noreferrer" className="w-full bg-[#222] text-white border border-white/10 rounded-2xl py-3 flex items-center justify-center gap-3 font-medium hover:bg-[#333] transition-colors">
+                <a href="https://calendly.com/digitinexus/30min" target="_blank" rel="noopener noreferrer" className="w-full bg-[#222] text-white border border-white/10 rounded-2xl py-3 flex items-center justify-center gap-3 font-medium hover:bg-[#333] transition-colors">
                     <span className="pl-2">{t('services.bookCall')}</span>
                 </a>
             </motion.div>
@@ -101,7 +101,7 @@ export const Services: React.FC = () => {
                     ))}
                 </div>
 
-                <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ" target="_blank" rel="noopener noreferrer" className="w-full bg-[#222] text-white border border-white/10 rounded-2xl py-3 flex items-center justify-center gap-3 font-medium hover:bg-[#333] transition-colors">
+                <a href="https://calendly.com/digitinexus/30min" target="_blank" rel="noopener noreferrer" className="w-full bg-[#222] text-white border border-white/10 rounded-2xl py-3 flex items-center justify-center gap-3 font-medium hover:bg-[#333] transition-colors">
                     <span className="pl-2">{t('services.bookCall')}</span>
                 </a>
             </motion.div>

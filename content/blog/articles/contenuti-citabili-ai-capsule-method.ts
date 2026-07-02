@@ -153,7 +153,7 @@ const article: Article = {
       type: 'cta',
       text: 'Vuoi contenuti e un sito pensati per essere citati da Google e dalle AI, non solo per "stare online"? Li scriviamo e li costruiamo citabili, in 1–4 settimane.',
       label: 'Parliamone',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

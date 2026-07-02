@@ -146,7 +146,7 @@ const article: Article = {
       type: 'cta',
       text: 'Have an idea to validate and want a landing page ready in a few days? We will tell you right away how to set up the test and what to measure.',
       label: 'Let\'s talk',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

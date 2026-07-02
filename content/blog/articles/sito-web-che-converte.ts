@@ -155,7 +155,7 @@ const article: Article = {
       type: 'cta',
       text: 'Vuoi sapere quale dei sette elementi sta frenando le conversioni del tuo sito? Lo vediamo insieme su esempi concreti, senza giri di parole.',
       label: 'Parliamone',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

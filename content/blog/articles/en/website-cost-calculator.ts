@@ -125,7 +125,7 @@ const article: Article = {
       type: 'cta',
       text: 'Have a site in mind and want to go from a ballpark to a clear quote for your project? Tell us the type, pages, and integrations you are picturing: we will give you a realistic order of magnitude and what drives it, no obligation.',
       label: 'Let\'s talk',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

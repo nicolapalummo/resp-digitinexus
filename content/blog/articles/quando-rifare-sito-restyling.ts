@@ -126,7 +126,7 @@ const article: Article = {
       type: 'cta',
       text: 'Vuoi sapere se al tuo sito basta un restyling mirato o conviene rifarlo? E quanto incide la velocità sui contatti che stai perdendo? Guardiamo insieme il tuo, senza impegno.',
       label: 'Parliamone',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

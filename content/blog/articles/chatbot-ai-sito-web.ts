@@ -139,7 +139,7 @@ const article: Article = {
       type: 'cta',
       text: 'Vuoi capire se un chatbot AI ha davvero senso per il tuo sito, prima di investirci? Partiamo dalle tue domande ricorrenti e dai tuoi contenuti, e ti diciamo onestamente se conviene.',
       label: 'Parliamone',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

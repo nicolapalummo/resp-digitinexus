@@ -147,7 +147,7 @@ const article: Article = {
       type: 'cta',
       text: 'Have a campaign, a launch, or an idea to validate, and want a landing built to convert, not just to look nice? Let us talk, starting from your goal.',
       label: 'Let us talk',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

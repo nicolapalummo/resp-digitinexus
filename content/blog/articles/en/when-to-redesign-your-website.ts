@@ -129,7 +129,7 @@ const article: Article = {
       type: 'cta',
       text: 'Want to know whether your site just needs a targeted redesign or is better rebuilt? And how much speed is weighing on the leads you are losing? We look at yours together, no obligation.',
       label: 'Let\'s talk',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

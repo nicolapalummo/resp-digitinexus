@@ -129,7 +129,7 @@ const article: Article = {
       type: 'cta',
       text: 'Vuoi un sito che valorizzi chi sei agli occhi di Google e delle AI, con firma autore, Person schema e identità coerente su ogni pagina? Lo costruiamo così, in 1–4 settimane.',
       label: 'Parliamone',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

@@ -169,7 +169,7 @@ const article: Article = {
       type: 'cta',
       text: 'Preparing a round and your site does not yet communicate the credibility your startup deserves? We build custom sites, clear and fast, that show value, results, and team in seconds.',
       label: 'Let us talk',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

@@ -140,7 +140,7 @@ const article: Article = {
       type: 'cta',
       text: 'Want to automate booking and first contact without losing the relationship with your clients? We start from your recurring requests and your calendar, and decide together what to automate and what to leave to people.',
       label: 'Let\'s talk',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

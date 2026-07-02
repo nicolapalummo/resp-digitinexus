@@ -161,7 +161,7 @@ const article: Article = {
       type: 'cta',
       text: 'Want to know whether your current site holds up to these five criteria, or start from premium design from day one? We talk it through with concrete examples, no runaround.',
       label: 'Let\'s talk',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

@@ -234,12 +234,23 @@
   "freemium": {
     "pageTitle": "Hub Risorse DigitiNexus",
     "pageSubtitle": "Sblocca la tua strategia, un passo alla volta.",
+    "gate": {
+      "title": "Sblocca le risorse gratuite",
+      "subtitle": "Lascia la tua email: ti diamo accesso immediato a tutte le guide.",
+      "placeholder": "La tua email",
+      "button": "Sblocca l'accesso",
+      "sending": "Invio…",
+      "unlocked": "Accesso sbloccato! Buona lettura.",
+      "error": "Qualcosa è andato storto. Riprova.",
+      "invalid": "Inserisci un'email valida."
+    },
     "progress": "Progresso",
     "backHome": "Torna alla Home",
     "downloaded": "COMPLETATO",
     "step1": {
       "title": "Ottimizzazione Google Business Profile",
       "description": "La guida completa per ottimizzare il tuo profilo Google Business e aumentare la visibilità locale della tua attività.",
+      "statusLocked": "SBLOCCA DOPO LA MAIL",
       "status": "SCARICA ORA",
       "category": "Locale"
     },

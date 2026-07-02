@@ -182,7 +182,7 @@ const article: Article = {
       type: 'cta',
       text: 'Want to know which of these seven mistakes apply to you and how to fix them without rebuilding the site from scratch? Let us look at yours together, no strings attached.',
       label: 'Let\'s talk',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

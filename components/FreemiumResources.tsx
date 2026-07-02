@@ -4,6 +4,9 @@ import { Lock, Download, CheckCircle2, ArrowLeft, Sparkles, ArrowRight } from 'l
 import { useTranslation } from 'react-i18next';
 
 const STORAGE_KEY = 'digitinexus-freemium-progress';
+const EMAIL_STORAGE_KEY = 'digitinexus-resources-email';
+// Web3Forms access key — public by design (safe in client code). Free key at web3forms.com.
+const WEB3FORMS_ACCESS_KEY = 'PASTE_YOUR_WEB3FORMS_ACCESS_KEY';
 
 const PDF_FILES = [
   '/freemium/Guida Ottimizzazione Google Business Profil | DigitiNexus.pdf',
@@ -35,6 +38,16 @@ const getStoredProgress = (): ProgressState => {
   return { step1: false, step2: false, step3: false };
 };
 
+const getStoredEmail = (): boolean => {
+  try {
+    return !!localStorage.getItem(EMAIL_STORAGE_KEY);
+  } catch {
+    return false;
+  }
+};
+
+const isValidEmail = (v: string): boolean => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+
 // ── Animation variants ──────────────────────────────────────────────
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -60,6 +73,12 @@ export const FreemiumResources: React.FC = () => {
   const [justCompleted, setJustCompleted] = useState<string | null>(null);
   const [showFinalReveal, setShowFinalReveal] = useState(false);
 
+  // Email gate: resources stay locked until the visitor leaves their email.
+  const [emailUnlocked, setEmailUnlocked] = useState<boolean>(getStoredEmail);
+  const [email, setEmail] = useState('');
+  const [submitting, setSubmitting] = useState(false);
+  const [gateError, setGateError] = useState<string | null>(null);
+
   const completedCount = [progress.step1, progress.step2, progress.step3].filter(Boolean).length;
   const allComplete = completedCount === 3;
 
@@ -79,9 +98,10 @@ export const FreemiumResources: React.FC = () => {
 
   const isUnlocked = useCallback(
     (stepKey: keyof ProgressState): boolean => {
+      if (!emailUnlocked) return false; // email gate: nothing is accessible without the email
       switch (stepKey) {
         case 'step1':
-          return true; // always available
+          return true; // available once the email is left
         case 'step2':
           return progress.step1;
         case 'step3':
@@ -90,11 +110,12 @@ export const FreemiumResources: React.FC = () => {
           return false;
       }
     },
-    [progress],
+    [progress, emailUnlocked],
   );
 
   const handleDownload = useCallback(
     (stepKey: keyof ProgressState, fileIndex: number) => {
+      if (!emailUnlocked) return; // gate: no download without the email
       // Trigger the actual file download
       const a = document.createElement('a');
       a.href = encodePdfPath(PDF_FILES[fileIndex]);
@@ -118,7 +139,49 @@ export const FreemiumResources: React.FC = () => {
         setTimeout(() => setJustCompleted(null), 2800);
       }
     },
-    [progress],
+    [progress, emailUnlocked],
+  );
+
+  // Submit the email to Web3Forms, then unlock the resources.
+  const handleEmailSubmit = useCallback(
+    async (e: React.FormEvent) => {
+      e.preventDefault();
+      const value = email.trim();
+      if (!isValidEmail(value)) {
+        setGateError(t('freemium.gate.invalid'));
+        return;
+      }
+      setSubmitting(true);
+      setGateError(null);
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({
+            access_key: WEB3FORMS_ACCESS_KEY,
+            email: value,
+            subject: 'Nuovo contatto — Risorse gratuite DigitiNexus',
+            from_name: 'DigitiNexus — Risorse gratuite',
+          }),
+        });
+        const data = await res.json();
+        if (data.success) {
+          try {
+            localStorage.setItem(EMAIL_STORAGE_KEY, value);
+          } catch {
+            // ignore storage errors
+          }
+          setEmailUnlocked(true);
+        } else {
+          setGateError(t('freemium.gate.error'));
+        }
+      } catch {
+        setGateError(t('freemium.gate.error'));
+      } finally {
+        setSubmitting(false);
+      }
+    },
+    [email, t],
   );
 
   // ── Step definitions ─────────────────────────────────────────────
@@ -249,6 +312,60 @@ export const FreemiumResources: React.FC = () => {
           {t('freemium.pageSubtitle')}
         </motion.p>
       </motion.section>
+
+      {/* ── Email gate ─────────────────────────────────────────── */}
+      <section className="relative max-w-2xl mx-auto px-6 pb-10">
+        <AnimatePresence mode="wait">
+          {!emailUnlocked ? (
+            <motion.form
+              key="gate"
+              onSubmit={handleEmailSubmit}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              className="rounded-2xl border border-orange-500/20 bg-gradient-to-b from-orange-500/[0.06] to-white/[0.01] p-6 md:p-8"
+            >
+              <div className="mb-3 flex items-center gap-3">
+                <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-orange-500/15 text-orange-400">
+                  <Lock size={18} />
+                </span>
+                <h2 className="text-xl font-semibold text-white md:text-2xl">{t('freemium.gate.title')}</h2>
+              </div>
+              <p className="mb-5 text-sm text-white/50">{t('freemium.gate.subtitle')}</p>
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <input
+                  type="email"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder={t('freemium.gate.placeholder')}
+                  aria-label={t('freemium.gate.placeholder')}
+                  className="flex-1 rounded-xl border border-white/10 bg-black/40 px-4 py-3 text-white placeholder-white/30 outline-none transition-colors focus:border-orange-500/50"
+                />
+                <button
+                  type="submit"
+                  disabled={submitting}
+                  className="rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 px-6 py-3 font-medium text-white transition-transform hover:scale-[1.02] disabled:cursor-not-allowed disabled:opacity-60"
+                >
+                  {submitting ? t('freemium.gate.sending') : t('freemium.gate.button')}
+                </button>
+              </div>
+              {gateError && <p className="mt-3 text-sm text-red-400">{gateError}</p>}
+            </motion.form>
+          ) : (
+            <motion.div
+              key="unlocked"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="flex items-center justify-center gap-2 rounded-2xl border border-emerald-500/20 bg-emerald-500/[0.06] px-5 py-3"
+            >
+              <CheckCircle2 size={16} className="text-emerald-400" />
+              <span className="text-sm text-emerald-300">{t('freemium.gate.unlocked')}</span>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </section>
 
       {/* ── Steps section ──────────────────────────────────────── */}
       <motion.section
@@ -592,7 +709,7 @@ export const FreemiumResources: React.FC = () => {
                   initial={showFinalReveal ? { opacity: 0, scale: 0.9, y: 20 } : false}
                   animate={{ opacity: 1, scale: 1, y: 0 }}
                   transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                  href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ"
+                  href="https://calendly.com/digitinexus/30min"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-500 to-amber-500 text-white font-bold px-8 py-4 rounded-2xl text-base md:text-lg mt-8 shadow-2xl shadow-orange-500/20 hover:shadow-orange-500/35 transition-all duration-300"

@@ -134,7 +134,7 @@ const article: Article = {
       type: 'cta',
       text: 'Hai un\'idea di sito e vuoi passare dalla stima a un preventivo chiaro sul tuo progetto? Raccontaci tipologia, pagine e integrazioni che hai in mente: ti diamo un ordine di grandezza realistico e cosa lo determina, senza impegno.',
       label: 'Parliamone',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

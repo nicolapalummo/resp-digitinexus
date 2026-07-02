@@ -153,7 +153,7 @@ const article: Article = {
       type: 'cta',
       text: 'Want to use AI in your business without exposing your customers\' data? We set up the tools, rules, and safeguards that fit your business, in plain terms your team can actually apply.',
       label: 'Let\'s talk',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [

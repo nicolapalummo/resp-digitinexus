@@ -210,7 +210,7 @@ export const Header: React.FC = () => {
               </button>
           </div>
 
-          <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ" target="_blank" rel="noopener noreferrer" className={`${buttonBg} ${buttonText} rounded-3xl pl-4 pr-1 py-1 flex items-center gap-3 font-medium text-sm transition-colors duration-500`}>
+          <a href="https://calendly.com/digitinexus/30min" target="_blank" rel="noopener noreferrer" className={`${buttonBg} ${buttonText} rounded-3xl pl-4 pr-1 py-1 flex items-center gap-3 font-medium text-sm transition-colors duration-500`}>
               <span className="pl-1">{t('nav.bookCall')}</span>
               <img 
                   src="/logoDN.webp" 
@@ -307,7 +307,7 @@ export const Header: React.FC = () => {
                 </motion.div>
                 
                 <motion.a
-                    href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ"
+                    href="https://calendly.com/digitinexus/30min"
                     target="_blank"
                     rel="noopener noreferrer"
                     initial={{ y: 20, opacity: 0 }}
@@ -421,7 +421,7 @@ export const Header: React.FC = () => {
               <span className={`text-[10px] font-mono transition-colors duration-500 ${headerTheme === 'dark' ? 'text-white/40' : 'text-black/40'}`}>01</span>
           </div>
 
-          <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ" target="_blank" rel="noopener noreferrer" className={`${buttonBg} ${buttonText} rounded-2xl pl-1 pr-1 py-1.5 flex items-center gap-3 font-medium text-base hover:opacity-90 transition-all duration-500 shadow-sm`}>
+          <a href="https://calendly.com/digitinexus/30min" target="_blank" rel="noopener noreferrer" className={`${buttonBg} ${buttonText} rounded-2xl pl-1 pr-1 py-1.5 flex items-center gap-3 font-medium text-base hover:opacity-90 transition-all duration-500 shadow-sm`}>
               <span className="pl-3">{t('nav.bookCall')}</span>
               <img 
                   src="/logoDN.webp" 

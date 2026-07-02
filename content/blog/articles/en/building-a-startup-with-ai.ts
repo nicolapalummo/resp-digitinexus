@@ -128,7 +128,7 @@ const article: Article = {
       type: 'cta',
       text: 'Building a startup and want to figure out where AI actually buys you time, and where it risks making you skip steps that matter? Let us look at your idea together and set up the right first moves.',
       label: 'Let\'s talk',
-      href: 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ18t82AxggzpAnyxiF2fZEKpnWRb20HaTP4IDRhZ1EppW1Khfccy1O483Tm8xHqxq1ZPM18TToJ',
+      href: 'https://calendly.com/digitinexus/30min',
     },
   ],
   faq: [
