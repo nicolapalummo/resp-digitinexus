@@ -12,7 +12,7 @@
   "confirmation": {
     "badge": "Booking confirmed",
     "title": "Thank you for booking!",
-    "titleNamed": "Thank you {{name}}, all set!",
+    "titleNamed": "Thank you for booking, {{name}}!",
     "appointmentLabel": "Your appointment",
     "subtitle": "We've received your request and sent you a confirmation email with all the appointment details.",
     "emailNote": "Can't find the email? Check your spam or promotions folder.",

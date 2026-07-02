@@ -12,7 +12,7 @@
   "confirmation": {
     "badge": "Prenotazione confermata",
     "title": "Grazie di aver prenotato!",
-    "titleNamed": "Grazie {{name}}, è tutto confermato!",
+    "titleNamed": "Grazie di aver prenotato, {{name}}!",
     "appointmentLabel": "Il tuo appuntamento",
     "subtitle": "Abbiamo ricevuto la tua richiesta e ti abbiamo inviato una mail di conferma con tutti i dettagli dell'appuntamento.",
     "emailNote": "Non trovi l'email? Controlla la cartella spam o promozioni.",

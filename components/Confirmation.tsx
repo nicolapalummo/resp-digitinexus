@@ -32,8 +32,11 @@ export const Confirmation: React.FC = () => {
   }, [en]);
 
   // ── Calendly params (all optional) ──────────────────────────────────────────
-  const firstName = (params.get('invitee_first_name') || '').trim().slice(0, 40);
-  const eventName = (params.get('event_type_name') || '').trim().slice(0, 80);
+  // Calendly passes invitee_first_name only when the form collects first/last
+  // separately; with a single "Name" field it passes invitee_full_name → fall back.
+  let firstName = (params.get('invitee_first_name') || '').trim();
+  if (!firstName) firstName = (params.get('invitee_full_name') || '').trim().split(/\s+/)[0] || '';
+  firstName = firstName.slice(0, 40);
   const startRaw = params.get('event_start_time');
   let startFormatted: string | null = null;
   if (startRaw) {
@@ -135,7 +138,6 @@ export const Confirmation: React.FC = () => {
                   {t('confirmation.appointmentLabel')}
                 </p>
                 <p className="font-medium text-white">{startFormatted}</p>
-                {eventName && <p className="mt-1 text-sm text-white/60">{eventName}</p>}
               </div>
             </motion.div>
           )}
