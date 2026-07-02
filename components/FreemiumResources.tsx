@@ -5,14 +5,34 @@ import { useTranslation } from 'react-i18next';
 
 const STORAGE_KEY = 'digitinexus-freemium-progress';
 const EMAIL_STORAGE_KEY = 'digitinexus-resources-email';
-// Web3Forms access key — public by design (safe in client code). Free key at web3forms.com.
-const WEB3FORMS_ACCESS_KEY = 'PASTE_YOUR_WEB3FORMS_ACCESS_KEY';
+// Endpoint pubblico del CRM DigitiNexus: registra il contatto nel Database
+// (sezione Database di crmsales.digitinexus.com). Risponde sempre 200.
+const CRM_INTAKE_URL = 'https://crmsales.digitinexus.com/api/contact-intake';
 
 const PDF_FILES = [
   '/freemium/Guida Ottimizzazione Google Business Profil | DigitiNexus.pdf',
   '/freemium/10 Pilastri del Marketing | DigitiNexus.pdf',
   '/freemium/Strategie di Marketing Offline per PMI | DigitiNexus.pdf',
 ];
+
+// Nome della risorsa registrato nel CRM per ogni download (dedup email+risorsa)
+const RESOURCE_NAMES = [
+  'Guida Ottimizzazione Google Business Profile',
+  '10 Pilastri del Marketing',
+  'Strategie di Marketing Offline per PMI',
+];
+
+// Registra il contatto nel CRM senza mai bloccare l'esperienza utente
+const sendToCrm = (payload: {
+  email: string;
+  risorsaScaricata: string;
+  consensoMarketing: boolean;
+}): Promise<Response> =>
+  fetch(CRM_INTAKE_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  });
 
 interface ProgressState {
   step1: boolean;
@@ -76,6 +96,7 @@ export const FreemiumResources: React.FC = () => {
   // Email gate: resources stay locked until the visitor leaves their email.
   const [emailUnlocked, setEmailUnlocked] = useState<boolean>(getStoredEmail);
   const [email, setEmail] = useState('');
+  const [consenso, setConsenso] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [gateError, setGateError] = useState<string | null>(null);
 
@@ -116,6 +137,19 @@ export const FreemiumResources: React.FC = () => {
   const handleDownload = useCallback(
     (stepKey: keyof ProgressState, fileIndex: number) => {
       if (!emailUnlocked) return; // gate: no download without the email
+      // Registra nel CRM quale risorsa è stata scaricata (non blocca il download)
+      try {
+        const storedEmail = localStorage.getItem(EMAIL_STORAGE_KEY);
+        if (storedEmail) {
+          void sendToCrm({
+            email: storedEmail,
+            risorsaScaricata: RESOURCE_NAMES[fileIndex] ?? 'Risorsa gratuita',
+            consensoMarketing: false,
+          }).catch(() => {});
+        }
+      } catch {
+        // ignore
+      }
       // Trigger the actual file download
       const a = document.createElement('a');
       a.href = encodePdfPath(PDF_FILES[fileIndex]);
@@ -142,11 +176,11 @@ export const FreemiumResources: React.FC = () => {
     [progress, emailUnlocked],
   );
 
-  // Submit the email to Web3Forms, then unlock the resources.
+  // Submit the email to the DigitiNexus CRM, then unlock the resources.
   const handleEmailSubmit = useCallback(
     async (e: React.FormEvent) => {
       e.preventDefault();
-      const value = email.trim();
+      const value = email.trim().toLowerCase();
       if (!isValidEmail(value)) {
         setGateError(t('freemium.gate.invalid'));
         return;
@@ -154,18 +188,12 @@ export const FreemiumResources: React.FC = () => {
       setSubmitting(true);
       setGateError(null);
       try {
-        const res = await fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-          body: JSON.stringify({
-            access_key: WEB3FORMS_ACCESS_KEY,
-            email: value,
-            subject: 'Nuovo contatto — Risorse gratuite DigitiNexus',
-            from_name: 'DigitiNexus — Risorse gratuite',
-          }),
+        const res = await sendToCrm({
+          email: value,
+          risorsaScaricata: 'Sblocco risorse gratuite',
+          consensoMarketing: consenso,
         });
-        const data = await res.json();
-        if (data.success) {
+        if (res.ok) {
           try {
             localStorage.setItem(EMAIL_STORAGE_KEY, value);
           } catch {
@@ -181,7 +209,7 @@ export const FreemiumResources: React.FC = () => {
         setSubmitting(false);
       }
     },
-    [email, t],
+    [email, consenso, t],
   );
 
   // ── Step definitions ─────────────────────────────────────────────
@@ -351,6 +379,15 @@ export const FreemiumResources: React.FC = () => {
                   {submitting ? t('freemium.gate.sending') : t('freemium.gate.button')}
                 </button>
               </div>
+              <label className="mt-3 flex cursor-pointer items-start gap-2 text-xs text-white/40">
+                <input
+                  type="checkbox"
+                  checked={consenso}
+                  onChange={(e) => setConsenso(e.target.checked)}
+                  className="mt-0.5 accent-orange-500"
+                />
+                {t('freemium.gate.privacy')}
+              </label>
               {gateError && <p className="mt-3 text-sm text-red-400">{gateError}</p>}
             </motion.form>
           ) : (

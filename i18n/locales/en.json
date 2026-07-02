@@ -242,7 +242,8 @@
       "sending": "Sending…",
       "unlocked": "Access unlocked! Enjoy.",
       "error": "Something went wrong. Please try again.",
-      "invalid": "Please enter a valid email."
+      "invalid": "Please enter a valid email.",
+      "privacy": "I agree to receive marketing tips and materials from DigitiNexus by email (optional)."
     },
     "progress": "Progress",
     "backHome": "Back to Home",

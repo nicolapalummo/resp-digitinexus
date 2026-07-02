@@ -242,7 +242,8 @@
       "sending": "Invio…",
       "unlocked": "Accesso sbloccato! Buona lettura.",
       "error": "Qualcosa è andato storto. Riprova.",
-      "invalid": "Inserisci un'email valida."
+      "invalid": "Inserisci un'email valida.",
+      "privacy": "Acconsento a ricevere via email consigli e materiali di marketing da DigitiNexus (facoltativo)."
     },
     "progress": "Progresso",
     "backHome": "Torna alla Home",
