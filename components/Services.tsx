@@ -166,8 +166,10 @@ export const Services: React.FC = () => {
 
                 <p className="text-sm text-gray-500 italic mb-8 max-w-3xl">{t('services.service3.note')}</p>
 
-                <a href="https://calendly.com/digitinexus/30min" target="_blank" rel="noopener noreferrer" className="self-center md:self-start inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-amber-400 text-white rounded-3xl px-10 py-3 font-medium hover:brightness-110 transition-all">
-                    {t('services.bookCall')}
+                {/* Stessa pill della navbar: bianca con il logo DN a destra */}
+                <a href="https://calendly.com/digitinexus/30min" target="_blank" rel="noopener noreferrer" className="self-center md:self-start inline-flex items-center gap-3 bg-white text-black rounded-3xl pl-5 pr-1.5 py-1.5 font-medium hover:bg-gray-100 transition-colors">
+                    <span>{t('services.bookCall')}</span>
+                    <img src="/logoDN.webp" alt="DigitiNexus" className="w-9 h-9 rounded-3xl object-cover" />
                 </a>
             </motion.div>
 
