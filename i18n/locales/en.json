@@ -256,7 +256,8 @@
       "errorSend": "We couldn't send the email. Your contact is saved: please try again in a few minutes.",
       "errorGeneric": "Something went wrong. Please try again in a few minutes.",
       "invalid": "Please enter a valid email address.",
-      "another": "Use another email"
+      "another": "Use another email",
+      "consent": "No spam: just the PDFs and the occasional useful tip. Unsubscribe anytime."
     },
     "pageTitle": "DigitiNexus Resource Hub",
     "pageSubtitle": "Unlock your strategy, one step at a time.",

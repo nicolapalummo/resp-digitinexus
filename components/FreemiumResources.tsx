@@ -45,7 +45,6 @@ export const FreemiumResources: React.FC = () => {
   const locale = langFromPath(location.pathname);
 
   const [email, setEmail] = useState('');
-  const [consenso, setConsenso] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [sentTo, setSentTo] = useState<string | null>(null);
@@ -92,10 +91,11 @@ export const FreemiumResources: React.FC = () => {
       setSubmitting(true);
       setError(null);
       try {
+        // Lasciare l'email vale come consenso (frase informativa sotto il form)
         const res = await fetch('/api/send-resources', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email: value, consensoMarketing: consenso, locale }),
+          body: JSON.stringify({ email: value, consensoMarketing: true, locale }),
         });
         const data = await res.json().catch(() => ({}));
         if (res.ok && data.emailSent) {
@@ -117,7 +117,7 @@ export const FreemiumResources: React.FC = () => {
         setSubmitting(false);
       }
     },
-    [email, consenso, locale, t],
+    [email, locale, t],
   );
 
   // ── Render ───────────────────────────────────────────────────────
@@ -369,17 +369,7 @@ export const FreemiumResources: React.FC = () => {
                   {submitting ? t('freemium.mail.sending') : t('freemium.mail.button')}
                 </button>
               </div>
-              {/* Consenso marketing: FACOLTATIVO e mai pre-spuntato (GDPR).
-                  La consegna dei PDF è transazionale e non dipende dalla spunta. */}
-              <label className="mt-3 flex cursor-pointer items-start gap-2 text-xs text-white/40">
-                <input
-                  type="checkbox"
-                  checked={consenso}
-                  onChange={(e) => setConsenso(e.target.checked)}
-                  className="mt-0.5 accent-orange-500"
-                />
-                {t('freemium.gate.privacy')}
-              </label>
+              <p className="mt-3 text-xs text-white/35">{t('freemium.mail.consent')}</p>
               {error && <p className="mt-3 text-sm text-red-400">{error}</p>}
             </motion.form>
           )}

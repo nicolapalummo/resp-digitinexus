@@ -256,7 +256,8 @@
       "errorSend": "Non siamo riusciti a inviare l'email. Il tuo contatto è salvato: riprova tra qualche minuto.",
       "errorGeneric": "Qualcosa è andato storto. Riprova tra qualche minuto.",
       "invalid": "Inserisci un indirizzo email valido.",
-      "another": "Usa un'altra email"
+      "another": "Usa un'altra email",
+      "consent": "Niente spam: solo i PDF e qualche consiglio utile. Disiscrizione quando vuoi."
     },
     "pageTitle": "Hub Risorse DigitiNexus",
     "pageSubtitle": "Sblocca la tua strategia, un passo alla volta.",
