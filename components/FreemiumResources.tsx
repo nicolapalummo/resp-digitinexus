@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Lock, Mail, CheckCircle2, ArrowLeft, Sparkles, ArrowRight, FileText } from 'lucide-react';
+import { Lock, Mail, CheckCircle2, ArrowLeft, Sparkles, ArrowRight, FileText, ZoomIn, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 import { langFromPath } from '../lib/i18nRouting';
@@ -49,6 +49,21 @@ export const FreemiumResources: React.FC = () => {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [sentTo, setSentTo] = useState<string | null>(null);
+  // Lightbox: solo le 2 pagine leggibili si ingrandiscono (versione hi-res z{n}.webp)
+  const [zoom, setZoom] = useState<{ src: string; alt: string } | null>(null);
+
+  useEffect(() => {
+    if (!zoom) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setZoom(null);
+    };
+    window.addEventListener('keydown', onKey);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      window.removeEventListener('keydown', onKey);
+      document.body.style.overflow = '';
+    };
+  }, [zoom]);
 
   // Scroll to top on mount + prefill dell'email se già lasciata in passato
   useEffect(() => {
@@ -203,21 +218,39 @@ export const FreemiumResources: React.FC = () => {
 
               {/* Preview strip: 2 pagine leggibili + pagine sfocate */}
               <div className="flex gap-3 overflow-x-auto pb-2">
-                {[1, 2].map((n) => (
-                  <figure key={`p${n}`} className="flex-shrink-0 w-36 md:w-44">
-                    <img
-                      src={`/freemium/preview/${res.previewKey}/p${n}.webp`}
-                      alt={`${t(`freemium.${res.key}.title`)} – ${t('freemium.preview.pageLabel', { n })}`}
-                      width={640}
-                      height={828}
-                      loading="lazy"
-                      className="w-full h-auto rounded-lg border border-white/10"
-                    />
-                    <figcaption className="mt-1.5 text-center text-[10px] font-mono uppercase tracking-wider text-white/30">
-                      {t('freemium.preview.pageLabel', { n })}
-                    </figcaption>
-                  </figure>
-                ))}
+                {[1, 2].map((n) => {
+                  const alt = `${t(`freemium.${res.key}.title`)} – ${t('freemium.preview.pageLabel', { n })}`;
+                  return (
+                    <figure key={`p${n}`} className="flex-shrink-0 w-36 md:w-44">
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setZoom({ src: `/freemium/preview/${res.previewKey}/z${n}.webp`, alt })
+                        }
+                        className="group relative block w-full cursor-zoom-in"
+                        aria-label={alt}
+                      >
+                        <img
+                          src={`/freemium/preview/${res.previewKey}/p${n}.webp`}
+                          alt={alt}
+                          width={640}
+                          height={828}
+                          loading="lazy"
+                          className="w-full h-auto rounded-lg border border-white/10 group-hover:border-orange-400/40 transition-colors"
+                        />
+                        <span className="absolute inset-0 flex items-center justify-center rounded-lg bg-black/0 group-hover:bg-black/25 transition-colors">
+                          <ZoomIn
+                            size={20}
+                            className="text-white opacity-0 group-hover:opacity-90 transition-opacity drop-shadow"
+                          />
+                        </span>
+                      </button>
+                      <figcaption className="mt-1.5 text-center text-[10px] font-mono uppercase tracking-wider text-white/30">
+                        {t('freemium.preview.pageLabel', { n })}
+                      </figcaption>
+                    </figure>
+                  );
+                })}
 
                 {/* Pagine oltre la seconda: immagini GIÀ sfocate + overlay lucchetto */}
                 <div className="relative flex gap-3 flex-shrink-0">
@@ -393,6 +426,42 @@ export const FreemiumResources: React.FC = () => {
 
       {/* ── Bottom spacer ──────────────────────────────────────── */}
       <div className="h-24" />
+
+      {/* ── Lightbox per le pagine di anteprima leggibili ──────── */}
+      <AnimatePresence>
+        {zoom && (
+          <motion.div
+            key="lightbox"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            onClick={() => setZoom(null)}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-sm p-4 md:p-8 cursor-zoom-out"
+            role="dialog"
+            aria-modal="true"
+            aria-label={zoom.alt}
+          >
+            <button
+              type="button"
+              onClick={() => setZoom(null)}
+              className="absolute top-5 right-5 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
+              aria-label="Chiudi"
+            >
+              <X size={20} />
+            </button>
+            <motion.img
+              initial={{ scale: 0.92, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+              src={zoom.src}
+              alt={zoom.alt}
+              className="max-h-full max-w-full rounded-xl shadow-2xl"
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

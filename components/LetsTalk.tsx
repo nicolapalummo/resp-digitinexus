@@ -2,11 +2,15 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { Link, useLocation } from 'react-router-dom';
+import { langFromPath } from '../lib/i18nRouting';
 
 const CALENDLY_URL = 'https://calendly.com/digitinexus/30min';
 
 export const LetsTalk: React.FC = () => {
   const { t } = useTranslation();
+  const location = useLocation();
+  const aboutHref = langFromPath(location.pathname) === 'en' ? '/en/chi-siamo' : '/chi-siamo';
 
   // Load the Calendly inline-widget script once; re-init on later mounts (SPA nav).
   useEffect(() => {
@@ -56,8 +60,15 @@ export const LetsTalk: React.FC = () => {
              <span>&copy; {new Date().getFullYear()} {t('letsTalk.copyright')}</span>
              <span className="hidden md:inline mx-2">|</span>
              <span className="md:mx-2 flex flex-col md:flex-row items-center gap-2 md:gap-0">
-                 <a 
-                     href="/Terms & Conditions DigitiNexus LLC.pdf" 
+                 <Link
+                     to={aboutHref}
+                     className="hover:text-gray-600 transition-colors cursor-pointer"
+                 >
+                     {t('about.tag')}
+                 </Link>
+                 <span className="hidden md:inline mx-2">|</span>
+                 <a
+                     href="/Terms & Conditions DigitiNexus LLC.pdf"
                      target="_blank"
                      rel="noopener noreferrer"
                      className="hover:text-gray-600 transition-colors cursor-pointer"

@@ -118,7 +118,7 @@ export default async function handler(req: any, res: any) {
   //    il nurturing marketing è gestito dal CRM solo se consensoMarketing=true).
   let emailSent = false;
   const apiKey = process.env.RESEND_API_KEY;
-  const from = process.env.RESOURCES_FROM_EMAIL || 'DigitiNexus <risorse@digitinexus.com>';
+  const from = process.env.RESOURCES_FROM_EMAIL || 'DigitiNexus <info@digitinexus.com>';
   if (apiKey) {
     try {
       const exp = Date.now() + LINK_TTL_MS;

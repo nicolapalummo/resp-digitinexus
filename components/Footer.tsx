@@ -7,6 +7,9 @@ import { langFromPath } from '../lib/i18nRouting';
 export const Footer: React.FC = () => {
   const location = useLocation();
   const isEn = langFromPath(location.pathname) === 'en';
+  // Sulla landing l'ultima sezione (LetsTalk, sfondo chiaro) ha già la sua riga
+  // copyright + link legali: il footer nero globale lì stonerebbe e duplicherebbe.
+  if (location.pathname === '/' || location.pathname === '/en') return null;
   return (
   <footer className="bg-black border-t border-white/10 py-8 px-6 text-center text-sm text-white/40">
     <p>
