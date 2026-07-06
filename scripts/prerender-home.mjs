@@ -86,7 +86,7 @@ function buildContent(locale) {
   <section class="max-w-5xl mx-auto px-6 py-10">
     <h2 class="text-3xl font-medium">${esc(t.about?.title || 'Chi siamo')}</h2>
     ${(Array.isArray(t.about?.text) ? t.about.text : [t.about?.text]).filter(Boolean).map((p) => `<p class="mt-3 text-white/70">${esc(p)}</p>`).join('')}
-    <img src="/team-digitinexus-v2.webp" alt="${esc(t.about?.imageAlt || 'Team DigitiNexus')}" loading="lazy" />
+    <img src="/team-digitinexus-v2.webp" alt="${esc(t.about?.imageAlt || 'Team DigitiNexus')}" width="1537" height="1023" loading="lazy" />
     <p>Filippo Gentili &amp; Nicola Palummo</p>
   </section>
   <section class="max-w-5xl mx-auto px-6 py-10">
@@ -108,6 +108,9 @@ function buildContent(locale) {
     <ul>${clusterLinksHtml(locale)}</ul>
     <p><a href="${CLUSTERS[locale].base}">${esc(m.blogLabel)}</a></p>
   </section>
+  <footer class="max-w-5xl mx-auto px-6 py-10 text-white/50">
+    <p>© ${new Date().getFullYear()} DigitiNexus LLC · <a href="/Privacy%20Policy%20DigitiNexus%20LLC.pdf">Privacy Policy</a> · <a href="/Terms%20&amp;%20Conditions%20DigitiNexus%20LLC.pdf">Terms &amp; Conditions</a></p>
+  </footer>
 </main>`;
 }
 
@@ -183,7 +186,54 @@ function renderResources(locale) {
   html = html.replace(/<meta property="og:description"[^>]*>/, `<meta property="og:description" content="${esc(m.desc)}" />`);
   const alt = `    <link rel="alternate" hreflang="it" href="${SITE}/risorse-gratuite" />\n    <link rel="alternate" hreflang="en" href="${SITE}/en/risorse-gratuite" />\n    <link rel="alternate" hreflang="x-default" href="${SITE}/risorse-gratuite" />\n  </head>`;
   html = html.replace('</head>', alt);
+  // page-level structured data (the org schema was stripped above with the homepage block)
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': `${SITE}${m.path}#webpage`,
+        url: `${SITE}${m.path}`,
+        name: m.title,
+        description: m.desc,
+        inLanguage: locale === 'en' ? 'en-US' : 'it-IT',
+        isPartOf: { '@id': `${SITE}/#website` },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${SITE}${m.path}#breadcrumb`,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: locale === 'en' ? `${SITE}/en` : `${SITE}/` },
+          { '@type': 'ListItem', position: 2, name: locale === 'en' ? 'Free resources' : 'Risorse gratuite', item: `${SITE}${m.path}` },
+        ],
+      },
+    ],
+  };
+  html = html.replace('</head>', `    <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>\n  </head>`);
   html = html.replace(/<div id="root">\s*<\/div>/, `<div id="root">${buildResources(locale)}</div>`);
+  return html;
+}
+
+// Client-only routes (React renders the real content; crawlers must not index
+// them, but the URL must exist as a static asset so Vercel serves 200 instead
+// of the 404.html fallback — /confirmation is the post-Calendly-booking page).
+const CONFIRMATION_META = {
+  it: { path: '/confirmation', title: 'Grazie di aver prenotato | DigitiNexus' },
+  en: { path: '/en/confirmation', title: 'Thanks for booking | DigitiNexus' },
+};
+
+function renderConfirmation(locale) {
+  const m = CONFIRMATION_META[locale];
+  let html = baseHtml;
+  html = html.replace(/\s*<!-- Structured data:[\s\S]*?-->/g, '');
+  html = html.replace(/\s*<script type="application\/ld\+json">[\s\S]*?<\/script>/g, '');
+  if (locale === 'en') html = html.replace(/<html lang="[^"]*"/, '<html lang="en"');
+  html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${esc(m.title)}</title>`);
+  html = html.replace(/<meta name="robots"[^>]*>/, '<meta name="robots" content="noindex, follow" />');
+  html = html.replace(/<meta name="googlebot"[^>]*>/, '<meta name="googlebot" content="noindex, follow" />');
+  // no canonical/og:url pointing at the homepage on a noindex utility page
+  html = html.replace(/\s*<link rel="canonical"[^>]*>/, '');
+  html = html.replace(/\s*<link rel="alternate"[^>]*>/g, '');
   return html;
 }
 
@@ -193,6 +243,9 @@ function render404() {
   html = html.replace(/\s*<script type="application\/ld\+json">[\s\S]*?<\/script>/g, '');
   html = html.replace(/<title>[\s\S]*?<\/title>/, '<title>404 — Pagina non trovata | DigitiNexus</title>');
   html = html.replace(/<meta name="robots"[^>]*>/, '<meta name="robots" content="noindex, follow" />');
+  html = html.replace(/<meta name="googlebot"[^>]*>/, '<meta name="googlebot" content="noindex, follow" />');
+  // a 404 must not declare the homepage as canonical
+  html = html.replace(/\s*<link rel="canonical"[^>]*>/, '');
   html = html.replace(/\s*<link rel="alternate"[^>]*>/g, '');
   const body = `
 <main class="bg-black text-white" style="min-height:60vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:4rem 1.5rem">
@@ -217,4 +270,9 @@ writeFileSync(join(DIST, 'risorse-gratuite', 'index.html'), renderResources('it'
 mkdirSync(join(DIST, 'en', 'risorse-gratuite'), { recursive: true });
 writeFileSync(join(DIST, 'en', 'risorse-gratuite', 'index.html'), renderResources('en'), 'utf8');
 
-console.log('[prerender-home] /, /en, /risorse-gratuite, /en/risorse-gratuite generati con contenuto statico + hreflang.');
+mkdirSync(join(DIST, 'confirmation'), { recursive: true });
+writeFileSync(join(DIST, 'confirmation', 'index.html'), renderConfirmation('it'), 'utf8');
+mkdirSync(join(DIST, 'en', 'confirmation'), { recursive: true });
+writeFileSync(join(DIST, 'en', 'confirmation', 'index.html'), renderConfirmation('en'), 'utf8');
+
+console.log('[prerender-home] /, /en, /risorse-gratuite, /en/risorse-gratuite, /confirmation, /en/confirmation generati.');

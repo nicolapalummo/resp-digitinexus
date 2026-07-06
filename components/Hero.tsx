@@ -17,6 +17,9 @@ export const Hero: React.FC = () => {
             transition={{ duration: 1.5, ease: "easeOut" }}
             src="/Logo DN Mongolfiera.webp"
             alt="DigitiNexus Mongolfiera"
+            width={1536}
+            height={1024}
+            fetchPriority="high"
             className="w-full h-full object-cover object-center opacity-90"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/90 pointer-events-none" />
@@ -94,6 +97,9 @@ export const Hero: React.FC = () => {
              <img 
                 src="/Logo DN Ombrelli 4.webp"
                 alt="DigitiNexus, agenzia web e design"
+                width={1536}
+                height={1024}
+                fetchPriority="high"
                 className="w-full h-full object-cover"
             />
         </motion.div>

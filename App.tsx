@@ -19,6 +19,7 @@ import { FreemiumResources } from './components/FreemiumResources';
 import { ExploreGuides } from './components/ExploreGuides';
 import { NotFound } from './components/NotFound';
 import { Confirmation } from './components/Confirmation';
+import { Footer } from './components/Footer';
 import { LocaleManager } from './components/LocaleManager';
 // Blog routes are lazy-loaded so the 120 article data modules ship in a separate
 // chunk (only downloaded on /blog routes), keeping the homepage bundle light.
@@ -107,6 +108,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
         </Suspense>
+        <Footer />
       </div>
     </BrowserRouter>
   );

@@ -115,8 +115,8 @@ const STATIC_HEADER = `
 
 const STATIC_FOOTER = `
 <footer class="blog-static-footer">
-  <p>© ${new Date().getFullYear()} DigitiNexus — Siti web su misura, consegnati in 1–4 settimane.</p>
-  <p><a href="/blog">Blog</a> · <a href="/">Home</a></p>
+  <p>© ${new Date().getFullYear()} DigitiNexus LLC — Siti web su misura, consegnati in 1–4 settimane.</p>
+  <p><a href="/blog">Blog</a> · <a href="/">Home</a> · <a href="/Privacy%20Policy%20DigitiNexus%20LLC.pdf" target="_blank" rel="noopener noreferrer">Privacy Policy</a> · <a href="/Terms%20&amp;%20Conditions%20DigitiNexus%20LLC.pdf" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a></p>
 </footer>`;
 
 // Minimal inline CSS so the no-JS / pre-hydration view is readable even if the
@@ -215,6 +215,16 @@ function writePage(routePath, html) {
   writeFileSync(join(outDir, 'index.html'), html, 'utf8');
 }
 
+// Reciprocal hreflang for listing pages (blog index + categories). Articles get
+// theirs from articleAlternates(); listing URLs are derivable from the locale maps.
+function listingAlternates(pathIt, pathEn) {
+  return [
+    { hreflang: 'it', href: `${SITE.baseUrl}${pathIt}` },
+    { hreflang: 'en', href: `${SITE.baseUrl}${pathEn}` },
+    { hreflang: 'x-default', href: `${SITE.baseUrl}${pathIt}` },
+  ];
+}
+
 // ── 4-6. Per-locale: article pages, blog index, category pages ──────────────
 function emitLocale(locale) {
   const ui = blogUI(locale);
@@ -286,6 +296,9 @@ ${STATIC_FOOTER}`;
       ogType: 'website',
       body,
       jsonLd: buildBlogIndexSchema(localeArticles, locale),
+      alternates: getVisibleArticles('it').length && getVisibleArticles('en').length
+        ? listingAlternates(blogBasePath('it'), blogBasePath('en'))
+        : undefined,
       htmlLang: locale,
     });
     writePage(routeBase, html);
@@ -314,6 +327,12 @@ ${STATIC_FOOTER}`;
       ogType: 'website',
       body,
       jsonLd: buildBlogIndexSchema(inCluster, locale),
+      alternates: getArticlesByCluster(c.id, 'it').length && getArticlesByCluster(c.id, 'en').length
+        ? listingAlternates(
+            categoryUrl(clusterFor(c.id, 'it').slug, 'it'),
+            categoryUrl(clusterFor(c.id, 'en').slug, 'en'),
+          )
+        : undefined,
       htmlLang: locale,
     });
     writePage(`${routeBase}/${catSeg}/${c.slug}`, html);
@@ -383,5 +402,29 @@ Sitemap: ${SITE.baseUrl}/sitemap.xml
 `;
 writeFileSync(join(DIST, 'robots.txt'), robots, 'utf8');
 
-console.log('[prerender] sitemap.xml, rss.xml, robots.txt generati.');
+// ── 10. llms.txt (indice per crawler AI, formato llmstxt.org) ───────────────
+const enArticles = getVisibleArticles('en');
+const llms = `# DigitiNexus
+
+> Agenzia web italiana: progettiamo e realizziamo siti su misura per studi professionali, PMI e startup. Design premium, consegna in 1–4 settimane. Blog bilingue (IT/EN) su costi, tempi, qualità, SEO/GEO e intelligenza artificiale per le aziende.
+
+## Pagine principali
+
+- [Home (IT)](${SITE.baseUrl}/): chi siamo, servizi, processo, FAQ
+- [Home (EN)](${SITE.baseUrl}/en): about, services, process, FAQ
+- [Blog (IT)](${SITE.baseUrl}${SITE.blogBase}): guide su costi, tempi e qualità dei siti web
+- [Blog (EN)](${SITE.baseUrl}/en/blog): guides on website costs, timing and quality
+- [Risorse gratuite](${SITE.baseUrl}/risorse-gratuite): guide scaricabili
+
+## Articoli (IT)
+
+${articles.map((a) => `- [${a.title}](${absoluteArticleUrl(a.slug)}): ${a.metaDescription}`).join('\n')}
+
+## Articles (EN)
+
+${enArticles.map((a) => `- [${a.title}](${absoluteArticleUrl(a.slug, 'en')}): ${a.metaDescription}`).join('\n')}
+`;
+writeFileSync(join(DIST, 'llms.txt'), llms, 'utf8');
+
+console.log('[prerender] sitemap.xml, rss.xml, robots.txt, llms.txt generati.');
 

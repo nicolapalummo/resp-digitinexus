@@ -220,7 +220,7 @@ export function buildArticleSchema(article: Article) {
   const locale = articleLocale(article);
   const lang = langTag(locale);
   const url = absoluteArticleUrl(article.slug, locale);
-  const cluster = CLUSTERS[article.cluster];
+  const cluster = clusterFor(article.cluster, locale);
   const cover = article.cover.src.startsWith('http')
     ? article.cover.src
     : `${SITE.baseUrl}${article.cover.src}`;
@@ -265,7 +265,7 @@ export function buildArticleSchema(article: Article) {
       '@type': 'BreadcrumbList',
       '@id': `${url}#breadcrumb`,
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: locale === 'en' ? `${SITE.baseUrl}/en` : SITE.baseUrl },
+        { '@type': 'ListItem', position: 1, name: 'Home', item: locale === 'en' ? `${SITE.baseUrl}/en` : `${SITE.baseUrl}/` },
         { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE.baseUrl}${blogBasePath(locale)}` },
         {
           '@type': 'ListItem',

@@ -34,3 +34,6 @@ assets/
 *.sln
 *.sw?
 *.dmg
+
+# Report audit SEO (generati, non parte del sito)
+digitinexus.com-audit/
