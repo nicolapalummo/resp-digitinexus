@@ -46,6 +46,12 @@
       "headers": [
         { "key": "X-Robots-Tag", "value": "noindex" }
       ]
+    },
+    {
+      "source": "/avatar/(.*)",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, noimageindex" }
+      ]
     }
   ],
   "rewrites": [

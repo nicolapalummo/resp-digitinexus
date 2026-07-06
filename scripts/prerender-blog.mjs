@@ -404,6 +404,10 @@ writeFileSync(join(DIST, 'rss.xml'), rss, 'utf8');
 const robots = `User-agent: *
 Allow: /
 
+# Le foto profilo delle testimonianze non devono comparire su Google Immagini
+User-agent: Googlebot-Image
+Disallow: /avatar/
+
 Sitemap: ${SITE.baseUrl}/sitemap.xml
 `;
 writeFileSync(join(DIST, 'robots.txt'), robots, 'utf8');

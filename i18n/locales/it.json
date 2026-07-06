@@ -81,32 +81,49 @@
   "reviews": {
     "title": "Recensioni",
     "review1": {
-      "company": "Voldz Law",
-      "quote": "La nostra priorità era dare ai clienti un senso di fiducia e professionalità fin dal primo click. Il nuovo sito web è elegante e altamente funzionale. I potenziali clienti possono finalmente capire chi siamo e cosa offriamo in pochi secondi. Un passo avanti significativo.",
-      "highlight": "capire chi siamo e cosa offriamo in pochi secondi",
-      "author": "Mila Anderson",
-      "role": "Direttore Relazioni Clienti – Voldz Law P.C."
+      "quote": "Avevamo un buon sito, ma mancava la spinta giusta per attrarre lead di qualità. DigitiNexus ha gestito le campagne con una precisione chirurgica: i contatti che arrivano ora sono profilati e in linea con il nostro target corporate. Niente fronzoli, solo risultati misurabili. Finalmente le nostre Ads lavorano davvero per noi.",
+      "highlight": "i contatti che arrivano ora sono profilati",
+      "author": "Siobhan Vance"
     },
     "review2": {
-      "company": "The Antler Room",
-      "quote": "Catturare l'anima di un ristorante non è un compito facile, eppure il nuovo sito web lo fa perfettamente. La fotografia spicca, la navigazione è fluida e tutto comunica la nostra identità culinaria. Le prenotazioni online sono aumentate e molti ospiti ci dicono che ci hanno scoperto grazie al sito web.",
-      "highlight": "Le prenotazioni online sono aumentate",
-      "author": "Sarah Whitmore",
-      "role": "Direttore Generale – The Antler Room"
+      "quote": "Il nuovo sito comunica finalmente la nostra autorità nel settore, e con le campagne Ads abbiamo visto le richieste di consulenza aumentare nettamente fin dalle prime settimane. Il funnel che hanno costruito è fluido, moderno e trasmette quella fiducia che per noi è fondamentale. La nostra presenza online riflette finalmente la qualità del nostro lavoro.",
+      "highlight": "le richieste di consulenza aumentare nettamente",
+      "author": "Avv. Valerio Gigli"
     },
     "review3": {
-      "company": "Delizia Trattoria",
-      "quote": "Volevamo un sito web che fosse accogliente come il nostro ristorante. Il design è caldo, pulito e mette in mostra i nostri piatti in modo bellissimo. Gli ospiti spesso ci dicono che la prima impressione che hanno avuto dal sito web li ha convinti a visitarci di persona — e questo significa tutto per noi.",
-      "highlight": "la prima impressione che hanno avuto dal sito web li ha convinti a visitarci di persona",
-      "author": "Julien Caradec",
-      "role": "Proprietario – Delizia Trattoria"
+      "quote": "Avevamo bisogno di validare il nostro modello B2B e DigitiNexus ha trasformato la nostra presenza online in una vera macchina da acquisizione. Il sito è intuitivo, le campagne sono mirate e il flusso di lead è costante. Hanno capito cosa serviva alla nostra startup per crescere e hanno colpito nel segno.",
+      "highlight": "una vera macchina da acquisizione",
+      "author": "Beckett Hayes"
     },
     "review4": {
-      "company": "Mark Harford Law",
-      "quote": "Il nuovo sito web ha completamente trasformato il modo in cui i clienti ci percepiscono. La struttura è chiara, moderna e trasmette una vera autorità. Grazie a questo restyling, le richieste di consulenza sono aumentate del 25% nelle prime settimane. La nostra presenza online riflette finalmente la qualità del nostro studio.",
-      "highlight": "le richieste di consulenza sono aumentate del 25% nelle prime settimane",
-      "author": "Erin Matthews",
-      "role": "Responsabile Operativo – Mark Harford Law"
+      "quote": "Cercavamo un partner che curasse tutto, dallo sviluppo web alla strategia di crescita, ed è stato un successo. Il nuovo ecosistema digitale che hanno creato è impeccabile: ha abbattuto i costi di acquisizione e ha migliorato drasticamente la qualità dei contatti. Ora la nostra comunicazione è coerente e performante.",
+      "highlight": "ha abbattuto i costi di acquisizione",
+      "author": "Diletta Cresti"
+    },
+    "review5": {
+      "quote": "Volevamo un sito che fosse accogliente ma estremamente professionale. Il design è pulito, mette in luce i nostri servizi in modo perfetto e, grazie al funnel integrato con le Ads, il tasso di conversione è esploso. Molti clienti ci dicono che sono arrivati a contattarci proprio per l'impatto positivo avuto dal sito. Un cambio di passo incredibile.",
+      "highlight": "il tasso di conversione è esploso",
+      "author": "Jacopo Belvisi"
+    },
+    "review6": {
+      "quote": "Catturare l'anima di un lavoro creativo non è semplice, eppure questo portfolio lo fa perfettamente. La navigazione è fluida, le immagini risaltano e ogni dettaglio comunica la mia identità artistica. È uno spazio elegante che mette in risalto i miei lavori in modo impeccabile. Non avrei potuto chiedere di meglio per presentarmi.",
+      "highlight": "ogni dettaglio comunica la mia identità artistica",
+      "author": "Heloise Charon"
+    },
+    "review7": {
+      "quote": "La nostra priorità era dare ai clienti un senso di fiducia e solidità fin dal primo click. Il sito è elegante, veloce e altamente funzionale. I potenziali partner possono finalmente capire chi siamo e il valore che offriamo in pochi secondi. È stato un passo avanti fondamentale per la nostra immagine.",
+      "highlight": "capire chi siamo e il valore che offriamo in pochi secondi",
+      "author": "Soren Sterling"
+    },
+    "review8": {
+      "quote": "Volevamo un sito che fosse accogliente come lo studio che gestiamo. Il design è pulito, mette in mostra i nostri progetti in modo bellissimo e trasmette immediatamente il nostro approccio sartoriale. Molti clienti ci dicono che è stata proprio la prima impressione sul sito a convincerli a chiamarci. Significa tutto per noi.",
+      "highlight": "la prima impressione sul sito a convincerli a chiamarci",
+      "author": "Arch. Flavia Maraini"
+    },
+    "review9": {
+      "quote": "Il nuovo sito ha trasformato il modo in cui i clienti ci percepiscono. La struttura è chiara, moderna e comunica subito una vera autorità nel nostro campo. Grazie al restyling, anche la gestione interna è diventata più semplice e professionale. La nostra vetrina digitale è finalmente all'altezza della nostra reputazione.",
+      "highlight": "comunica subito una vera autorità",
+      "author": "Dott. Tancredi Nardi"
     }
   },
   "about": {

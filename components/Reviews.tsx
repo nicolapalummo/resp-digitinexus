@@ -8,48 +8,29 @@ export const Reviews: React.FC = () => {
   const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const reviews = useMemo(() => [
-    {
-        id: 1,
-        company: t('reviews.review1.company'),
-        logo: "V",
-        quote: t('reviews.review1.quote'),
-        highlight: t('reviews.review1.highlight'),
-        author: t('reviews.review1.author'),
-        role: t('reviews.review1.role'),
-        image: "/avatar/Mila Anderson.webp"
-    },
-    {
-        id: 2,
-        company: t('reviews.review2.company'),
-        logo: "A",
-        quote: t('reviews.review2.quote'),
-        highlight: t('reviews.review2.highlight'),
-        author: t('reviews.review2.author'),
-        role: t('reviews.review2.role'),
-        image: "/avatar/Sarah Whitmore.webp"
-    },
-    {
-        id: 3,
-        company: t('reviews.review3.company'),
-        logo: "D",
-        quote: t('reviews.review3.quote'),
-        highlight: t('reviews.review3.highlight'),
-        author: t('reviews.review3.author'),
-        role: t('reviews.review3.role'),
-        image: "/avatar/Julien Caradec.webp"
-    },
-    {
-        id: 4,
-        company: t('reviews.review4.company'),
-        logo: "M",
-        quote: t('reviews.review4.quote'),
-        highlight: t('reviews.review4.highlight'),
-        author: t('reviews.review4.author'),
-        role: t('reviews.review4.role'),
-        image: "/avatar/Erin Matthews.webp"
-    }
-  ], [t]);
+  // 9 recensioni da i18n (solo quote + highlight + nome, niente ruolo).
+  // Niente foto profilo: avatar a monogramma, così nessuna immagine personale
+  // può finire su Google Images.
+  const reviews = useMemo(
+    () =>
+      Array.from({ length: 9 }, (_, i) => ({
+        id: i + 1,
+        quote: t(`reviews.review${i + 1}.quote`),
+        highlight: t(`reviews.review${i + 1}.highlight`),
+        author: t(`reviews.review${i + 1}.author`),
+      })),
+    [t],
+  );
+
+  // Iniziali del nome, ignorando i titoli professionali (Avv., Arch., Dott.)
+  const initials = (name: string) =>
+    name
+      .replace(/^(avv|arch|dott|ing|rag)\.\s*/i, '')
+      .split(/\s+/)
+      .map((w) => w[0])
+      .slice(0, 2)
+      .join('')
+      .toUpperCase();
 
   const nextSlide = () => {
     setActiveIndex((prev) => (prev + 1) % reviews.length);
@@ -94,16 +75,11 @@ export const Reviews: React.FC = () => {
 
                   {/* Author */}
                   <div className="flex flex-col items-center gap-3">
-                    <div className="w-14 h-14 rounded-2xl overflow-hidden border-2 border-white shadow-md">
-                      <img 
-                        src={review.image} 
-                        alt={review.author} 
-                        className="w-full h-full object-cover"
-                      />
+                    <div className="w-14 h-14 rounded-2xl border-2 border-white shadow-md bg-black text-white flex items-center justify-center font-semibold tracking-wide">
+                      {initials(review.author)}
                     </div>
                     <div className="text-center">
                       <h4 className="font-bold text-lg text-black">{review.author}</h4>
-                      <p className="text-sm text-gray-500 font-medium">{review.role}</p>
                     </div>
                   </div>
                 </div>
@@ -175,16 +151,11 @@ export const Reviews: React.FC = () => {
 
                                 {/* Author */}
                                 <div className="flex flex-col items-center gap-3">
-                                    <div className="w-14 h-14 rounded-2xl overflow-hidden border-2 border-white shadow-md">
-                                        <img 
-                                            src={review.image} 
-                                            alt={review.author} 
-                                            className="w-full h-full object-cover"
-                                        />
+                                    <div className="w-14 h-14 rounded-2xl border-2 border-white shadow-md bg-black text-white flex items-center justify-center font-semibold tracking-wide">
+                                        {initials(review.author)}
                                     </div>
                                     <div className="text-center">
                                         <h4 className="font-bold text-lg text-black">{review.author}</h4>
-                                        <p className="text-sm text-gray-500 font-medium">{review.role}</p>
                                     </div>
                                 </div>
                             </div>

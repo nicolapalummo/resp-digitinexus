@@ -81,32 +81,49 @@
   "reviews": {
     "title": "Reviews",
     "review1": {
-      "company": "Voldz Law",
-      "quote": "Our priority was to give clients a sense of trust and professionalism from the very first click. The new website is elegant and highly functional. Potential clients can finally understand who we are and what we offer in just a few seconds. A significant step forward.",
-      "highlight": "understand who we are and what we offer in just a few seconds",
-      "author": "Mila Anderson",
-      "role": "Client Relations Director – Voldz Law P.C."
+      "quote": "We had a good website, but it lacked the push to attract quality leads. DigitiNexus managed our campaigns with surgical precision: the inquiries we get now are qualified and aligned with our corporate target. No frills, just measurable results. Our ads finally work for us.",
+      "highlight": "the inquiries we get now are qualified",
+      "author": "Siobhan Vance"
     },
     "review2": {
-      "company": "The Antler Room",
-      "quote": "Capturing the soul of a restaurant is no easy task, yet the new website does it perfectly. The photography stands out, the navigation is smooth, and everything communicates our culinary identity. Online reservations have increased, and many guests tell us they discovered us thanks to the website.",
-      "highlight": "Online reservations have increased",
-      "author": "Sarah Whitmore",
-      "role": "General Manager – The Antler Room"
+      "quote": "The new website finally conveys our authority in the field, and with the ad campaigns we saw consultation requests increase sharply within the first weeks. The funnel they built is smooth, modern and conveys the trust that is essential for us. Our online presence finally reflects the quality of our work.",
+      "highlight": "consultation requests increase sharply",
+      "author": "Avv. Valerio Gigli"
     },
     "review3": {
-      "company": "Delizia Trattoria",
-      "quote": "We wanted a website that felt as welcoming as our restaurant. The design is warm, clean, and showcases our dishes beautifully. Guests often tell us that the first impression they got from the website convinced them to visit in person — and that means everything to us.",
-      "highlight": "first impression they got from the website convinced them to visit in person",
-      "author": "Julien Caradec",
-      "role": "Owner – Delizia Trattoria"
+      "quote": "We needed to validate our B2B model, and DigitiNexus turned our online presence into a true acquisition machine. The site is intuitive, the campaigns are targeted and the flow of leads is steady. They understood what our startup needed to grow and hit the mark.",
+      "highlight": "a true acquisition machine",
+      "author": "Beckett Hayes"
     },
     "review4": {
-      "company": "Mark Harford Law",
-      "quote": "The new website has completely transformed how clients perceive us. The structure is clear, modern, and conveys real authority. Thanks to this redesign, consultation requests increased by 25% in the first few weeks. Our online presence finally reflects the quality of our firm.",
-      "highlight": "consultation requests increased by 25% in the first few weeks",
-      "author": "Erin Matthews",
-      "role": "Operations Manager – Mark Harford Law"
+      "quote": "We were looking for a partner to handle everything, from web development to growth strategy, and it was a success. The digital ecosystem they created is flawless: it cut our acquisition costs and drastically improved lead quality. Our communication is now consistent and high-performing.",
+      "highlight": "it cut our acquisition costs",
+      "author": "Diletta Cresti"
+    },
+    "review5": {
+      "quote": "We wanted a website that felt welcoming yet extremely professional. The design is clean, showcases our services perfectly and, thanks to the funnel integrated with the ads, our conversion rate exploded. Many clients tell us they reached out precisely because of the impact the site had on them. An incredible step change.",
+      "highlight": "our conversion rate exploded",
+      "author": "Jacopo Belvisi"
+    },
+    "review6": {
+      "quote": "Capturing the soul of creative work is not easy, yet this portfolio does it perfectly. Navigation is smooth, the images stand out and every detail communicates my artistic identity. It is an elegant space that showcases my work impeccably. I could not have asked for a better way to present myself.",
+      "highlight": "every detail communicates my artistic identity",
+      "author": "Heloise Charon"
+    },
+    "review7": {
+      "quote": "Our priority was to give clients a sense of trust and solidity from the first click. The site is elegant, fast and highly functional. Potential partners can finally understand who we are and the value we offer in seconds. It was a fundamental step forward for our image.",
+      "highlight": "understand who we are and the value we offer in seconds",
+      "author": "Soren Sterling"
+    },
+    "review8": {
+      "quote": "We wanted a website as welcoming as the studio we run. The design is clean, showcases our projects beautifully and immediately conveys our tailored approach. Many clients tell us it was the first impression on the website that convinced them to call us. That means everything to us.",
+      "highlight": "the first impression on the website that convinced them to call us",
+      "author": "Arch. Flavia Maraini"
+    },
+    "review9": {
+      "quote": "The new website transformed the way clients perceive us. The structure is clear, modern and immediately conveys real authority in our field. Thanks to the redesign, even our internal management became simpler and more professional. Our digital storefront finally lives up to our reputation.",
+      "highlight": "immediately conveys real authority",
+      "author": "Dott. Tancredi Nardi"
     }
   },
   "about": {
