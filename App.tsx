@@ -77,6 +77,8 @@ function App() {
   // Add smooth scroll behavior
   useEffect(() => {
     document.documentElement.style.scrollBehavior = 'smooth';
+    // React è montato: via il boot-screen che copriva il contenuto prerenderizzato
+    document.documentElement.classList.remove('booting');
     return () => {
       document.documentElement.style.scrollBehavior = 'auto';
     };

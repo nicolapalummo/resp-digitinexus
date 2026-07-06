@@ -124,8 +124,15 @@
   ]
 }
 </script>
-    <!-- Brand loader shown while the Resources page boots (replaced when React mounts) -->
+    <!-- Boot-screen: mentre html.booting è attivo (loader.js, sincrono qui sopra
+         nel head) il contenuto prerenderizzato resta nascosto sotto un overlay
+         con spinner; React rimuove la classe al mount. Senza JS (crawler) la
+         classe non viene mai aggiunta e il contenuto statico è visibile. -->
+    <script src="/loader.js"></script>
     <style>
+      html.booting #root{visibility:hidden}
+      html.booting::before{content:'';position:fixed;inset:0;background:#0a0a0a;z-index:9998}
+      html.booting::after{content:'';position:fixed;top:50%;left:50%;margin:-20px 0 0 -20px;width:40px;aspect-ratio:1;z-index:9999;--c:linear-gradient(#f97316 0 0);--m:radial-gradient(farthest-side,#f97316 92%,#0000);background:var(--c),var(--m),var(--c),var(--m),var(--c),var(--m);background-size:8px 15px,8px 8px;background-repeat:no-repeat;animation:l14 1s infinite alternate}
       .app-loader{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#0a0a0a;z-index:9999}
       .app-loader .loader{width:40px;aspect-ratio:1;--c:linear-gradient(#f97316 0 0);--m:radial-gradient(farthest-side,#f97316 92%,#0000);background:var(--c),var(--m),var(--c),var(--m),var(--c),var(--m);background-size:8px 15px,8px 8px;background-repeat:no-repeat;animation:l14 1s infinite alternate}
       @keyframes l14{0%,10%{background-position:0 0,0 100%,50% 0,50% 100%,100% 0,100% 100%}33%{background-position:0 100%,0 0,50% 0,50% 100%,100% 0,100% 100%}66%{background-position:0 100%,0 0,50% 100%,50% 0,100% 0,100% 100%}90%,100%{background-position:0 100%,0 0,50% 100%,50% 0,100% 100%,100% 0}}
@@ -133,7 +140,6 @@
 </head>
   <body>
     <div id="root"></div>
-    <script src="/loader.js"></script>
   <script type="module" src="/index.tsx"></script>
 </body>
 </html>
