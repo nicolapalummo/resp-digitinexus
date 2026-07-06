@@ -1,16 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { Link, useLocation } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { langFromPath } from '../lib/i18nRouting';
 
 // "Chi siamo" / Founders section: a black rounded card (title, text, photo) floating
 // on the light section background, with a soft shadow. Placed above Why Me.
 export const ChiSiamo: React.FC = () => {
   const { t } = useTranslation();
-  const location = useLocation();
-  const aboutHref = langFromPath(location.pathname) === 'en' ? '/en/chi-siamo' : '/chi-siamo';
   return (
     <section id="about" className="bg-[#F3F4F6] py-20 md:py-24 px-6 md:px-12">
       <div className="container mx-auto">
@@ -47,13 +42,6 @@ export const ChiSiamo: React.FC = () => {
                   {paragraph}
                 </p>
               ))}
-              {/* Pagina Chi Siamo dedicata: accesso da qui e dal footer, non dalla navbar */}
-              <Link
-                to={aboutHref}
-                className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 transition-colors font-medium pt-1"
-              >
-                {t('about.moreLink')} <ArrowRight size={16} />
-              </Link>
             </div>
             <div className="order-1 lg:order-2">
               <div className="overflow-hidden rounded-2xl border border-white/10">
