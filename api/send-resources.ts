@@ -30,21 +30,29 @@ const RESOURCES = [
 const COPY = {
   it: {
     subject: 'I tuoi 3 PDF completi | DigitiNexus',
+    preheader: 'I tuoi 3 PDF sono pronti da scaricare. I link restano validi per 7 giorni.',
+    eyebrow: 'Le tue risorse',
     title: 'Ecco le tue risorse complete',
     intro:
       'Grazie per averle richieste! Qui sotto trovi i link per scaricare i 3 PDF completi. I link restano validi per 7 giorni.',
     cta: 'Scarica il PDF',
-    outro: 'Domande sul tuo sito o sulla tua presenza online? Rispondi pure a questa email.',
-    footer: 'DigitiNexus LLC · digitinexus.com',
+    outro: 'Domande sul tuo sito o sulla tua presenza online? Rispondi pure a questa email: la leggiamo davvero.',
+    signature: '— Il team DigitiNexus',
+    permission: 'Hai ricevuto questa email perché hai richiesto le risorse su digitinexus.com.',
+    footer: 'DigitiNexus LLC',
   },
   en: {
     subject: 'Your 3 complete PDFs | DigitiNexus',
+    preheader: 'Your 3 PDFs are ready to download. The links stay valid for 7 days.',
+    eyebrow: 'Your resources',
     title: 'Here are your complete resources',
     intro:
       'Thanks for requesting them! Below are the links to download the 3 complete PDFs. The links stay valid for 7 days.',
     cta: 'Download the PDF',
-    outro: 'Questions about your website or online presence? Just reply to this email.',
-    footer: 'DigitiNexus LLC · digitinexus.com',
+    outro: 'Questions about your website or online presence? Just reply to this email — we actually read it.',
+    signature: '— The DigitiNexus team',
+    permission: 'You received this email because you requested the resources on digitinexus.com.',
+    footer: 'DigitiNexus LLC',
   },
 };
 
@@ -56,27 +64,56 @@ function downloadUrl(id: number, exp: number): string {
   return `${SITE_URL}/api/download-resource?id=${id}&exp=${exp}&sig=${sig}`;
 }
 
+// Stile DigitiNexus: card scura #0a0a0a, accento arancio #F97316, item numerati
+// 01/02/03 come le sezioni del sito, bottoni pill. Solo tabelle + stili inline
+// (email-safe); il font Manrope degrada sui fallback di sistema nei client email.
 function buildEmailHtml(locale: 'it' | 'en', links: { label: string; url: string }[]): string {
   const c = COPY[locale];
+  const FONT = "'Manrope','Segoe UI',Helvetica,Arial,sans-serif";
   const rows = links
     .map(
-      (l) => `
-      <tr><td style="padding:10px 0">
-        <p style="margin:0 0 6px;font-weight:600;color:#111">${l.label}</p>
-        <a href="${l.url}" style="display:inline-block;background:#f97316;color:#fff;text-decoration:none;padding:10px 18px;border-radius:10px;font-weight:600">${c.cta} →</a>
+      (l, i) => `
+      <tr><td style="padding:22px 0;border-top:1px solid #262626">
+        <p style="margin:0 0 4px;font-family:${FONT};font-size:12px;font-weight:700;letter-spacing:2px;color:#f97316">0${i + 1}</p>
+        <p style="margin:0 0 14px;font-family:${FONT};font-size:17px;font-weight:700;color:#ffffff;line-height:1.4">${l.label}</p>
+        <table role="presentation" cellpadding="0" cellspacing="0"><tr>
+          <td bgcolor="#f97316" style="border-radius:999px">
+            <a href="${l.url}" style="display:inline-block;font-family:${FONT};background:#f97316;color:#ffffff;text-decoration:none;padding:12px 26px;border-radius:999px;font-weight:700;font-size:14px">${c.cta} &rarr;</a>
+          </td>
+        </tr></table>
       </td></tr>`,
     )
     .join('');
-  return `<!doctype html><html><body style="margin:0;padding:0;background:#f5f5f5;font-family:Arial,Helvetica,sans-serif">
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" style="padding:32px 16px">
-    <table role="presentation" width="560" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:16px;padding:32px">
-      <tr><td>
-        <h1 style="margin:0 0 12px;font-size:22px;color:#111">${c.title}</h1>
-        <p style="margin:0 0 18px;color:#444;line-height:1.6">${c.intro}</p>
-        <table role="presentation" width="100%" cellpadding="0" cellspacing="0">${rows}</table>
-        <p style="margin:22px 0 0;color:#444;line-height:1.6">${c.outro}</p>
-        <p style="margin:26px 0 0;color:#999;font-size:12px">${c.footer}</p>
+  return `<!doctype html><html lang="${locale}"><head><meta charset="utf-8"><meta name="color-scheme" content="dark"><meta name="supported-color-schemes" content="dark"></head>
+<body style="margin:0;padding:0;background:#f3f4f6;font-family:${FONT}">
+  <div style="display:none;max-height:0;overflow:hidden;mso-hide:all">${c.preheader}&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;</div>
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" bgcolor="#f3f4f6"><tr><td align="center" style="padding:40px 16px">
+    <table role="presentation" width="560" cellpadding="0" cellspacing="0" style="max-width:560px;width:100%">
+
+      <!-- header: logo + wordmark -->
+      <tr><td style="background:#0a0a0a;border-radius:20px 20px 0 0;padding:28px 36px;border-bottom:1px solid #262626">
+        <table role="presentation" cellpadding="0" cellspacing="0"><tr>
+          <td valign="middle" style="padding-right:14px"><img src="${SITE_URL}/email-logo.png" width="40" height="40" alt="DigitiNexus" style="display:block;border:0"></td>
+          <td valign="middle" style="font-family:${FONT};font-size:19px;font-weight:800;color:#ffffff;letter-spacing:.3px">DigitiNexus</td>
+        </tr></table>
       </td></tr>
+
+      <!-- corpo -->
+      <tr><td style="background:#0a0a0a;padding:36px 36px 40px;border-radius:0 0 20px 20px">
+        <p style="margin:0 0 10px;font-family:${FONT};font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#f97316">${c.eyebrow}</p>
+        <h1 style="margin:0 0 14px;font-family:${FONT};font-size:26px;line-height:1.25;color:#ffffff">${c.title}</h1>
+        <p style="margin:0 0 26px;font-family:${FONT};font-size:15px;color:#a3a3a3;line-height:1.65">${c.intro}</p>
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0">${rows}</table>
+        <p style="margin:28px 0 0;font-family:${FONT};font-size:15px;color:#a3a3a3;line-height:1.65;border-top:1px solid #262626;padding-top:24px">${c.outro}</p>
+        <p style="margin:18px 0 0;font-family:${FONT};font-size:15px;font-weight:700;color:#ffffff">${c.signature}</p>
+      </td></tr>
+
+      <!-- footer fuori dalla card -->
+      <tr><td align="center" style="padding:24px 20px 0">
+        <p style="margin:0 0 6px;font-family:${FONT};font-size:12px;color:#737373;line-height:1.6">${c.permission}</p>
+        <p style="margin:0;font-family:${FONT};font-size:12px;color:#737373">${c.footer} · <a href="${SITE_URL}" style="color:#f97316;text-decoration:none;font-weight:600">digitinexus.com</a></p>
+      </td></tr>
+
     </table>
   </td></tr></table>
 </body></html>`;
