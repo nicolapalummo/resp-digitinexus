@@ -8,9 +8,10 @@ export const Reviews: React.FC = () => {
   const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // 9 recensioni da i18n (solo quote + highlight + nome, niente ruolo).
-  // Niente foto profilo: avatar a monogramma, così nessuna immagine personale
-  // può finire su Google Images.
+  // 9 recensioni da i18n (quote + highlight + nome, niente ruolo).
+  // Le foto profilo NON devono finire su Google Images: file con nomi neutri
+  // (avatar-N.webp), alt vuoto, X-Robots-Tag noindex,noimageindex su /avatar/*
+  // (vercel.json) e Disallow Googlebot-Image nel robots.txt.
   const reviews = useMemo(
     () =>
       Array.from({ length: 9 }, (_, i) => ({
@@ -18,19 +19,10 @@ export const Reviews: React.FC = () => {
         quote: t(`reviews.review${i + 1}.quote`),
         highlight: t(`reviews.review${i + 1}.highlight`),
         author: t(`reviews.review${i + 1}.author`),
+        image: `/avatar/avatar-${i + 1}.webp`,
       })),
     [t],
   );
-
-  // Iniziali del nome, ignorando i titoli professionali (Avv., Arch., Dott.)
-  const initials = (name: string) =>
-    name
-      .replace(/^(avv|arch|dott|ing|rag)\.\s*/i, '')
-      .split(/\s+/)
-      .map((w) => w[0])
-      .slice(0, 2)
-      .join('')
-      .toUpperCase();
 
   const nextSlide = () => {
     setActiveIndex((prev) => (prev + 1) % reviews.length);
@@ -75,8 +67,8 @@ export const Reviews: React.FC = () => {
 
                   {/* Author */}
                   <div className="flex flex-col items-center gap-3">
-                    <div className="w-14 h-14 rounded-2xl border-2 border-white shadow-md bg-black text-white flex items-center justify-center font-semibold tracking-wide">
-                      {initials(review.author)}
+                    <div className="w-14 h-14 rounded-2xl overflow-hidden border-2 border-white shadow-md">
+                      <img src={review.image} alt="" aria-hidden loading="lazy" width={224} height={224} className="w-full h-full object-cover" />
                     </div>
                     <div className="text-center">
                       <h4 className="font-bold text-lg text-black">{review.author}</h4>
@@ -151,8 +143,8 @@ export const Reviews: React.FC = () => {
 
                                 {/* Author */}
                                 <div className="flex flex-col items-center gap-3">
-                                    <div className="w-14 h-14 rounded-2xl border-2 border-white shadow-md bg-black text-white flex items-center justify-center font-semibold tracking-wide">
-                                        {initials(review.author)}
+                                    <div className="w-14 h-14 rounded-2xl overflow-hidden border-2 border-white shadow-md">
+                                        <img src={review.image} alt="" aria-hidden loading="lazy" width={224} height={224} className="w-full h-full object-cover" />
                                     </div>
                                     <div className="text-center">
                                         <h4 className="font-bold text-lg text-black">{review.author}</h4>
