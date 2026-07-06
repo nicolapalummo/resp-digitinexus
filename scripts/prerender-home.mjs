@@ -58,7 +58,7 @@ function reviewsHtml(r) {
 
 function faqHtml(f) {
   if (!f) return '';
-  return ['q1', 'q2', 'q3', 'q4', 'q5', 'q6'].map((k) => f[k]).filter(Boolean).map((q) => {
+  return ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8'].map((k) => f[k]).filter(Boolean).map((q) => {
     const a = q.answer || [q.answer1, q.answer2, q.answer3].filter(Boolean).join(' ');
     return `<div><h3>${esc(q.question)}</h3><p>${esc(a)}</p></div>`;
   }).join('');

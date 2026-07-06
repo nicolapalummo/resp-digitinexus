@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Zap, Award, Smartphone, Layout, Code2, Layers, Palette, Box, Fingerprint, Lightbulb } from 'lucide-react';
+import { Megaphone, Award, Smartphone, Layout, Code2, Layers, Palette, Box, Fingerprint, Lightbulb } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 export const WhyMe: React.FC = () => {
@@ -86,7 +86,7 @@ export const WhyMe: React.FC = () => {
     {
       title: t('whyMe.feature2.title'),
       desc: t('whyMe.feature2.description'),
-      icon: <Zap size={24} />,
+      icon: <Megaphone size={24} />,
       visual: (
         <div className="w-full h-full bg-gray-50 flex items-center justify-center relative overflow-hidden group perspective-1000">
              {/* Background Grid */}

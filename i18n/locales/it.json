@@ -22,9 +22,9 @@
     "cta": "Torna alla home"
   },
   "hero": {
-    "badge": "Oltre 25 Progetti di Successo",
+    "badge": "Oltre 25 progetti di successo",
     "title": "Distinguiti con",
-    "subtitle": "Costruisci fiducia, distinguiti e fai crescere la tua attività con un sito web e un brand belli e funzionali, creati per il tuo settore.",
+    "subtitle": "Costruisci fiducia, distinguiti e fai crescere la tua attività con un sito web e campagne che lavorano insieme per portarti clienti — non solo visite.",
     "bookCall": "Parliamone",
     "viewWork": "Vedi i Lavori"
   },
@@ -34,7 +34,7 @@
     "description": "C'è un divario tra come appare il tuo prodotto e come lo presenti",
     "issue1": {
       "title": "Le persone non capiscono cosa fai",
-      "description": "Se il tuo sito web e il marketing non sono cristallini, i potenziali clienti non capiranno cosa fai o perché è importante."
+      "description": "Se il tuo sito web e il marketing non sono chiari, i potenziali clienti non capiranno cosa fai o perché è importante."
     },
     "issue2": {
       "title": "Sembri amatoriale e come se stessi ancora testando",
@@ -42,14 +42,15 @@
     },
     "issue3": {
       "title": "Il tuo sito non è costruito per convertire",
-      "description": "Hai un buon prodotto e un discreto riscontro. Ora è il momento che la struttura della pagina e i messaggi lavorino tanto quanto te."
+      "description": "Porti (o potresti portare) traffico dalle campagne, ma il sito non trasforma i clic in contatti. La struttura della pagina e i messaggi devono lavorare tanto quanto il tuo budget."
     }
   },
   "intro": {
     "tag": "Introduzione",
     "text1": "Se questa è la tua situazione, possiamo aiutarti.",
     "text2": "DigitiNexus è un'agenzia web orientata al design che unisce creatività, strategia e tecnologia per creare siti web che si distinguono davvero.",
-    "text3": "Ogni progetto che costruiamo non solo è bello da vedere — funziona anche alla perfezione."
+    "text3": "Ogni progetto che costruiamo non solo è bello da vedere — funziona anche alla perfezione.",
+    "text4": "Uniamo sito e pubblicità in un unico funnel: le persone giuste ti trovano, e quando arrivano trovano un sito costruito per farle diventare clienti."
   },
   "work": {
     "tag": "Lavori",
@@ -63,7 +64,7 @@
     "you": "Tu",
     "step1": {
       "title": "Prenota una chiamata veloce",
-      "description": "Iniziamo con una chiamata veloce per capire i tuoi obiettivi, il target e le priorità. Nessun impegno + saprai cosa fare dopo.",
+      "description": "Iniziamo con una chiamata veloce per capire i tuoi obiettivi, il target e le priorità. Nessun impegno: saprai come procedere.",
       "duration": "~30 min"
     },
     "step2": {
@@ -73,7 +74,7 @@
     },
     "step3": {
       "title": "Lancia, costruisci fiducia e converti di più",
-      "description": "Andiamo online e monitoriamo le prestazioni del tuo sito, offrendo supporto post-lancio e ottimizzazione.",
+      "description": "Andiamo online, attiviamo le campagne dove servono (Google, Meta, TikTok) e monitoriamo le prestazioni: ottimizziamo sito e ads sugli stessi dati.",
       "duration": "Supporto continuo disponibile"
     }
   },
@@ -123,34 +124,34 @@
     "tag": "Perché noi",
     "title": "Perché lavorare con noi",
     "feature1": {
-      "title": "Una Rete Curata di Esperti",
-      "description": "Ogni progetto è costruito attorno alle persone giuste. Dai designer di motion e 3D agli sviluppatori e brand strategist, assembliamo un team personalizzato che si adatta ai tuoi obiettivi, settore e visione creativa."
+      "title": "Una rete curata di esperti",
+      "description": "Ogni progetto è costruito attorno alle persone giuste. Dai motion designer e artisti 3D agli sviluppatori e brand strategist, componiamo un team su misura che si adatta ai tuoi obiettivi, settore e visione creativa."
     },
     "feature2": {
-      "title": "Esperti di Animazione",
-      "description": "Usiamo un design motion avanzato per trasformare pagine statiche in esperienze immersive che elevano la presenza del tuo brand."
+      "title": "Traffico + conversione (Sito + Ads)",
+      "description": "Non ci fermiamo al sito: portiamo traffico qualificato con campagne su Google, Meta e TikTok e allineiamo annuncio e pagina, così ogni clic ha la migliore occasione di diventare un cliente."
     },
     "feature3": {
-      "title": "Design Orientato alla Conversione",
+      "title": "Design orientato alla conversione",
       "description": "Progettiamo con uno scopo, combinando eccellenza visiva e pensiero strategico per costruire siti web che attirano, coinvolgono e convertono."
     },
     "feature4": {
-      "title": "Personalizzato per il Tuo Settore",
-      "description": "Che tu gestisca un ristorante, uno studio professionale o uno studio creativo, adattiamo il nostro processo al tuo tono, pubblico e esigenze aziendali."
+      "title": "Personalizzato per il tuo settore",
+      "description": "Che tu gestisca un ristorante, uno studio professionale o uno studio creativo, adattiamo il nostro processo al tuo tono, pubblico ed esigenze aziendali."
     },
     "feature5": {
-      "title": "Mobile-First per scelta",
+      "title": "Mobile-first per scelta",
       "description": "Progettiamo dal mobile in su, ottimizzando layout, velocità e interazioni per i dispositivi che le persone usano di più. Questo garantisce un'esperienza fluida, veloce e ad alta conversione su tutti gli schermi."
     },
     "feature6": {
-      "title": "Costruito per il Lungo Termine",
+      "title": "Costruito per il lungo termine",
       "description": "Le nostre relazioni non finiscono al lancio. Restiamo vicini ai nostri clienti con aggiornamenti continui, perfezionamenti creativi e supporto proattivo per mantenere i loro siti web in crescita e performanti nel tempo."
     }
   },
   "services": {
     "tag": "Servizi",
     "title": "Con cosa ti aiuteremo",
-    "subtitle": "Miglioriamo la tua presenza online per darti più credibilità. Così potrai attirare clienti migliori, giustificare i tuoi prezzi e trovare collaboratori di valore",
+    "subtitle": "Miglioriamo la tua presenza online e la riempiamo di persone giuste: un sito che converte e campagne che lo alimentano.",
     "verticalsTitle": "Siti su misura per il tuo settore:",
     "verticals": {
       "commercialisti": "Commercialisti",
@@ -165,7 +166,7 @@
         "Design UX & UI personalizzato",
         "Sviluppo completo del sito web",
         "Copywriting e struttura dei contenuti",
-        "Build mobile-first, moderna e scalabile",
+        "Sito mobile-first, moderno e scalabile",
         "Integrazioni (CRM, automazioni, analytics, moduli avanzati)",
         "Aggiornamenti chiari e frequenti"
       ]
@@ -183,11 +184,37 @@
         "Processo strutturato con round di revisione chiari"
       ]
     },
+    "service3": {
+     "title": "Ads & Funnel",
+     "platforms": "Meta · Google · TikTok",
+     "price": "Su misura, da 800 €",
+     "description": "Il sito converte, le campagne lo riempiono. Insieme. Portiamo traffico qualificato al tuo sito e progettiamo il percorso perché diventi contatti e clienti — non solo clic. Scegliamo le piattaforme giuste per il tuo pubblico, allineiamo annuncio e pagina, misuriamo tutto.",
+     "features": [
+      "Strategia di funnel: dal primo clic al contatto",
+      "Setup campagne su Google / Meta / TikTok (in base al tuo pubblico)",
+      "Landing page o pagine di conversione allineate agli annunci",
+      "Tracciamento conversioni (analytics, eventi, pixel) a norma privacy",
+      "Test di creatività e messaggi",
+      "Ottimizzazione continua sui dati, con report chiari"
+     ],
+     "badge": "Da solo o nel pacchetto unico Sito + Ads",
+     "note": "La maggior parte delle agenzie ti vende o il sito o le ads. Noi li costruiamo insieme, così non paghi clic che si perdono su una pagina che non converte."
+    },
     "bookCall": "Parliamone"
   },
   "faq": {
     "tag": "FAQ",
-    "title": "Le tue domande, risposte",
+    "title": "Le tue domande, le nostre risposte",
+  "q7": {
+   "question": "Gestite anche le campagne pubblicitarie?",
+   "answer1": "Sì. Oltre al sito, creiamo e gestiamo campagne su Google, Meta e TikTok, scegliendo le piattaforme giuste per il tuo pubblico.",
+   "answer2": "Sito e ads vengono progettati insieme, così il traffico che paghi trova una pagina costruita per convertire."
+  },
+  "q8": {
+   "question": "Meglio investire nel sito o nelle ads?",
+   "answer1": "Servono entrambi, in ordine: prima un sito che converte, poi le ads che lo alimentano. Fare ads verso un sito che non converte significa pagare clic che si perdono.",
+   "answer2": "Partiamo dalle fondamenta e accendiamo il traffico quando la pagina è pronta."
+  },
     "q1": {
       "question": "Quali servizi offrite?",
       "answer1": "Progettiamo e sviluppiamo siti web completi, dalla strategia e branding al design e lancio.",

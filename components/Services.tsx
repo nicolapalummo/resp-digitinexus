@@ -131,6 +131,46 @@ export const Services: React.FC = () => {
                 </a>
             </motion.div>
 
+            {/* Card 3: Ads & Funnel — il sistema completo, a tutta larghezza */}
+            <motion.div
+                className="md:col-span-2 bg-[#111] rounded-2xl p-8 md:p-10 border border-orange-500/25 hover:border-orange-500/40 transition-colors flex flex-col"
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-10%" }}
+                transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            >
+                <div className="flex flex-col items-start gap-3 sm:flex-row sm:justify-between mb-2">
+                    <h3 className="text-3xl md:text-4xl font-medium tracking-tight">{t('services.service3.title')}</h3>
+                    <span className="inline-block px-3 py-1 bg-orange-900/30 text-orange-400 text-xs font-mono rounded border border-orange-500/30 whitespace-nowrap">
+                        {t('services.service3.price')}
+                    </span>
+                </div>
+                <p className="text-xs font-mono uppercase tracking-[0.15em] text-orange-400 mb-6">
+                    {t('services.service3.platforms')} · {t('services.service3.badge')}
+                </p>
+
+                <p className="text-gray-400 mb-10 text-lg max-w-3xl">
+                {t('services.service3.description')}
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-4 mb-10 flex-1">
+                    {(t('services.service3.features', { returnObjects: true }) as string[]).map((item, i) => (
+                        <div key={i} className="flex items-center gap-3">
+                            <div className="w-5 h-5 rounded bg-orange-900/30 text-orange-400 flex items-center justify-center border border-orange-500/30 flex-shrink-0">
+                                <Check size={12} />
+                            </div>
+                            <span className="text-gray-300">{item}</span>
+                        </div>
+                    ))}
+                </div>
+
+                <p className="text-sm text-gray-500 italic mb-8 max-w-3xl">{t('services.service3.note')}</p>
+
+                <a href="https://calendly.com/digitinexus/30min" target="_blank" rel="noopener noreferrer" className="w-full md:w-auto md:self-start md:px-10 bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-2xl py-3 flex items-center justify-center gap-3 font-medium hover:brightness-110 transition-all">
+                    <span className="pl-2">{t('services.bookCall')}</span>
+                </a>
+            </motion.div>
+
         </div>
       </div>
     </section>

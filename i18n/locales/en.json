@@ -24,7 +24,7 @@
   "hero": {
     "badge": "Over 25 Successful Projects",
     "title": "Stand Out with",
-    "subtitle": "Build trust, stand out, and grow your business with a beautifully functional website and brand made for your industry.",
+    "subtitle": "Build trust, stand out, and grow your business with a website and ad campaigns that work together to bring you clients — not just visits.",
     "bookCall": "Book a Call",
     "viewWork": "View Work"
   },
@@ -42,14 +42,15 @@
     },
     "issue3": {
       "title": "Your site isn't built to convert",
-      "description": "You've got a good product and decent traction. Now it's time for your page structure and messaging to work as hard as you do."
+      "description": "You've got a good product and decent traction. Your page structure and messaging should work as hard as your budget. Bring (or plan to bring) campaign traffic, and make the site turn clicks into inquiries."
     }
   },
   "intro": {
     "tag": "Intro",
     "text1": "If that sounds like your situation, We can help.",
     "text2": "DigitiNexus is a design-driven web agency that blends creativity, strategy, and technology to craft websites that truly stand out.",
-    "text3": "Every project we build doesn't just look beautiful — it performs beautifully too."
+    "text3": "Every project we build doesn't just look beautiful — it performs beautifully too.",
+    "text4": "We combine website and advertising into one funnel: the right people find you, and when they arrive they find a site built to turn them into clients."
   },
   "work": {
     "tag": "Work",
@@ -63,7 +64,7 @@
     "you": "You",
     "step1": {
       "title": "Book a quick call",
-      "description": "We start with a quick call to understand your goals, audience, and priorities. No commitments + you'll know what to do next.",
+      "description": "We start with a quick call to understand your goals, audience, and priorities. No commitments: you'll know how to proceed.",
       "duration": "~30 min"
     },
     "step2": {
@@ -73,7 +74,7 @@
     },
     "step3": {
       "title": "Launch, build trust, convert more",
-      "description": "We go live and monitor your site's performance, offering post-launch support and optimization.",
+      "description": "We go live, switch on campaigns where they matter (Google, Meta, TikTok) and monitor performance: we optimize site and ads on the same data.",
       "duration": "On-going support available"
     }
   },
@@ -127,8 +128,8 @@
       "description": "Every project is built around the right people. From motion and 3D designers to developers and brand strategists, we assemble a custom team that fits your goals, industry, and creative vision."
     },
     "feature2": {
-      "title": "Animation Pro",
-      "description": "We use advanced motion design to turn static pages into immersive experiences that elevate your brand's presence."
+      "title": "Traffic + Conversion (Site + Ads)",
+      "description": "We don't stop at the website: we drive qualified traffic with campaigns on Google, Meta and TikTok and align ad and page, so every click gets the best chance of becoming a client."
     },
     "feature3": {
       "title": "Conversion-Driven Design",
@@ -150,7 +151,7 @@
   "services": {
     "tag": "Services",
     "title": "What we'll help you with",
-    "subtitle": "Let's convert better, raise more, build more trust so you can hire better talent and charge premium prices",
+    "subtitle": "We improve your online presence and fill it with the right people: a site that converts and campaigns that feed it.",
     "verticalsTitle": "Custom websites for your industry:",
     "verticals": {
       "commercialisti": "Accounting firms",
@@ -183,11 +184,37 @@
         "Structured process with clear revision rounds"
       ]
     },
+    "service3": {
+     "title": "Ads & Funnel",
+     "platforms": "Meta · Google · TikTok",
+     "price": "Custom, from €800",
+     "description": "The site converts, the campaigns fill it. Together. We drive qualified traffic to your website and design the journey so it becomes inquiries and clients — not just clicks. We pick the right platforms for your audience, align ad and page, and measure everything.",
+     "features": [
+      "Funnel strategy: from first click to inquiry",
+      "Campaign setup on Google / Meta / TikTok (based on your audience)",
+      "Landing or conversion pages aligned with the ads",
+      "Conversion tracking (analytics, events, pixels), privacy-compliant",
+      "Creative and message testing",
+      "Continuous data-driven optimization, with clear reports"
+     ],
+     "badge": "Standalone or as the single Site + Ads package",
+     "note": "Most agencies sell you either the website or the ads. We build them together, so you don't pay for clicks that get lost on a page that doesn't convert."
+    },
     "bookCall": "Book a Call"
   },
   "faq": {
     "tag": "FAQs",
     "title": "Your questions, answered",
+  "q7": {
+   "question": "Do you also manage ad campaigns?",
+   "answer1": "Yes. Beyond the website, we create and manage campaigns on Google, Meta and TikTok, choosing the right platforms for your audience.",
+   "answer2": "Site and ads are designed together, so the traffic you pay for lands on a page built to convert."
+  },
+  "q8": {
+   "question": "Should I invest in the website or in ads?",
+   "answer1": "You need both, in order: first a website that converts, then the ads that feed it. Running ads to a site that doesn't convert means paying for clicks that get lost.",
+   "answer2": "We start from the foundations and switch on the traffic once the page is ready."
+  },
     "q1": {
       "question": "What services do you offer?",
       "answer1": "We design and develop complete websites, from strategy and branding to design and launch.",

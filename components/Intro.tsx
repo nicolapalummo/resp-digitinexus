@@ -31,6 +31,10 @@ export const Intro: React.FC = () => {
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-light leading-tight text-white">
                 {t('intro.text3')}
             </h2>
+
+            <p className="mt-8 text-xl md:text-2xl font-light leading-relaxed text-gray-400 max-w-3xl">
+                {t('intro.text4')}
+            </p>
         </motion.div>
       </div>
     </section>

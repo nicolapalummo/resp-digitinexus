@@ -60,6 +60,24 @@ export const FAQ: React.FC = () => {
           <p>{t('faq.q6.answer2')}</p>
         </>
       )
+    },
+    {
+      question: t('faq.q7.question'),
+      answer: (
+        <>
+          <p className="mb-4">{t('faq.q7.answer1')}</p>
+          <p>{t('faq.q7.answer2')}</p>
+        </>
+      )
+    },
+    {
+      question: t('faq.q8.question'),
+      answer: (
+        <>
+          <p className="mb-4">{t('faq.q8.answer1')}</p>
+          <p>{t('faq.q8.answer2')}</p>
+        </>
+      )
     }
   ];
 
