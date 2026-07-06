@@ -127,3 +127,29 @@ Scritti col disclaimer "informazione generale, non consulenza legale" e conferma
 - **#11 — Calcolatore costo/tempi** · ✅ **calcolatore interattivo realizzato** e integrato nell'articolo (componente `CostCalculator`: fasce statiche per il SEO + widget client-side). In revisione prima della PR. *(Da decidere: versione EN del calcolatore in $ o qualitativa.)*
 
 > Promemoria: i **3 case study** sono gli unici articoli che NON usciranno alla loro data finché non fornisci i dati reali.
+
+---
+
+## Cluster C8 — Ads & Funnel (slot domenicale in parallelo)
+
+Uscita **1/settimana la domenica** (mai in collisione con lun/mer/ven), dal **7 giugno al 13 settembre 2026**. Autore: Filippo Gentili (Nicola Palummo per #65 e #75).
+
+| Data | # | Slug |
+|---|---|---|
+| dom 07/06/2026 | 61 | funnel-sito-web-ads (pillar) |
+| dom 14/06/2026 | 62 | meta-google-tiktok-quale-scegliere |
+| dom 21/06/2026 | 63 | sito-o-ads-da-dove-partire |
+| dom 28/06/2026 | 64 | quanto-budget-ads |
+| dom 05/07/2026 | 65 | landing-page-per-ads |
+| dom 12/07/2026 | 66 | google-ads-domanda-attiva |
+| dom 19/07/2026 | 67 | meta-ads-scoperta-retargeting |
+| dom 26/07/2026 | 68 | tiktok-ads-quando-ha-senso |
+| dom 02/08/2026 | 69 | retargeting-come-funziona |
+| dom 09/08/2026 | 70 | metriche-campagne-ads |
+| dom 16/08/2026 | 71 | tracciamento-conversioni-privacy |
+| dom 23/08/2026 | 72 | errori-che-bruciano-budget-ads |
+| dom 30/08/2026 | 73 | ads-studi-professionali-servizi |
+| dom 06/09/2026 | 74 | ads-ecommerce-attivita-locali |
+| dom 13/09/2026 | 75 | annuncio-landing-offerta-message-match |
+
+Brief completi in `DigitiNexus_Cluster_Ads_Funnel.md`.

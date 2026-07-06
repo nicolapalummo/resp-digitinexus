@@ -90,6 +90,22 @@ export const covers: Cover[] = [
   { slug: 'startup-con-ai', scene: 'a person riding a large upward arrow while building with blocks alongside a small robot co-pilot, an orange trail behind.' },
   { slug: 'ai-privacy-gdpr', scene: 'a person holding a shield that protects a stack of documents from a robot hand reaching in, a small padlock nearby, the shield orange.' },
   { slug: 'quanto-costa-ai-azienda', scene: 'a person weighing a small robot head on one side of a balance scale against stacked coin-discs on the other, orange accents.' },
+  // ── C8 Ads & Funnel (#61-#75) ──
+  { slug: 'funnel-sito-web-ads', scene: 'a person guiding a stream of small dots through a large funnel that outputs a few happy customer-shapes at the bottom, the funnel outlined in orange.' },
+  { slug: 'meta-google-tiktok-quale-scegliere', scene: 'a person standing before three blank signpost screens pointing in different directions, choosing one that is highlighted in orange.' },
+  { slug: 'sito-o-ads-da-dove-partire', scene: 'a person laying a solid foundation block on the ground before raising a small megaphone above it, the megaphone orange.' },
+  { slug: 'quanto-budget-ads', scene: 'a person carefully pouring a few coin-discs from a small jar into the top of a megaphone-funnel, the coins orange.' },
+  { slug: 'landing-page-per-ads', scene: 'a person assembling one tall single web-page panel with a big rounded call-to-action button, the button orange.' },
+  { slug: 'google-ads-domanda-attiva', scene: 'a person holding a large magnifying glass over a blank search-bar shape while catching incoming dots with a small net, the search bar outlined in orange.' },
+  { slug: 'meta-ads-scoperta-retargeting', scene: 'a person holding a small megaphone next to a large phone shape with floating heart and speech-bubble shapes, the hearts orange.' },
+  { slug: 'tiktok-ads-quando-ha-senso', scene: 'a person holding a tall vertical phone playing a video, with a rounded play-button triangle floating above, the play button orange.' },
+  { slug: 'retargeting-come-funziona', scene: 'a person gently pulling a small walking figure-shape back along a dotted U-turn path toward a panel, the dotted path orange.' },
+  { slug: 'metriche-campagne-ads', scene: 'a person studying a simple floating dashboard with a bar chart and a rising line, holding a magnifier over one key bar, that bar orange.' },
+  { slug: 'tracciamento-conversioni-privacy', scene: 'a person connecting a chain of small dots (a tracking pixel path) that passes through a shield with a small padlock, the shield orange.' },
+  { slug: 'errori-che-bruciano-budget-ads', scene: 'a person plugging a leak in a bucket from which a few coin-discs are dripping out, the escaping coins orange.' },
+  { slug: 'ads-studi-professionali-servizi', scene: 'a person catching a few dots marked with small check-shapes into an open briefcase, the check marks orange.' },
+  { slug: 'ads-ecommerce-attivita-locali', scene: 'a person holding a shopping bag next to a small storefront shape with a map-pin, and a few arrow-shapes pointing in, the pin orange.' },
+  { slug: 'annuncio-landing-offerta-message-match', scene: 'a person fitting together two matching puzzle pieces, one shaped like a small ad panel and one like a landing page, the joining edge glowing orange.' },
 ];
 
 export function coverBySlug(slug: string): Cover | undefined {

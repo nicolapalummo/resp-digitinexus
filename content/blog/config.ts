@@ -104,6 +104,13 @@ export const CLUSTERS: Record<string, Cluster> = {
     description:
       'AI per il business, senza hype: agenti e chatbot, automazioni, RAG sui tuoi dati, casi d\'uso concreti per studi, PMI e startup.',
   },
+  c8: {
+    id: 'c8',
+    slug: 'ads-funnel',
+    label: 'Ads & Funnel',
+    description:
+      'Campagne su Google, Meta e TikTok e landing che convertono: sito e pubblicità come due metà di un unico funnel che porta clienti.',
+  },
 };
 
 export const CLUSTER_LIST = Object.values(CLUSTERS);
@@ -129,6 +136,8 @@ export const CLUSTERS_EN: Record<string, Cluster> = {
     description: 'From MVP to investor-ready website: launch speed and credibility for customers and investors.' },
   c7: { id: 'c7', slug: 'artificial-intelligence', label: 'Artificial Intelligence',
     description: 'AI for business, without the hype: agents and chatbots, automation, RAG on your data, concrete use cases for firms, SMBs and startups.' },
+  c8: { id: 'c8', slug: 'ads-funnel', label: 'Ads & Funnel',
+    description: 'Campaigns on Google, Meta and TikTok plus landing pages that convert: website and advertising as two halves of one funnel that brings clients.' },
 };
 
 export const CLUSTER_LIST_EN = Object.values(CLUSTERS_EN);

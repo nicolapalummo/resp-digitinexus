@@ -321,3 +321,9 @@ Formato GEO di default: **capsula di risposta autocontenuta (20–25 parole)** s
 ---
 
 *Documento strategico per DigitiNexus — uso interno. Dati di mercato da fonti pubblicate al giugno 2026; punteggi scorecard e stime di difficoltà/potenziale GEO sono valutazioni qualitative da validare con strumenti (es. SEOZoom) prima dell'esecuzione.*
+
+---
+
+## Addendum — Cluster C8: Ads & Funnel (#61–#75)
+
+Ottavo cluster (dopo C7 AI): la complementarità **sito + ads** — le campagne (Google · Meta · TikTok) riempiono il funnel, il sito converte. Coerente col servizio "Ads & Funnel" (su misura, da 800 €, dato first-party). Pillar: #61 `funnel-sito-web-ads`. Categoria: `/blog/categoria/ads-funnel`. Uscita domenicale 07/06→13/09/2026, in parallelo al calendario principale. Policy fonti identica agli altri cluster (statistiche solo istituzionali; budget qualitativi; nessun risultato inventato). Brief completi e prompt copertine in `DigitiNexus_Cluster_Ads_Funnel.md`; calendario in `CALENDARIO_EDITORIALE.md`.

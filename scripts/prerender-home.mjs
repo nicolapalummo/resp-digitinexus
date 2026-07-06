@@ -25,8 +25,8 @@ const esc = (s = '') => String(s)
 
 // Blog cluster category URLs per locale (for internal linking from the homepage).
 const CLUSTERS = {
-  it: { base: '/blog', seg: 'categoria', slugs: ['costi-tempi', 'qualita', 'seo-geo', 'studi-professionali', 'pmi', 'startup', 'intelligenza-artificiale'] },
-  en: { base: '/en/blog', seg: 'category', slugs: ['costs-timing', 'quality-design', 'seo-geo', 'professional-firms', 'small-business', 'startups', 'artificial-intelligence'] },
+  it: { base: '/blog', seg: 'categoria', slugs: ['costi-tempi', 'qualita', 'seo-geo', 'studi-professionali', 'pmi', 'startup', 'intelligenza-artificiale', 'ads-funnel'] },
+  en: { base: '/en/blog', seg: 'category', slugs: ['costs-timing', 'quality-design', 'seo-geo', 'professional-firms', 'small-business', 'startups', 'artificial-intelligence', 'ads-funnel'] },
 };
 
 const META = {
@@ -67,8 +67,8 @@ function faqHtml(f) {
 function clusterLinksHtml(locale) {
   const c = CLUSTERS[locale];
   const labels = locale === 'it'
-    ? ['Costi, tempi e processo', 'Qualità e design', 'SEO & GEO', 'Studi professionali', 'PMI di servizi', 'Startup', 'Intelligenza Artificiale']
-    : ['Costs, timing & process', 'Quality & design', 'SEO & GEO', 'Professional firms', 'Small business', 'Startups', 'Artificial Intelligence'];
+    ? ['Costi, tempi e processo', 'Qualità e design', 'SEO & GEO', 'Studi professionali', 'PMI di servizi', 'Startup', 'Intelligenza Artificiale', 'Ads & Funnel']
+    : ['Costs, timing & process', 'Quality & design', 'SEO & GEO', 'Professional firms', 'Small business', 'Startups', 'Artificial Intelligence', 'Ads & Funnel'];
   return c.slugs.map((slug, i) => `<li><a href="${c.base}/${c.seg}/${slug}">${esc(labels[i])}</a></li>`).join('');
 }
 

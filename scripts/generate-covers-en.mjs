@@ -81,7 +81,9 @@ const en = all.filter((a) => a.locale === 'en');
 
 let ok = 0;
 for (const a of en) {
-  const base = basename(a.cover.src).replace(/\.webp$/, ''); // e.g. quanto-costa-sito-web
+  // cover.src EN è <slug-it>-en.webp ma il raw in _raw/ ha il nome IT: togli il suffisso
+  const base = basename(a.cover.src).replace(/\.webp$/, '').replace(/-en$/, '');
+  if (existsSync(join(OUT_DIR, `${base}-en.webp`))) { continue; } // già generata
   if (await makeTitled(base, a.title)) { ok++; }
 }
 console.log(`[covers-en] generate-covers-en: ${ok}/${en.length} cover EN titolate scritte (<base>-en.webp + -600).`);
