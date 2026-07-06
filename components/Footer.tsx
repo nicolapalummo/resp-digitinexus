@@ -1,11 +1,23 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { langFromPath } from '../lib/i18nRouting';
 
 // Footer legale minimale (GDPR: i PDF Privacy/Terms erano orfani, non linkati
 // da nessuna pagina). Solo dati societari confermati — niente indirizzi/P.IVA.
-export const Footer: React.FC = () => (
+export const Footer: React.FC = () => {
+  const location = useLocation();
+  const isEn = langFromPath(location.pathname) === 'en';
+  return (
   <footer className="bg-black border-t border-white/10 py-8 px-6 text-center text-sm text-white/40">
     <p>
       © {new Date().getFullYear()} DigitiNexus LLC ·{' '}
+      <Link
+        to={isEn ? '/en/chi-siamo' : '/chi-siamo'}
+        className="hover:text-white/70 underline underline-offset-4 transition-colors"
+      >
+        {isEn ? 'About us' : 'Chi siamo'}
+      </Link>{' '}
+      ·{' '}
       <a
         href="/Privacy%20Policy%20DigitiNexus%20LLC.pdf"
         target="_blank"
@@ -25,4 +37,5 @@ export const Footer: React.FC = () => (
       </a>
     </p>
   </footer>
-);
+  );
+};

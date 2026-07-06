@@ -18,6 +18,7 @@ const SITE = 'https://digitinexus.com';
 
 const it = JSON.parse(readFileSync(join(ROOT, 'i18n/locales/it.json'), 'utf8'));
 const en = JSON.parse(readFileSync(join(ROOT, 'i18n/locales/en.json'), 'utf8'));
+const SERVICE_PAGES = JSON.parse(readFileSync(join(ROOT, 'content/service-pages.json'), 'utf8'));
 
 const esc = (s = '') => String(s)
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -77,7 +78,7 @@ function buildContent(locale) {
   const heroTitle = `${esc(t.hero?.title || 'DigitiNexus')} DigitiNexus`;
   return `
 <main class="bg-black text-white">
-  <header class="max-w-5xl mx-auto px-6 py-20">
+  <header class="max-w-5xl mx-auto px-6 py-20" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center">
     ${t.hero?.badge ? `<p class="text-orange-400">${esc(t.hero.badge)}</p>` : ''}
     <h1 class="text-4xl md:text-6xl font-semibold tracking-tight">${heroTitle}</h1>
     <p class="mt-5 text-lg text-white/70 max-w-2xl">${esc(t.hero?.subtitle || '')}</p>
@@ -92,6 +93,7 @@ function buildContent(locale) {
   <section class="max-w-5xl mx-auto px-6 py-10">
     <h2 class="text-3xl font-medium">${esc(t.services?.title || 'Servizi')}</h2>
     ${t.services?.subtitle ? `<p class="mt-3 text-white/70">${esc(t.services.subtitle)}</p>` : ''}
+    ${t.services?.verticalsTitle ? `<p>${esc(t.services.verticalsTitle)}</p><ul>${Object.keys(SERVICE_PAGES).map((slug) => `<li><a href="${locale === 'en' ? '/en' : ''}/servizi/${slug}">${esc(SERVICE_PAGES[slug][locale].h1)}</a></li>`).join('')}</ul>` : ''}
     ${servicesHtml(t.services)}
   </section>
   <section class="max-w-5xl mx-auto px-6 py-10">
@@ -109,7 +111,7 @@ function buildContent(locale) {
     <p><a href="${CLUSTERS[locale].base}">${esc(m.blogLabel)}</a></p>
   </section>
   <footer class="max-w-5xl mx-auto px-6 py-10 text-white/50">
-    <p>© ${new Date().getFullYear()} DigitiNexus LLC · <a href="/Privacy%20Policy%20DigitiNexus%20LLC.pdf">Privacy Policy</a> · <a href="/Terms%20&amp;%20Conditions%20DigitiNexus%20LLC.pdf">Terms &amp; Conditions</a></p>
+    <p>© ${new Date().getFullYear()} DigitiNexus LLC · <a href="${locale === 'en' ? '/en' : ''}/chi-siamo">${locale === 'en' ? 'About us' : 'Chi siamo'}</a> · <a href="/Privacy%20Policy%20DigitiNexus%20LLC.pdf">Privacy Policy</a> · <a href="/Terms%20&amp;%20Conditions%20DigitiNexus%20LLC.pdf">Terms &amp; Conditions</a></p>
   </footer>
 </main>`;
 }
@@ -214,6 +216,157 @@ function renderResources(locale) {
   return html;
 }
 
+// Shared head transform for the static content pages (chi-siamo, servizi/*):
+// same-slug bilingual pattern as /risorse-gratuite.
+function applyPageHead(html, { locale, path, pathIt, pathEn, title, desc, jsonLd }) {
+  html = html.replace(/\s*<!-- Structured data:[\s\S]*?-->/g, '');
+  html = html.replace(/\s*<script type="application\/ld\+json">[\s\S]*?<\/script>/g, '');
+  if (locale === 'en') html = html.replace(/<html lang="[^"]*"/, '<html lang="en"');
+  html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${esc(title)}</title>`);
+  html = html.replace(/<meta name="description"[^>]*>/, `<meta name="description" content="${esc(desc)}" />`);
+  html = html.replace(/<link rel="canonical"[^>]*>/, `<link rel="canonical" href="${SITE}${path}" />`);
+  html = html.replace(/<meta property="og:url"[^>]*>/, `<meta property="og:url" content="${SITE}${path}" />`);
+  html = html.replace(/<meta property="og:locale"[^>]*>/, `<meta property="og:locale" content="${locale === 'en' ? 'en_US' : 'it_IT'}" />`);
+  html = html.replace(/<meta property="og:title"[^>]*>/, `<meta property="og:title" content="${esc(title)}" />`);
+  html = html.replace(/<meta property="og:description"[^>]*>/, `<meta property="og:description" content="${esc(desc)}" />`);
+  const alt = `    <link rel="alternate" hreflang="it" href="${SITE}${pathIt}" />\n    <link rel="alternate" hreflang="en" href="${SITE}${pathEn}" />\n    <link rel="alternate" hreflang="x-default" href="${SITE}${pathIt}" />\n  </head>`;
+  html = html.replace('</head>', alt);
+  html = html.replace('</head>', `    <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>\n  </head>`);
+  return html;
+}
+
+function renderAbout(locale) {
+  const a = (locale === 'en' ? en : it).aboutPage;
+  const path = locale === 'en' ? '/en/chi-siamo' : '/chi-siamo';
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'AboutPage',
+        '@id': `${SITE}${path}#webpage`,
+        url: `${SITE}${path}`,
+        name: a.metaTitle,
+        description: a.metaDescription,
+        inLanguage: locale === 'en' ? 'en-US' : 'it-IT',
+        isPartOf: { '@id': `${SITE}/#website` },
+        about: { '@id': `${SITE}/#organization` },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${SITE}${path}#breadcrumb`,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: locale === 'en' ? `${SITE}/en` : `${SITE}/` },
+          { '@type': 'ListItem', position: 2, name: a.kicker, item: `${SITE}${path}` },
+        ],
+      },
+      ...a.founders.map((f) => ({
+        '@type': 'Person',
+        name: f.name,
+        jobTitle: f.role,
+        sameAs: [f.linkedin],
+        worksFor: { '@id': `${SITE}/#organization` },
+      })),
+    ],
+  };
+  const body = `
+<main class="bg-black text-white" style="min-height:100vh">
+  <div class="max-w-5xl mx-auto px-6 py-24">
+    <p class="text-orange-400">${esc(a.kicker)}</p>
+    <h1 class="text-4xl md:text-6xl font-medium tracking-tight">${esc(a.h1)}</h1>
+    <p class="mt-6 text-2xl text-white">${esc(a.intro)}</p>
+    ${a.story.map((p) => `<p class="mt-4 text-white/70">${esc(p)}</p>`).join('')}
+    <img src="/team-digitinexus-v2.webp" alt="${esc((locale === 'en' ? en : it).about?.imageAlt || 'Team DigitiNexus')}" width="1537" height="1023" loading="lazy" />
+    <h2 class="text-3xl font-medium">${esc(a.foundersTitle)}</h2>
+    ${a.founders.map((f) => `<article><h3>${esc(f.name)}</h3><p>${esc(f.role)}</p><p><a href="${esc(f.linkedin)}" target="_blank" rel="noopener noreferrer">LinkedIn</a></p></article>`).join('')}
+    <h2 class="text-3xl font-medium">${esc(a.howTitle)}</h2>
+    ${a.how.map((h) => `<article><h3>${esc(h.title)}</h3><p>${esc(h.text)}</p></article>`).join('')}
+    <p>${esc(a.ctaText)} <a href="https://calendly.com/digitinexus/30min" target="_blank" rel="noopener noreferrer">${esc(a.ctaLabel)}</a></p>
+  </div>
+</main>`;
+  let html = applyPageHead(baseHtml, {
+    locale, path,
+    pathIt: '/chi-siamo', pathEn: '/en/chi-siamo',
+    title: a.metaTitle, desc: a.metaDescription, jsonLd,
+  });
+  html = html.replace(/<div id="root">\s*<\/div>/, `<div id="root">${body}</div>`);
+  return html;
+}
+
+function renderService(slug, locale) {
+  const s = SERVICE_PAGES[slug][locale];
+  const base = locale === 'en' ? '/en' : '';
+  const path = `${base}/servizi/${slug}`;
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Service',
+        '@id': `${SITE}${path}#service`,
+        name: s.h1,
+        description: s.metaDescription,
+        url: `${SITE}${path}`,
+        provider: { '@id': `${SITE}/#organization` },
+        areaServed: { '@type': 'Country', name: locale === 'en' ? 'Italy' : 'Italia' },
+        serviceType: s.h1,
+      },
+      {
+        '@type': 'WebPage',
+        '@id': `${SITE}${path}#webpage`,
+        url: `${SITE}${path}`,
+        name: s.metaTitle,
+        description: s.metaDescription,
+        inLanguage: locale === 'en' ? 'en-US' : 'it-IT',
+        isPartOf: { '@id': `${SITE}/#website` },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${SITE}${path}#breadcrumb`,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: locale === 'en' ? `${SITE}/en` : `${SITE}/` },
+          { '@type': 'ListItem', position: 2, name: s.h1, item: `${SITE}${path}` },
+        ],
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `${SITE}${path}#faq`,
+        mainEntity: s.faq.items.map((f) => ({
+          '@type': 'Question',
+          name: f.q,
+          acceptedAnswer: { '@type': 'Answer', text: f.a },
+        })),
+      },
+    ],
+  };
+  const body = `
+<main class="bg-black text-white" style="min-height:100vh">
+  <div class="max-w-5xl mx-auto px-6 py-24">
+    <p class="text-orange-400">${esc(s.kicker)}</p>
+    <h1 class="text-4xl md:text-6xl font-medium tracking-tight">${esc(s.h1)}</h1>
+    <p class="mt-6 text-lg text-white/70">${esc(s.subtitle)}</p>
+    <h2 class="text-3xl font-medium">${esc(s.pains.title)}</h2>
+    <ul>${s.pains.items.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>
+    <h2 class="text-3xl font-medium">${esc(s.includes.title)}</h2>
+    ${s.includes.items.map((i) => `<article><h3>${esc(i.title)}</h3><p>${esc(i.text)}</p></article>`).join('')}
+    <h2 class="text-3xl font-medium">${esc(s.pricing.title)}</h2>
+    <p>${esc(s.pricing.text)}</p>
+    <h2 class="text-3xl font-medium">${esc(s.process.title)}</h2>
+    ${s.process.steps.map((st) => `<article><h3>${esc(st.label)}: ${esc(st.title)}</h3><p>${esc(st.text)}</p></article>`).join('')}
+    <h2 class="text-3xl font-medium">${esc(s.faq.title)}</h2>
+    <dl>${s.faq.items.map((f) => `<dt>${esc(f.q)}</dt><dd>${esc(f.a)}</dd>`).join('')}</dl>
+    <h2 class="text-3xl font-medium">${esc(s.articles.title)}</h2>
+    <ul>${s.articles.items.map((a) => `<li><a href="${esc(a.href)}">${esc(a.label)}</a></li>`).join('')}</ul>
+    <p>${esc(s.cta.text)} <a href="https://calendly.com/digitinexus/30min" target="_blank" rel="noopener noreferrer">${esc(s.cta.label)}</a></p>
+  </div>
+</main>`;
+  let html = applyPageHead(baseHtml, {
+    locale, path,
+    pathIt: `/servizi/${slug}`, pathEn: `/en/servizi/${slug}`,
+    title: s.metaTitle, desc: s.metaDescription, jsonLd,
+  });
+  html = html.replace(/<div id="root">\s*<\/div>/, `<div id="root">${body}</div>`);
+  return html;
+}
+
 // Client-only routes (React renders the real content; crawlers must not index
 // them, but the URL must exist as a static asset so Vercel serves 200 instead
 // of the 404.html fallback — /confirmation is the post-Calendly-booking page).
@@ -275,4 +428,16 @@ writeFileSync(join(DIST, 'confirmation', 'index.html'), renderConfirmation('it')
 mkdirSync(join(DIST, 'en', 'confirmation'), { recursive: true });
 writeFileSync(join(DIST, 'en', 'confirmation', 'index.html'), renderConfirmation('en'), 'utf8');
 
-console.log('[prerender-home] /, /en, /risorse-gratuite, /en/risorse-gratuite, /confirmation, /en/confirmation generati.');
+mkdirSync(join(DIST, 'chi-siamo'), { recursive: true });
+writeFileSync(join(DIST, 'chi-siamo', 'index.html'), renderAbout('it'), 'utf8');
+mkdirSync(join(DIST, 'en', 'chi-siamo'), { recursive: true });
+writeFileSync(join(DIST, 'en', 'chi-siamo', 'index.html'), renderAbout('en'), 'utf8');
+
+for (const slug of Object.keys(SERVICE_PAGES)) {
+  mkdirSync(join(DIST, 'servizi', slug), { recursive: true });
+  writeFileSync(join(DIST, 'servizi', slug, 'index.html'), renderService(slug, 'it'), 'utf8');
+  mkdirSync(join(DIST, 'en', 'servizi', slug), { recursive: true });
+  writeFileSync(join(DIST, 'en', 'servizi', slug, 'index.html'), renderService(slug, 'en'), 'utf8');
+}
+
+console.log(`[prerender-home] home, risorse, confirmation, chi-siamo e ${Object.keys(SERVICE_PAGES).length} pagine servizio generate (IT+EN).`);

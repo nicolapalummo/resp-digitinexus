@@ -150,7 +150,11 @@ const article: Article = {
     { slug: 'chatbot-ai-sito-web', anchor: 'Chatbot AI sul sito web' },
     { slug: 'ai-privacy-gdpr', anchor: 'AI, privacy e GDPR' },
   ],
-  sources: [],
+  sources: [
+    { label: 'Google Cloud — Retrieval-Augmented Generation (RAG): casi e architettura', url: 'https://cloud.google.com/use-cases/retrieval-augmented-generation' },
+    { label: 'AWS — Retrieval-Augmented Generation spiegata', url: 'https://aws.amazon.com/what-is/retrieval-augmented-generation/' },
+    { label: 'Lewis et al., "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks" (arXiv, 2020)', url: 'https://arxiv.org/abs/2005.11401' },
+  ],
 };
 
 export default article;

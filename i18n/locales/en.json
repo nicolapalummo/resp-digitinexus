@@ -116,7 +116,8 @@
       "Tired of seeing identical, forgettable projects, we brought together branding, design and digital strategy to craft online experiences that combine beauty, function and performance.",
       "Every detail, from proportions and color to typography and navigation, is designed to communicate clearly and leave a lasting impression."
     ],
-    "imageAlt": "Filippo Gentili and Nicola Palummo, founders of DigitiNexus"
+    "imageAlt": "Filippo Gentili and Nicola Palummo, founders of DigitiNexus",
+    "moreLink": "More about us"
   },
   "whyMe": {
     "tag": "Why us",
@@ -150,6 +151,12 @@
     "tag": "Services",
     "title": "What we'll help you with",
     "subtitle": "Let's convert better, raise more, build more trust so you can hire better talent and charge premium prices",
+    "verticalsTitle": "Custom websites for your industry:",
+    "verticals": {
+      "commercialisti": "Accounting firms",
+      "avvocati": "Law firms",
+      "studi": "Professional firms"
+    },
     "service1": {
       "title": "Custom one time project",
       "price": "Starts at $2k",
@@ -273,6 +280,47 @@
     "finalDescription": "You have the materials. Now you need the action plan.",
     "finalCta": "REQUEST FREE AUDIT",
     "finalLocked": "Complete all steps to unlock"
+  },
+  "aboutPage": {
+    "metaTitle": "About us | DigitiNexus Web Agency",
+    "metaDescription": "Meet DigitiNexus: the web agency founded by Filippo Gentili and Nicola Palummo, designing custom websites for professional firms, SMEs and startups.",
+    "kicker": "About us",
+    "h1": "The people behind DigitiNexus",
+    "intro": "We are a young web agency born from the desire to create websites that truly stand out.",
+    "story": [
+      "Tired of seeing identical, forgettable projects, we combined skills in branding, design and digital strategy to craft online experiences that blend beauty, functionality and performance.",
+      "Every detail, from proportions to color, from typography to navigation, is designed to communicate clearly and leave a lasting impression.",
+      "We mostly work with professional firms, service SMEs and startups: businesses built on trust and reputation, where a well-crafted website makes the difference between a lost contact and a new client."
+    ],
+    "foundersTitle": "The founders",
+    "founders": [
+      {
+        "name": "Nicola Palummo",
+        "role": "Cofounder & Web Designer",
+        "linkedin": "https://www.linkedin.com/in/nicola-palummo"
+      },
+      {
+        "name": "Filippo Gentili",
+        "role": "Cofounder",
+        "linkedin": "https://www.linkedin.com/in/filippo-gentili-390615279/"
+      }
+    ],
+    "howTitle": "How we work",
+    "how": [
+      {
+        "title": "Custom, always",
+        "text": "No templates: every project starts from a blank page, your industry and your goals."
+      },
+      {
+        "title": "Transparency",
+        "text": "A clear quote agreed before we start, with frequent updates throughout the project."
+      },
+      {
+        "title": "Fast delivery",
+        "text": "Most websites go live in 2-4 weeks, without sacrificing quality."
+      }
+    ],
+    "ctaText": "Want to know us better? Let's talk about your project.",
+    "ctaLabel": "Book a free call"
   }
 }
-

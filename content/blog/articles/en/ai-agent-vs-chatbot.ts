@@ -156,7 +156,10 @@ const article: Article = {
     { slug: 'ai-chatbot-for-your-website', anchor: 'How to put an AI chatbot on your website' },
     { slug: 'rag-ai-on-your-company-data', anchor: 'RAG: AI that answers from your data' },
   ],
-  sources: [],
+  sources: [
+    { label: 'Anthropic — Building Effective Agents (research)', url: 'https://www.anthropic.com/research/building-effective-agents' },
+    { label: 'IBM — What are AI agents?', url: 'https://www.ibm.com/think/topics/ai-agents' },
+  ],
 };
 
 export default article;

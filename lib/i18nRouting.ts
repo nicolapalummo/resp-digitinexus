@@ -1,6 +1,8 @@
 // Bilingual URL helpers. Italian is primary at "/", English lives under "/en".
 // The blog is Italian-only (no /en/blog).
 
+import servicePages from '../content/service-pages.json';
+
 export const SITE_URL = 'https://digitinexus.com';
 export type Lang = 'it' | 'en';
 
@@ -64,4 +66,25 @@ export const PAGE_META: Record<string, PageMeta> = {
         'Free guides and resources from DigitiNexus to improve your online presence: Google Business Profile, marketing and strategy.',
     },
   },
+  '/chi-siamo': {
+    it: {
+      title: 'Chi siamo | DigitiNexus Web Agency',
+      description:
+        'Conosci DigitiNexus: la web agency fondata da Filippo Gentili e Nicola Palummo che progetta siti su misura per studi professionali, PMI e startup.',
+    },
+    en: {
+      title: 'About us | DigitiNexus Web Agency',
+      description:
+        'Meet DigitiNexus: the web agency founded by Filippo Gentili and Nicola Palummo, designing custom websites for professional firms, SMEs and startups.',
+    },
+  },
 };
+
+// Le pagine servizio condividono lo slug tra IT ed EN (come /risorse-gratuite):
+// title/description arrivano dallo stesso JSON usato da ServicePage e dal prerender.
+for (const [slug, locales] of Object.entries(servicePages)) {
+  PAGE_META[`/servizi/${slug}`] = {
+    it: { title: locales.it.metaTitle, description: locales.it.metaDescription },
+    en: { title: locales.en.metaTitle, description: locales.en.metaDescription },
+  };
+}

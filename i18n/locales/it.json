@@ -116,7 +116,8 @@
       "Stanchi di vedere progetti identici e facilmente dimenticabili, abbiamo unito competenze in branding, design e strategia digitale per dare vita a esperienze online che uniscono bellezza, funzionalità e performance.",
       "Ogni dettaglio, dalle proporzioni al colore, dalla tipografia alla navigazione, è pensato per comunicare in modo chiaro e lasciare un'impressione duratura."
     ],
-    "imageAlt": "Filippo Gentili e Nicola Palummo, founder di DigitiNexus"
+    "imageAlt": "Filippo Gentili e Nicola Palummo, founder di DigitiNexus",
+    "moreLink": "Scopri di più su di noi"
   },
   "whyMe": {
     "tag": "Perché noi",
@@ -150,6 +151,12 @@
     "tag": "Servizi",
     "title": "Con cosa ti aiuteremo",
     "subtitle": "Miglioriamo la tua presenza online per darti più credibilità. Così potrai attirare clienti migliori, giustificare i tuoi prezzi e trovare collaboratori di valore",
+    "verticalsTitle": "Siti su misura per il tuo settore:",
+    "verticals": {
+      "commercialisti": "Commercialisti",
+      "avvocati": "Avvocati e studi legali",
+      "studi": "Studi professionali"
+    },
     "service1": {
       "title": "Progetto personalizzato una tantum",
       "price": "A partire da 2k €",
@@ -273,6 +280,47 @@
     "finalDescription": "Hai i materiali. Ora serve il piano d'azione.",
     "finalCta": "RICHIEDI AUDIT GRATUITO",
     "finalLocked": "Completa tutti gli step per sbloccare"
+  },
+  "aboutPage": {
+    "metaTitle": "Chi siamo | DigitiNexus Web Agency",
+    "metaDescription": "Conosci DigitiNexus: la web agency fondata da Filippo Gentili e Nicola Palummo che progetta siti su misura per studi professionali, PMI e startup.",
+    "kicker": "Chi siamo",
+    "h1": "Chi c'è dietro DigitiNexus",
+    "intro": "Siamo una giovane web agency nata dal desiderio di creare siti web che si distinguano davvero.",
+    "story": [
+      "Stanchi di vedere progetti identici e facilmente dimenticabili, abbiamo unito competenze in branding, design e strategia digitale per dare vita a esperienze online che uniscono bellezza, funzionalità e performance.",
+      "Ogni dettaglio, dalle proporzioni al colore, dalla tipografia alla navigazione, è pensato per comunicare in modo chiaro e lasciare un'impressione duratura.",
+      "Lavoriamo soprattutto con studi professionali, PMI di servizi e startup: realtà che vivono di fiducia e reputazione, dove un sito curato fa la differenza tra un contatto perso e un cliente nuovo."
+    ],
+    "foundersTitle": "I founder",
+    "founders": [
+      {
+        "name": "Nicola Palummo",
+        "role": "Cofounder & Web Designer",
+        "linkedin": "https://www.linkedin.com/in/nicola-palummo"
+      },
+      {
+        "name": "Filippo Gentili",
+        "role": "Cofounder",
+        "linkedin": "https://www.linkedin.com/in/filippo-gentili-390615279/"
+      }
+    ],
+    "howTitle": "Come lavoriamo",
+    "how": [
+      {
+        "title": "Su misura, sempre",
+        "text": "Niente template: ogni progetto parte da un foglio bianco, dal tuo settore e dai tuoi obiettivi."
+      },
+      {
+        "title": "Trasparenza",
+        "text": "Preventivo chiaro e concordato prima di iniziare, aggiornamenti frequenti durante il progetto."
+      },
+      {
+        "title": "Consegna rapida",
+        "text": "La maggior parte dei siti è online in 2-4 settimane, senza sacrificare la qualità."
+      }
+    ],
+    "ctaText": "Vuoi conoscerci meglio? Parliamo del tuo progetto.",
+    "ctaLabel": "Prenota una call gratuita"
   }
 }
-

@@ -20,6 +20,8 @@ import { ExploreGuides } from './components/ExploreGuides';
 import { NotFound } from './components/NotFound';
 import { Confirmation } from './components/Confirmation';
 import { Footer } from './components/Footer';
+import { AboutPage } from './components/AboutPage';
+import { ServicePage } from './components/ServicePage';
 import { LocaleManager } from './components/LocaleManager';
 // Blog routes are lazy-loaded so the 120 article data modules ship in a separate
 // chunk (only downloaded on /blog routes), keeping the homepage bundle light.
@@ -97,6 +99,10 @@ function App() {
           <Route path="/en/risorse-gratuite" element={<FreemiumResources />} />
           <Route path="/confirmation" element={<Confirmation />} />
           <Route path="/en/confirmation" element={<Confirmation />} />
+          <Route path="/chi-siamo" element={<AboutPage />} />
+          <Route path="/en/chi-siamo" element={<AboutPage />} />
+          <Route path="/servizi/:slug" element={<ServicePage />} />
+          <Route path="/en/servizi/:slug" element={<ServicePage />} />
           <Route path="/blog" element={<BlogIndex />} />
           <Route path="/blog/categoria/:cluster" element={<BlogCategory />} />
           <Route path="/blog/:slug" element={<BlogArticle />} />

@@ -155,7 +155,11 @@ const article: Article = {
     { slug: 'prompt-efficaci-lavoro', anchor: 'Prompt efficaci per il lavoro' },
     { slug: 'ai-studi-professionali', anchor: 'AI per gli studi professionali' },
   ],
-  sources: [],
+  sources: [
+    { label: 'Google Cloud — Allucinazioni AI: cosa sono e perché accadono', url: 'https://cloud.google.com/discover/what-are-ai-hallucinations' },
+    { label: 'IBM — AI hallucinations: definizione, cause ed esempi', url: 'https://www.ibm.com/think/topics/ai-hallucinations' },
+    { label: 'NIST — AI Risk Management Framework', url: 'https://www.nist.gov/itl/ai-risk-management-framework' },
+  ],
 };
 
 export default article;

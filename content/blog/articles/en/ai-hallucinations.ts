@@ -160,7 +160,11 @@ const article: Article = {
     { slug: 'rag-ai-on-your-company-data', anchor: 'RAG: the AI that answers with your data' },
     { slug: 'effective-prompts-for-work', anchor: 'Effective prompts for work' },
   ],
-  sources: [],
+  sources: [
+    { label: 'Google Cloud — What are AI hallucinations?', url: 'https://cloud.google.com/discover/what-are-ai-hallucinations' },
+    { label: 'IBM — What are AI hallucinations?', url: 'https://www.ibm.com/think/topics/ai-hallucinations' },
+    { label: 'NIST — AI Risk Management Framework', url: 'https://www.nist.gov/itl/ai-risk-management-framework' },
+  ],
 };
 
 export default article;

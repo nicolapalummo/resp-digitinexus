@@ -347,10 +347,16 @@ for (const loc of LOCALES) {
 console.log('[prerender] HTML statico generato in dist/blog.');
 
 // ── 7. sitemap.xml ──────────────────────────────────────────────────────────
+const SERVICE_PAGES = JSON.parse(readFileSync(join(ROOT, 'content/service-pages.json'), 'utf8'));
+const SERVICE_SLUGS = Object.keys(SERVICE_PAGES);
 const nonEmptyClusters = CLUSTER_LIST.filter((c) => getArticlesByCluster(c.id).length > 0);
 const sitemapUrls = [
   { loc: `${SITE.baseUrl}/`, lastmod: null, priority: '1.0' },
   { loc: `${SITE.baseUrl}/en`, lastmod: null, priority: '0.9' },
+  ...SERVICE_SLUGS.map((s) => ({ loc: `${SITE.baseUrl}/servizi/${s}`, lastmod: null, priority: '0.8' })),
+  ...SERVICE_SLUGS.map((s) => ({ loc: `${SITE.baseUrl}/en/servizi/${s}`, lastmod: null, priority: '0.7' })),
+  { loc: `${SITE.baseUrl}/chi-siamo`, lastmod: null, priority: '0.7' },
+  { loc: `${SITE.baseUrl}/en/chi-siamo`, lastmod: null, priority: '0.6' },
   { loc: `${SITE.baseUrl}/risorse-gratuite`, lastmod: null, priority: '0.6' },
   { loc: `${SITE.baseUrl}/en/risorse-gratuite`, lastmod: null, priority: '0.5' },
   { loc: `${SITE.baseUrl}${SITE.blogBase}`, lastmod: articles[0]?.updatedDate, priority: '0.8' },
@@ -412,9 +418,15 @@ const llms = `# DigitiNexus
 
 - [Home (IT)](${SITE.baseUrl}/): chi siamo, servizi, processo, FAQ
 - [Home (EN)](${SITE.baseUrl}/en): about, services, process, FAQ
+- [Chi siamo](${SITE.baseUrl}/chi-siamo): i founder e come lavoriamo
 - [Blog (IT)](${SITE.baseUrl}${SITE.blogBase}): guide su costi, tempi e qualità dei siti web
 - [Blog (EN)](${SITE.baseUrl}/en/blog): guides on website costs, timing and quality
 - [Risorse gratuite](${SITE.baseUrl}/risorse-gratuite): guide scaricabili
+
+## Servizi
+
+${SERVICE_SLUGS.map((s) => `- [${SERVICE_PAGES[s].it.h1}](${SITE.baseUrl}/servizi/${s}): ${SERVICE_PAGES[s].it.metaDescription}`).join('\n')}
+${SERVICE_SLUGS.map((s) => `- [${SERVICE_PAGES[s].en.h1}](${SITE.baseUrl}/en/servizi/${s}): ${SERVICE_PAGES[s].en.metaDescription}`).join('\n')}
 
 ## Articoli (IT)
 

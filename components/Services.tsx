@@ -1,11 +1,22 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Check } from 'lucide-react';
+import { Check, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { Link, useLocation } from 'react-router-dom';
+import { langFromPath } from '../lib/i18nRouting';
+
+// Pagine servizio per verticale, raggiungibili da qui (non dalla navbar).
+const VERTICALS = [
+  { key: 'commercialisti', slug: 'siti-web-commercialisti' },
+  { key: 'avvocati', slug: 'siti-web-avvocati' },
+  { key: 'studi', slug: 'siti-web-studi-professionali' },
+] as const;
 
 export const Services: React.FC = () => {
   const { t } = useTranslation();
+  const location = useLocation();
+  const prefix = langFromPath(location.pathname) === 'en' ? '/en' : '';
   return (
     <section id="services" className="bg-black text-white py-20 md:py-24 px-6 md:px-12">
       <div className="container mx-auto">
@@ -30,6 +41,20 @@ export const Services: React.FC = () => {
             </div>
             <div className="max-w-md text-lg text-gray-400 pb-2">
                 {t('services.subtitle')}
+                <div className="mt-5">
+                    <p className="text-sm text-gray-500 mb-2">{t('services.verticalsTitle')}</p>
+                    <div className="flex flex-wrap gap-2">
+                        {VERTICALS.map((v) => (
+                            <Link
+                                key={v.key}
+                                to={`${prefix}/servizi/${v.slug}`}
+                                className="inline-flex items-center gap-1.5 border border-white/15 bg-white/5 hover:bg-white/10 hover:border-white/30 transition-colors rounded-full px-4 py-1.5 text-sm text-white/80"
+                            >
+                                {t(`services.verticals.${v.key}`)} <ArrowRight size={13} />
+                            </Link>
+                        ))}
+                    </div>
+                </div>
             </div>
         </motion.div>
 

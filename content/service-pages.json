@@ -1,0 +1,344 @@
+{
+  "siti-web-commercialisti": {
+    "it": {
+      "kicker": "Servizi · Commercialisti",
+      "h1": "Siti web per commercialisti e studi fiscali",
+      "subtitle": "Un sito professionale che trasmette affidabilità, spiega i tuoi servizi con chiarezza e porta nuovi contatti allo studio. Su misura, online in 2 o 3 settimane.",
+      "metaTitle": "Siti web per commercialisti su misura | DigitiNexus",
+      "metaDescription": "Realizziamo siti web su misura per commercialisti e studi fiscali: design professionale, testi inclusi, consegna in 2-3 settimane e preventivo trasparente.",
+      "pains": {
+        "title": "Ti riconosci?",
+        "items": [
+          "Quando un potenziale cliente cerca un commercialista nella tua zona, il tuo studio non compare",
+          "Il sito attuale è datato e non riflette la qualità del tuo lavoro",
+          "I nuovi clienti arrivano solo dal passaparola e la crescita è imprevedibile",
+          "Non hai tempo di scrivere i testi e il progetto resta fermo da mesi"
+        ]
+      },
+      "includes": {
+        "title": "Cosa comprende il progetto",
+        "items": [
+          { "title": "Design su misura", "text": "Niente template: un design pensato per uno studio professionale, coerente con la tua identità e i tuoi clienti." },
+          { "title": "Testi inclusi", "text": "Copywriting professionale compreso nel prezzo: presentazione dello studio, servizi, aree di specializzazione." },
+          { "title": "SEO e motori AI", "text": "Struttura ottimizzata per Google e per le risposte dei motori AI (GEO), con schema markup e prestazioni curate." },
+          { "title": "Mobile-first e veloce", "text": "Perfetto su smartphone, dove i tuoi clienti ti cercano, con Core Web Vitals sotto controllo." },
+          { "title": "Integrazioni utili", "text": "Modulo contatti, prenotazione appuntamenti, analytics e collegamento al tuo gestionale o CRM." }
+        ]
+      },
+      "pricing": {
+        "title": "Prezzo trasparente, definito prima di iniziare",
+        "text": "Un sito vetrina su misura parte da 2.500 €, con pagine illimitate e copywriting incluso. In base al numero di aree, contenuti e funzionalità un progetto per uno studio arriva in genere fino a 6.000 €. Il preventivo è chiaro e concordato prima del kickoff: niente sorprese."
+      },
+      "process": {
+        "title": "Online in 3 settimane",
+        "steps": [
+          { "label": "Settimana 1", "title": "Kickoff e design", "text": "Brief, architettura delle pagine, wireframe e design delle pagine chiave. Iniziamo a raccogliere i contenuti." },
+          { "label": "Settimana 2", "title": "Sviluppo", "text": "Build mobile-first, integrazioni (moduli, analytics, CRM) e micro-animazioni." },
+          { "label": "Settimana 3", "title": "Contenuti, test e lancio", "text": "Testi definitivi, ottimizzazione prestazioni, SEO di base con schema markup, test su dispositivi e go-live." }
+        ]
+      },
+      "faq": {
+        "title": "Domande frequenti",
+        "items": [
+          { "q": "Quanto costa un sito per uno studio di commercialisti?", "a": "Un sito vetrina su misura parte da 2.500 € con pagine illimitate e testi inclusi. In base ad aree di attività, contenuti e funzionalità, un progetto completo per uno studio arriva in genere fino a 6.000 €." },
+          { "q": "In quanto tempo sarà online?", "a": "Nella maggior parte dei casi in 2 o 3 settimane dal kickoff, se i materiali di base (logo, informazioni sullo studio) sono disponibili. Progetti più articolati possono richiedere qualche settimana in più." },
+          { "q": "Devo scrivere io i testi?", "a": "No. Il copywriting è incluso: prepariamo noi i testi di presentazione, servizi e pagine informative, e li rivediamo insieme prima della pubblicazione." },
+          { "q": "Il sito sarà trovabile su Google?", "a": "Consegniamo il sito con SEO tecnica di base: struttura corretta, schema markup, sitemap e prestazioni curate. Il posizionamento sulle ricerche competitive dipende poi da contenuti e costanza nel tempo, e possiamo affiancarti anche su quello." }
+        ]
+      },
+      "articles": {
+        "title": "Approfondimenti dal blog",
+        "items": [
+          { "label": "Sito web per commercialisti: guida completa", "href": "/blog/sito-web-commercialista" },
+          { "label": "Quanto costa un sito web nel 2026", "href": "/blog/quanto-costa-sito-web" },
+          { "label": "Un sito professionale in 1-4 settimane", "href": "/blog/sito-web-1-4-settimane" }
+        ]
+      },
+      "cta": { "text": "Parliamo del sito del tuo studio: 30 minuti, senza impegno.", "label": "Prenota una call gratuita" }
+    },
+    "en": {
+      "kicker": "Services · Accountants",
+      "h1": "Websites for CPAs and accounting firms",
+      "subtitle": "A professional website that builds trust, explains your services clearly and brings new clients to your firm. Custom-built, live in 2 to 3 weeks.",
+      "metaTitle": "Custom websites for accounting firms | DigitiNexus",
+      "metaDescription": "We design custom websites for CPAs and accounting firms: professional design, copywriting included, delivered in 2-3 weeks with a transparent upfront quote.",
+      "pains": {
+        "title": "Sound familiar?",
+        "items": [
+          "Potential clients searching for an accountant in your area never find your firm",
+          "Your current website looks dated and undersells the quality of your work",
+          "New clients only come from referrals, so growth is unpredictable",
+          "You have no time to write content, so the project has been stuck for months"
+        ]
+      },
+      "includes": {
+        "title": "What the project includes",
+        "items": [
+          { "title": "Custom design", "text": "No templates: a design built for a professional firm, consistent with your identity and your clients." },
+          { "title": "Copywriting included", "text": "Professional copy is part of the package: firm presentation, services, practice areas." },
+          { "title": "SEO and AI search", "text": "Structured for Google and for AI answer engines (GEO), with schema markup and tuned performance." },
+          { "title": "Mobile-first and fast", "text": "Flawless on smartphones, where your clients look for you, with Core Web Vitals under control." },
+          { "title": "Useful integrations", "text": "Contact forms, appointment booking, analytics and connections to your practice software or CRM." }
+        ]
+      },
+      "pricing": {
+        "title": "A transparent quote, agreed upfront",
+        "text": "Custom showcase websites come with unlimited pages and copywriting included. You get a clear, fixed quote before kickoff based on practice areas, content and features. No surprises."
+      },
+      "process": {
+        "title": "Live in 3 weeks",
+        "steps": [
+          { "label": "Week 1", "title": "Kickoff and design", "text": "Brief, page architecture, wireframes and key-page design. Content gathering starts." },
+          { "label": "Week 2", "title": "Development", "text": "Mobile-first build, integrations (forms, analytics, CRM) and micro-animations." },
+          { "label": "Week 3", "title": "Content, testing and launch", "text": "Final copy, performance tuning, baseline SEO with schema markup, device testing and go-live." }
+        ]
+      },
+      "faq": {
+        "title": "Frequently asked questions",
+        "items": [
+          { "q": "How much does a website for an accounting firm cost?", "a": "Every project gets a fixed, transparent quote before kickoff, based on practice areas, content and features. Unlimited pages and copywriting are always included." },
+          { "q": "How long until it goes live?", "a": "Most projects launch in 2 to 3 weeks from kickoff, provided the basics (logo, firm information) are available. More complex builds can take a few extra weeks." },
+          { "q": "Do I have to write the content myself?", "a": "No. Copywriting is included: we draft the firm presentation, services and informational pages, and review everything with you before publishing." },
+          { "q": "Will the site rank on Google?", "a": "We deliver every site with solid technical SEO: correct structure, schema markup, sitemap and tuned performance. Ranking for competitive searches then depends on content and consistency over time, and we can support you there too." }
+        ]
+      },
+      "articles": {
+        "title": "From the blog",
+        "items": [
+          { "label": "CPA and accounting firm websites: the complete guide", "href": "/en/blog/cpa-accounting-firm-website" },
+          { "label": "How much does a website cost in 2026", "href": "/en/blog/how-much-does-a-website-cost" },
+          { "label": "A professional website in 1-4 weeks", "href": "/en/blog/website-in-1-to-4-weeks" }
+        ]
+      },
+      "cta": { "text": "Let's talk about your firm's website: 30 minutes, no strings attached.", "label": "Book a free call" }
+    }
+  },
+  "siti-web-avvocati": {
+    "it": {
+      "kicker": "Servizi · Avvocati",
+      "h1": "Siti web per avvocati e studi legali",
+      "subtitle": "Un sito sobrio e autorevole che presenta lo studio, le aree di attività e rende semplice contattarti. Su misura, online in 2 o 3 settimane.",
+      "metaTitle": "Siti web per avvocati e studi legali | DigitiNexus",
+      "metaDescription": "Siti web su misura per avvocati e studi legali: design autorevole, testi inclusi, consegna in 2-3 settimane e preventivo trasparente prima di iniziare.",
+      "pains": {
+        "title": "Ti riconosci?",
+        "items": [
+          "Chi cerca un avvocato online trova i tuoi concorrenti, non il tuo studio",
+          "Il sito attuale non trasmette l'autorevolezza che i clienti si aspettano da uno studio legale",
+          "Le aree di attività non sono chiare e arrivano richieste fuori target",
+          "Vorresti un sito nuovo ma temi un progetto lungo e dai costi indefiniti"
+        ]
+      },
+      "includes": {
+        "title": "Cosa comprende il progetto",
+        "items": [
+          { "title": "Design autorevole", "text": "Un design sobrio e distintivo, pensato per trasmettere fiducia e professionalità dal primo sguardo." },
+          { "title": "Testi inclusi", "text": "Copywriting professionale compreso: presentazione dello studio, aree di attività, profili dei professionisti." },
+          { "title": "SEO e motori AI", "text": "Struttura ottimizzata per Google e per le risposte dei motori AI (GEO), con schema markup e prestazioni curate." },
+          { "title": "Mobile-first e veloce", "text": "Perfetto su ogni dispositivo, con tempi di caricamento rapidi e navigazione chiara." },
+          { "title": "Contatto immediato", "text": "Moduli di contatto chiari, prenotazione di un primo colloquio e recapiti sempre in evidenza." }
+        ]
+      },
+      "pricing": {
+        "title": "Prezzo trasparente, definito prima di iniziare",
+        "text": "Un sito vetrina su misura parte da 2.500 €, con pagine illimitate e copywriting incluso. In base al numero di aree di attività e professionisti da presentare, un progetto per uno studio legale arriva in genere fino a 6.000 €. Preventivo chiaro e concordato prima del kickoff."
+      },
+      "process": {
+        "title": "Online in 3 settimane",
+        "steps": [
+          { "label": "Settimana 1", "title": "Kickoff e design", "text": "Brief, architettura delle pagine, wireframe e design delle pagine chiave. Iniziamo a raccogliere i contenuti." },
+          { "label": "Settimana 2", "title": "Sviluppo", "text": "Build mobile-first, integrazioni (moduli, analytics, CRM) e micro-animazioni." },
+          { "label": "Settimana 3", "title": "Contenuti, test e lancio", "text": "Testi definitivi, ottimizzazione prestazioni, SEO di base con schema markup, test su dispositivi e go-live." }
+        ]
+      },
+      "faq": {
+        "title": "Domande frequenti",
+        "items": [
+          { "q": "Quanto costa un sito per uno studio legale?", "a": "Un sito vetrina su misura parte da 2.500 € con pagine illimitate e testi inclusi. In base ad aree di attività, numero di professionisti e contenuti, un progetto completo arriva in genere fino a 6.000 €." },
+          { "q": "In quanto tempo sarà online?", "a": "Nella maggior parte dei casi in 2 o 3 settimane dal kickoff, se i materiali di base sono disponibili. Progetti più articolati possono richiedere qualche settimana in più." },
+          { "q": "Devo scrivere io i testi?", "a": "No. Il copywriting è incluso: prepariamo noi presentazione, aree di attività e profili, e li rivediamo insieme con lo studio prima della pubblicazione." },
+          { "q": "Gestite anche i profili dei singoli avvocati?", "a": "Sì. Ogni professionista può avere la sua pagina con foto, percorso e aree di attività, una struttura che aiuta anche la visibilità su Google." }
+        ]
+      },
+      "articles": {
+        "title": "Approfondimenti dal blog",
+        "items": [
+          { "label": "Sito web per avvocati e studi legali: guida completa", "href": "/blog/sito-web-avvocato-studio-legale" },
+          { "label": "Il sito web per lo studio professionale", "href": "/blog/sito-web-studio-professionale" },
+          { "label": "Quanto costa un sito web nel 2026", "href": "/blog/quanto-costa-sito-web" }
+        ]
+      },
+      "cta": { "text": "Parliamo del sito del tuo studio: 30 minuti, senza impegno.", "label": "Prenota una call gratuita" }
+    },
+    "en": {
+      "kicker": "Services · Law firms",
+      "h1": "Websites for lawyers and law firms",
+      "subtitle": "A refined, authoritative website that presents your firm and practice areas, and makes contacting you effortless. Custom-built, live in 2 to 3 weeks.",
+      "metaTitle": "Custom websites for law firms | DigitiNexus",
+      "metaDescription": "Custom websites for lawyers and law firms: authoritative design, copywriting included, delivered in 2-3 weeks with a transparent upfront quote.",
+      "pains": {
+        "title": "Sound familiar?",
+        "items": [
+          "People searching for a lawyer online find your competitors, not your firm",
+          "Your current website does not convey the authority clients expect from a law firm",
+          "Practice areas are unclear, so you receive off-target inquiries",
+          "You want a new site but fear a long project with undefined costs"
+        ]
+      },
+      "includes": {
+        "title": "What the project includes",
+        "items": [
+          { "title": "Authoritative design", "text": "A refined, distinctive design built to convey trust and professionalism at first glance." },
+          { "title": "Copywriting included", "text": "Professional copy is part of the package: firm presentation, practice areas, attorney profiles." },
+          { "title": "SEO and AI search", "text": "Structured for Google and for AI answer engines (GEO), with schema markup and tuned performance." },
+          { "title": "Mobile-first and fast", "text": "Flawless on every device, with fast load times and clear navigation." },
+          { "title": "Effortless contact", "text": "Clear contact forms, consultation booking and always-visible contact details." }
+        ]
+      },
+      "pricing": {
+        "title": "A transparent quote, agreed upfront",
+        "text": "Custom showcase websites come with unlimited pages and copywriting included. You get a clear, fixed quote before kickoff based on practice areas, attorney profiles and content. No surprises."
+      },
+      "process": {
+        "title": "Live in 3 weeks",
+        "steps": [
+          { "label": "Week 1", "title": "Kickoff and design", "text": "Brief, page architecture, wireframes and key-page design. Content gathering starts." },
+          { "label": "Week 2", "title": "Development", "text": "Mobile-first build, integrations (forms, analytics, CRM) and micro-animations." },
+          { "label": "Week 3", "title": "Content, testing and launch", "text": "Final copy, performance tuning, baseline SEO with schema markup, device testing and go-live." }
+        ]
+      },
+      "faq": {
+        "title": "Frequently asked questions",
+        "items": [
+          { "q": "How much does a law firm website cost?", "a": "Every project gets a fixed, transparent quote before kickoff, based on practice areas, attorney profiles and content. Unlimited pages and copywriting are always included." },
+          { "q": "How long until it goes live?", "a": "Most projects launch in 2 to 3 weeks from kickoff, provided the basics are available. More complex builds can take a few extra weeks." },
+          { "q": "Do I have to write the content myself?", "a": "No. Copywriting is included: we draft the presentation, practice areas and profiles, and review everything with the firm before publishing." },
+          { "q": "Do you build individual attorney profiles?", "a": "Yes. Each attorney can have a dedicated page with photo, background and practice areas, a structure that also helps visibility on Google." }
+        ]
+      },
+      "articles": {
+        "title": "From the blog",
+        "items": [
+          { "label": "Law firm websites: the complete guide", "href": "/en/blog/law-firm-website" },
+          { "label": "Websites for professional services firms", "href": "/en/blog/professional-services-firm-website" },
+          { "label": "How much does a website cost in 2026", "href": "/en/blog/how-much-does-a-website-cost" }
+        ]
+      },
+      "cta": { "text": "Let's talk about your firm's website: 30 minutes, no strings attached.", "label": "Book a free call" }
+    }
+  },
+  "siti-web-studi-professionali": {
+    "it": {
+      "kicker": "Servizi · Studi professionali",
+      "h1": "Siti web per studi professionali",
+      "subtitle": "Architetti, ingegneri, consulenti, notai: un sito su misura che racconta il tuo studio e valorizza il tuo lavoro. Online in 2 o 3 settimane.",
+      "metaTitle": "Siti web per studi professionali | DigitiNexus",
+      "metaDescription": "Siti web su misura per studi professionali: design premium, testi inclusi, consegna in 2-3 settimane e preventivo trasparente concordato prima di iniziare.",
+      "pains": {
+        "title": "Ti riconosci?",
+        "items": [
+          "Il tuo studio è eccellente ma online non si vede",
+          "Il portfolio dei progetti è fermo in un PDF che nessuno apre",
+          "Chi ti cerca su Google trova solo la scheda di Google Maps, senza un sito all'altezza",
+          "Vuoi attrarre clienti migliori e giustificare i tuoi prezzi con una presenza curata"
+        ]
+      },
+      "includes": {
+        "title": "Cosa comprende il progetto",
+        "items": [
+          { "title": "Design premium su misura", "text": "Ogni dettaglio, dalle proporzioni alla tipografia, è pensato per comunicare la qualità del tuo lavoro." },
+          { "title": "Testi inclusi", "text": "Copywriting professionale compreso: presentazione, servizi, portfolio e profili del team." },
+          { "title": "SEO e motori AI", "text": "Struttura ottimizzata per Google e per le risposte dei motori AI (GEO), con schema markup e prestazioni curate." },
+          { "title": "Portfolio che vende", "text": "Progetti presentati con immagini curate e casi concreti, non un elenco statico." },
+          { "title": "Integrazioni utili", "text": "Moduli di contatto, prenotazione appuntamenti, analytics e CRM." }
+        ]
+      },
+      "pricing": {
+        "title": "Prezzo trasparente, definito prima di iniziare",
+        "text": "Un sito vetrina su misura parte da 2.500 €, con pagine illimitate e copywriting incluso. In base a numero di aree, portfolio, foto e lingue, un progetto per uno studio arriva in genere fino a 6.000 €. Preventivo chiaro e concordato prima del kickoff."
+      },
+      "process": {
+        "title": "Online in 3 settimane",
+        "steps": [
+          { "label": "Settimana 1", "title": "Kickoff e design", "text": "Brief, architettura delle pagine, wireframe e design delle pagine chiave. Iniziamo a raccogliere i contenuti." },
+          { "label": "Settimana 2", "title": "Sviluppo", "text": "Build mobile-first, integrazioni (moduli, analytics, CRM) e micro-animazioni." },
+          { "label": "Settimana 3", "title": "Contenuti, test e lancio", "text": "Testi definitivi, ottimizzazione prestazioni, SEO di base con schema markup, test su dispositivi e go-live." }
+        ]
+      },
+      "faq": {
+        "title": "Domande frequenti",
+        "items": [
+          { "q": "Quanto costa un sito per uno studio professionale?", "a": "Un sito vetrina su misura parte da 2.500 € con pagine illimitate e testi inclusi. In base ad aree, portfolio, servizio foto e multilingua, un progetto completo arriva in genere fino a 6.000 €." },
+          { "q": "In quanto tempo sarà online?", "a": "Nella maggior parte dei casi in 2 o 3 settimane dal kickoff, se i materiali di base sono disponibili. Progetti più articolati possono richiedere qualche settimana in più." },
+          { "q": "Devo scrivere io i testi?", "a": "No. Il copywriting è incluso: prepariamo noi presentazione, servizi e descrizioni del portfolio, e li rivediamo insieme prima della pubblicazione." },
+          { "q": "Serve anche in inglese?", "a": "Possiamo realizzare il sito bilingue, con struttura hreflang corretta per Google. Il multilingua incide sul preventivo e viene definito prima di iniziare." }
+        ]
+      },
+      "articles": {
+        "title": "Approfondimenti dal blog",
+        "items": [
+          { "label": "Il sito web per lo studio professionale: guida completa", "href": "/blog/sito-web-studio-professionale" },
+          { "label": "Quanto tempo serve per fare un sito web", "href": "/blog/quanto-tempo-fare-sito-web" },
+          { "label": "Quanto costa un sito web nel 2026", "href": "/blog/quanto-costa-sito-web" }
+        ]
+      },
+      "cta": { "text": "Parliamo del sito del tuo studio: 30 minuti, senza impegno.", "label": "Prenota una call gratuita" }
+    },
+    "en": {
+      "kicker": "Services · Professional firms",
+      "h1": "Websites for professional services firms",
+      "subtitle": "Architects, engineers, consultants, advisors: a custom website that tells your firm's story and does justice to your work. Live in 2 to 3 weeks.",
+      "metaTitle": "Websites for professional services firms | DigitiNexus",
+      "metaDescription": "Custom websites for professional services firms: premium design, copywriting included, delivered in 2-3 weeks with a transparent upfront quote.",
+      "pains": {
+        "title": "Sound familiar?",
+        "items": [
+          "Your firm does excellent work, but online it does not show",
+          "Your project portfolio sits in a PDF nobody opens",
+          "People searching for you on Google only find a Maps listing, with no website to match",
+          "You want to attract better clients and justify your fees with a polished presence"
+        ]
+      },
+      "includes": {
+        "title": "What the project includes",
+        "items": [
+          { "title": "Premium custom design", "text": "Every detail, from proportions to typography, is crafted to communicate the quality of your work." },
+          { "title": "Copywriting included", "text": "Professional copy is part of the package: presentation, services, portfolio and team profiles." },
+          { "title": "SEO and AI search", "text": "Structured for Google and for AI answer engines (GEO), with schema markup and tuned performance." },
+          { "title": "A portfolio that sells", "text": "Projects presented with curated imagery and concrete cases, not a static list." },
+          { "title": "Useful integrations", "text": "Contact forms, appointment booking, analytics and CRM." }
+        ]
+      },
+      "pricing": {
+        "title": "A transparent quote, agreed upfront",
+        "text": "Custom showcase websites come with unlimited pages and copywriting included. You get a clear, fixed quote before kickoff based on practice areas, portfolio, photography and languages. No surprises."
+      },
+      "process": {
+        "title": "Live in 3 weeks",
+        "steps": [
+          { "label": "Week 1", "title": "Kickoff and design", "text": "Brief, page architecture, wireframes and key-page design. Content gathering starts." },
+          { "label": "Week 2", "title": "Development", "text": "Mobile-first build, integrations (forms, analytics, CRM) and micro-animations." },
+          { "label": "Week 3", "title": "Content, testing and launch", "text": "Final copy, performance tuning, baseline SEO with schema markup, device testing and go-live." }
+        ]
+      },
+      "faq": {
+        "title": "Frequently asked questions",
+        "items": [
+          { "q": "How much does a professional firm website cost?", "a": "Every project gets a fixed, transparent quote before kickoff, based on practice areas, portfolio, photography and languages. Unlimited pages and copywriting are always included." },
+          { "q": "How long until it goes live?", "a": "Most projects launch in 2 to 3 weeks from kickoff, provided the basics are available. More complex builds can take a few extra weeks." },
+          { "q": "Do I have to write the content myself?", "a": "No. Copywriting is included: we draft the presentation, services and portfolio descriptions, and review everything with you before publishing." },
+          { "q": "Can the site be multilingual?", "a": "Yes. We build bilingual sites with a correct hreflang structure for Google. Multilingual scope affects the quote and is defined before kickoff." }
+        ]
+      },
+      "articles": {
+        "title": "From the blog",
+        "items": [
+          { "label": "Websites for professional services firms: the complete guide", "href": "/en/blog/professional-services-firm-website" },
+          { "label": "How long does it take to build a website", "href": "/en/blog/how-long-to-build-a-website" },
+          { "label": "How much does a website cost in 2026", "href": "/en/blog/how-much-does-a-website-cost" }
+        ]
+      },
+      "cta": { "text": "Let's talk about your firm's website: 30 minutes, no strings attached.", "label": "Book a free call" }
+    }
+  }
+}

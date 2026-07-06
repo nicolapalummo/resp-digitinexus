@@ -159,7 +159,11 @@ const article: Article = {
     { slug: 'ai-agent-vs-chatbot', anchor: 'AI agent vs. chatbot' },
     { slug: 'ai-hallucinations', anchor: 'Why AI invents answers' },
   ],
-  sources: [],
+  sources: [
+    { label: 'Google Cloud — Retrieval-Augmented Generation (RAG) use cases and architecture', url: 'https://cloud.google.com/use-cases/retrieval-augmented-generation' },
+    { label: 'AWS — What is Retrieval-Augmented Generation?', url: 'https://aws.amazon.com/what-is/retrieval-augmented-generation/' },
+    { label: 'Lewis et al., "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks" (arXiv, 2020)', url: 'https://arxiv.org/abs/2005.11401' },
+  ],
 };
 
 export default article;

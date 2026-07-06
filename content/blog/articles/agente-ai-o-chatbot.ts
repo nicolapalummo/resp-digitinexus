@@ -151,7 +151,10 @@ const article: Article = {
     { slug: 'rag-ai-dati-azienda', anchor: 'RAG: AI che risponde sui tuoi dati' },
     { slug: 'automazioni-ai-no-code', anchor: 'Automazioni AI senza scrivere codice' },
   ],
-  sources: [],
+  sources: [
+    { label: 'Anthropic — Building Effective Agents (ricerca)', url: 'https://www.anthropic.com/research/building-effective-agents' },
+    { label: 'IBM — Cosa sono gli agenti AI', url: 'https://www.ibm.com/think/topics/ai-agents' },
+  ],
 };
 
 export default article;
