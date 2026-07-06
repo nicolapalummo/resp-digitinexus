@@ -32,9 +32,9 @@ export const Intro: React.FC = () => {
                 {t('intro.text3')}
             </h2>
 
-            <p className="mt-8 text-xl md:text-2xl font-light leading-relaxed text-gray-400 max-w-3xl">
+            <h2 className="mt-8 text-4xl md:text-5xl lg:text-6xl font-light leading-tight text-gray-200">
                 {t('intro.text4')}
-            </p>
+            </h2>
         </motion.div>
       </div>
     </section>

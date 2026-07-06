@@ -166,8 +166,8 @@ export const Services: React.FC = () => {
 
                 <p className="text-sm text-gray-500 italic mb-8 max-w-3xl">{t('services.service3.note')}</p>
 
-                <a href="https://calendly.com/digitinexus/30min" target="_blank" rel="noopener noreferrer" className="w-full md:w-auto md:self-start md:px-10 bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-2xl py-3 flex items-center justify-center gap-3 font-medium hover:brightness-110 transition-all">
-                    <span className="pl-2">{t('services.bookCall')}</span>
+                <a href="https://calendly.com/digitinexus/30min" target="_blank" rel="noopener noreferrer" className="self-center md:self-start inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-amber-400 text-white rounded-3xl px-10 py-3 font-medium hover:brightness-110 transition-all">
+                    {t('services.bookCall')}
                 </a>
             </motion.div>
 
