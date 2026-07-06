@@ -2,14 +2,30 @@
 // 1. Registra SEMPRE il contatto nel CRM (fonte "Risorsa sito"): anche se
 //    l'invio email fallisce, il contatto non va perso.
 // 2. Invia l'email con i 3 link firmati a scadenza (7 giorni) ai PDF completi.
-// Email via Resend (env: RESEND_API_KEY, RESOURCES_FROM_EMAIL).
-import {
-  CRM_INTAKE_URL,
-  LINK_TTL_MS,
-  RESOURCES,
-  downloadUrl,
-  isValidEmail,
-} from './_utils';
+// Email via Resend (env: RESEND_API_KEY, RESOURCES_FROM_EMAIL, RESOURCES_LINK_SECRET).
+// File self-contained: niente import relativi (il progetto è "type": "module"
+// e gli import ESM senza estensione falliscono a runtime nelle functions).
+import { createHmac } from 'node:crypto';
+
+const SITE_URL = 'https://digitinexus.com';
+const CRM_INTAKE_URL = 'https://crmsales.digitinexus.com/api/contact-intake';
+const LINK_TTL_MS = 7 * 24 * 60 * 60 * 1000; // 7 giorni
+
+const RESOURCES = [
+  {
+    label: {
+      it: 'Guida Ottimizzazione Google Business Profile',
+      en: 'Google Business Profile Optimization Guide',
+    },
+  },
+  { label: { it: '10 Pilastri del Marketing', en: 'The 10 Pillars of Marketing' } },
+  {
+    label: {
+      it: 'Strategie di Marketing Offline per PMI',
+      en: 'Offline Marketing Strategies for SMBs',
+    },
+  },
+];
 
 const COPY = {
   it: {
@@ -18,8 +34,7 @@ const COPY = {
     intro:
       'Grazie per averle richieste! Qui sotto trovi i link per scaricare i 3 PDF completi. I link restano validi per 7 giorni.',
     cta: 'Scarica il PDF',
-    outro:
-      'Domande sul tuo sito o sulla tua presenza online? Rispondi pure a questa email.',
+    outro: 'Domande sul tuo sito o sulla tua presenza online? Rispondi pure a questa email.',
     footer: 'DigitiNexus LLC · digitinexus.com',
   },
   en: {
@@ -32,6 +47,14 @@ const COPY = {
     footer: 'DigitiNexus LLC · digitinexus.com',
   },
 };
+
+const isValidEmail = (v: string): boolean => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+
+function downloadUrl(id: number, exp: number): string {
+  const secret = process.env.RESOURCES_LINK_SECRET || process.env.RESEND_API_KEY || '';
+  const sig = createHmac('sha256', secret).update(`${id}.${exp}`).digest('hex');
+  return `${SITE_URL}/api/download-resource?id=${id}&exp=${exp}&sig=${sig}`;
+}
 
 function buildEmailHtml(locale: 'it' | 'en', links: { label: string; url: string }[]): string {
   const c = COPY[locale];
