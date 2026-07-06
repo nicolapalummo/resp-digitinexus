@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { Link, useLocation } from 'react-router-dom';
+import { langFromPath } from '../lib/i18nRouting';
 
 // Mapping of Section IDs to Header Themes (same as Header component)
 const themeMap: Record<string, 'dark' | 'light'> = {
@@ -19,6 +21,9 @@ const themeMap: Record<string, 'dark' | 'light'> = {
 
 export const ThreeDPopup: React.FC = () => {
   const { t } = useTranslation();
+  const location = useLocation();
+  const resourcesHref =
+    langFromPath(location.pathname) === 'en' ? '/en/risorse-gratuite' : '/risorse-gratuite';
   const [isVisible, setIsVisible] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
   const [popupTheme, setPopupTheme] = useState<'dark' | 'light'>('dark');
@@ -29,7 +34,9 @@ export const ThreeDPopup: React.FC = () => {
     if (!isDesktop) return;
 
     const timer = setTimeout(() => {
-      const dismissed = localStorage.getItem('3d-popup-dismissed-v2');
+      // v3: il popup ora promuove /risorse-gratuite (immersive è stato dismesso),
+      // nuova chiave così chi aveva chiuso il vecchio popup rivede questo
+      const dismissed = localStorage.getItem('resources-popup-dismissed-v3');
       if (!dismissed) {
         setIsVisible(true);
       }
@@ -71,7 +78,7 @@ export const ThreeDPopup: React.FC = () => {
   const handleDismiss = () => {
     setIsVisible(false);
     setIsDismissed(true);
-    localStorage.setItem('3d-popup-dismissed-v2', 'true');
+    localStorage.setItem('resources-popup-dismissed-v3', 'true');
   };
 
   // Dynamic Styles based on Theme (same as Header)
@@ -112,15 +119,14 @@ export const ThreeDPopup: React.FC = () => {
             <p className={`text-sm mb-4 leading-relaxed transition-colors duration-500 ${popupTheme === 'dark' ? 'text-white/80' : 'text-black/80'}`}>
               {t('popup3d.description')}
             </p>
-            <a
-              href="https://immersive.digitinexus.com"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to={resourcesHref}
+              onClick={handleDismiss}
               className={`inline-flex items-center gap-2 ${buttonBg} ${buttonText} rounded-2xl px-4 py-2 text-sm font-medium hover:opacity-90 transition-all duration-500 shadow-sm`}
             >
               {t('popup3d.cta')}
               <span>→</span>
-            </a>
+            </Link>
           </div>
         </motion.div>
       )}
