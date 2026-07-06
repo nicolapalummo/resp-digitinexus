@@ -124,6 +124,38 @@ import enArticle58 from './articles/en/building-a-startup-with-ai';
 import enArticle59 from './articles/en/ai-privacy-and-data-protection';
 import enArticle60 from './articles/en/how-much-does-ai-cost-for-business';
 
+// C8 — Ads & Funnel (#61-#75)
+import c8a61 from './articles/funnel-sito-web-ads';
+import c8a62 from './articles/meta-google-tiktok-quale-scegliere';
+import c8a63 from './articles/sito-o-ads-da-dove-partire';
+import c8a64 from './articles/quanto-budget-ads';
+import c8a65 from './articles/landing-page-per-ads';
+import c8a66 from './articles/google-ads-domanda-attiva';
+import c8a67 from './articles/meta-ads-scoperta-retargeting';
+import c8a68 from './articles/tiktok-ads-quando-ha-senso';
+import c8a69 from './articles/retargeting-come-funziona';
+import c8a70 from './articles/metriche-campagne-ads';
+import c8a71 from './articles/tracciamento-conversioni-privacy';
+import c8a72 from './articles/errori-che-bruciano-budget-ads';
+import c8a73 from './articles/ads-studi-professionali-servizi';
+import c8a74 from './articles/ads-ecommerce-attivita-locali';
+import c8a75 from './articles/annuncio-landing-offerta-message-match';
+import c8en61 from './articles/en/website-and-ads-funnel';
+import c8en62 from './articles/en/meta-google-or-tiktok';
+import c8en63 from './articles/en/website-or-ads-where-to-start';
+import c8en64 from './articles/en/how-much-ad-budget';
+import c8en65 from './articles/en/landing-page-for-ads';
+import c8en66 from './articles/en/google-ads-active-demand';
+import c8en67 from './articles/en/meta-ads-discovery-retargeting';
+import c8en68 from './articles/en/tiktok-ads-when-it-makes-sense';
+import c8en69 from './articles/en/how-retargeting-works';
+import c8en70 from './articles/en/ad-campaign-metrics';
+import c8en71 from './articles/en/privacy-compliant-conversion-tracking';
+import c8en72 from './articles/en/ad-budget-mistakes';
+import c8en73 from './articles/en/ads-for-professional-firms';
+import c8en74 from './articles/en/ads-for-ecommerce-and-local-businesses';
+import c8en75 from './articles/en/ad-landing-offer-message-match';
+
 const ARTICLES_IT: Article[] = [
   article1, article2, article3, article4, article5, article6, article7, article8, article9, article10,
   article11, article12, article13, article14, article15, article16, article17, article18, article19, article20,
@@ -131,6 +163,7 @@ const ARTICLES_IT: Article[] = [
   article31, article32, article33, article34, article35, article36, article37, article38, article39, article40,
   article41, article42, article43, article44, article45, article46, article47, article48, article49, article50,
   article51, article52, article53, article54, article55, article56, article57, article58, article59, article60,
+  c8a61, c8a62, c8a63, c8a64, c8a65, c8a66, c8a67, c8a68, c8a69, c8a70, c8a71, c8a72, c8a73, c8a74, c8a75,
 ];
 
 export const ARTICLES_EN: Article[] = [
@@ -142,6 +175,7 @@ export const ARTICLES_EN: Article[] = [
   enArticle41, enArticle42, enArticle43, enArticle44, enArticle45, enArticle46,
   enArticle47, enArticle48, enArticle49, enArticle50, enArticle51, enArticle52, enArticle53, enArticle54,
   enArticle55, enArticle56, enArticle57, enArticle58, enArticle59, enArticle60, enArticle61,
+  c8en61, c8en62, c8en63, c8en64, c8en65, c8en66, c8en67, c8en68, c8en69, c8en70, c8en71, c8en72, c8en73, c8en74, c8en75,
 ];
 
 export const ARTICLES: Article[] = [...ARTICLES_IT, ...ARTICLES_EN];

@@ -2,7 +2,7 @@
 // Content is authored as typed data (no markdown parser dependency) so we keep
 // full control over GEO structure (capsule, answer-first H2s, FAQ schema).
 
-export type ClusterId = 'c1' | 'c2' | 'c3' | 'c4' | 'c5' | 'c6' | 'c7';
+export type ClusterId = 'c1' | 'c2' | 'c3' | 'c4' | 'c5' | 'c6' | 'c7' | 'c8';
 
 /** Content locale. Italian is primary at /blog; English lives under /en/blog. */
 export type Locale = 'it' | 'en';
