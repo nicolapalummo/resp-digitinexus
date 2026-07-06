@@ -239,6 +239,25 @@
     "cta": "Scopri le risorse"
   },
   "freemium": {
+    "preview": {
+      "label": "Anteprima gratuita: pagine 1-2 di {{pages}}",
+      "pageLabel": "Pag. {{n}}",
+      "lockedLabel": "Sblocca il resto via email",
+      "lockedCta": "Ricevi il PDF completo"
+    },
+    "mail": {
+      "title": "Ricevi i 3 PDF completi via email",
+      "subtitle": "Lascia la tua email e ti inviamo subito tutti e 3 i PDF completi.",
+      "placeholder": "La tua email",
+      "button": "Ricevi i 3 PDF via email",
+      "sending": "Invio in corso…",
+      "success": "Fatto! Controlla la tua email: ti abbiamo inviato i 3 PDF completi.",
+      "successHint": "Se non la vedi entro qualche minuto, controlla anche spam o promozioni. I link restano validi 7 giorni.",
+      "errorSend": "Non siamo riusciti a inviare l'email. Il tuo contatto è salvato: riprova tra qualche minuto.",
+      "errorGeneric": "Qualcosa è andato storto. Riprova tra qualche minuto.",
+      "invalid": "Inserisci un indirizzo email valido.",
+      "another": "Usa un'altra email"
+    },
     "pageTitle": "Hub Risorse DigitiNexus",
     "pageSubtitle": "Sblocca la tua strategia, un passo alla volta.",
     "gate": {

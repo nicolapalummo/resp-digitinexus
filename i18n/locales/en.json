@@ -239,6 +239,25 @@
     "cta": "Explore the resources"
   },
   "freemium": {
+    "preview": {
+      "label": "Free preview: pages 1-2 of {{pages}}",
+      "pageLabel": "Page {{n}}",
+      "lockedLabel": "Unlock the rest via email",
+      "lockedCta": "Get the full PDF"
+    },
+    "mail": {
+      "title": "Get the 3 complete PDFs via email",
+      "subtitle": "Leave your email and we'll send you all 3 complete PDFs right away.",
+      "placeholder": "Your email",
+      "button": "Send me the 3 PDFs",
+      "sending": "Sending…",
+      "success": "Done! Check your inbox: we've sent you the 3 complete PDFs.",
+      "successHint": "If you don't see it within a few minutes, check spam or promotions. The links stay valid for 7 days.",
+      "errorSend": "We couldn't send the email. Your contact is saved: please try again in a few minutes.",
+      "errorGeneric": "Something went wrong. Please try again in a few minutes.",
+      "invalid": "Please enter a valid email address.",
+      "another": "Use another email"
+    },
     "pageTitle": "DigitiNexus Resource Hub",
     "pageSubtitle": "Unlock your strategy, one step at a time.",
     "gate": {

@@ -6,6 +6,11 @@
   "framework": "vite",
   "cleanUrls": true,
   "trailingSlash": false,
+  "functions": {
+    "api/*.ts": {
+      "includeFiles": "private/freemium/**"
+    }
+  },
   "headers": [
     {
       "source": "/(.*)",
