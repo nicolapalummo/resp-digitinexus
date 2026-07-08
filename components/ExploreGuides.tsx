@@ -14,6 +14,7 @@ const COVER: Record<string, string> = {
   c4: '/blog/covers/sito-web-studio-professionale-plain.webp',
   c5: '/blog/covers/sito-web-pmi-servizi-plain.webp',
   c7: '/blog/covers/intelligenza-artificiale-per-aziende-plain.webp',
+  c8: '/blog/covers/funnel-sito-web-ads-plain.webp',
 };
 
 // Landing section under the FAQ: areas of expertise linked to the blog clusters.
@@ -21,8 +22,8 @@ const COVER: Record<string, string> = {
 export const ExploreGuides: React.FC = () => {
   const { t } = useTranslation();
   const locale = langFromPath(useLocation().pathname);
-  // Six clusters (startup card removed per design).
-  const clusters = clusterListFor(locale).filter((c) => c.id !== 'c6');
+  // Six clusters: startup (c6) and design/quality (c2) cards removed per design.
+  const clusters = clusterListFor(locale).filter((c) => c.id !== 'c6' && c.id !== 'c2');
 
   return (
     <section id="guides" className="bg-black text-white py-20 md:py-24 px-6 md:px-12">
