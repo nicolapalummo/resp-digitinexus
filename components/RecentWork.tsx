@@ -8,16 +8,17 @@ interface WorkItem {
     title: string;
     category: string;
     image: string;
+    alt: string;
     url: string;
 }
 
 const workItems: WorkItem[] = [
-    { id: 1, title: 'Mark Harford Law', category: 'Law Firm', image: '/portfolio/mark harford.webp', url: 'https://markharfordlaw.com' },
-    { id: 2, title: "Phil's Finest", category: 'Food Products', image: "/portfolio/phils finest.webp", url: 'https://www.philsfinest.com/?ref=httpster.net' },
-    { id: 3, title: 'Voldz Law', category: 'Law Firm', image: '/portfolio/Voldz law.webp', url: 'https://voldzlaw.com' },
-    { id: 4, title: 'Fixary', category: 'Startup', image: '/portfolio/Fixary-_-DigitiNexus.webp', url: 'https://fixary.up.railway.app' },
-    { id: 5, title: 'CF.media', category: 'Agency', image: '/portfolio/cfmedia-_-DigitiNexus.webp', url: 'https://www.cfmedia.agency' },
-    { id: 6, title: 'Héloïse Charon', category: 'Portfolio', image: '/portfolio/portfolio-Heloise-C-2-_-DigitiNexus.webp', url: 'https://heloise-charon-portfolio-production.up.railway.app' },
+    { id: 1, title: 'Centro Moretti', category: 'Dental Clinic', image: '/portfolio/centromoretti-DigitiNexus.webp', alt: 'Sito web del Centro Odontoiatrico Moretti, studio dentistico, realizzato da DigitiNexus', url: 'https://centromoretti.vercel.app' },
+    { id: 2, title: 'Lunora', category: 'Hospitality', image: '/portfolio/lunora-DigitiNexus.webp', alt: 'Sito web di Lunora, operatore di hospitality balneare in Versilia, realizzato da DigitiNexus', url: 'https://lunora-delta.vercel.app' },
+    { id: 3, title: 'Aste Balneari', category: 'Consulting', image: '/portfolio/astebalneari-DigitiNexus.webp', alt: 'Sito web di Aste Balneari, società di consulenza per concessioni demaniali, realizzato da DigitiNexus', url: 'https://astebalneari.vercel.app' },
+    { id: 4, title: 'Fixary', category: 'Startup', image: '/portfolio/Fixary-_-DigitiNexus.webp', alt: 'Sito web della startup Fixary realizzato da DigitiNexus', url: 'https://fixary.up.railway.app' },
+    { id: 5, title: 'CF.media', category: 'Agency', image: '/portfolio/cfmedia-DigitiNexus.webp', alt: "Sito web dell'agenzia CF.media realizzato da DigitiNexus", url: 'https://www.cfmedia.agency' },
+    { id: 6, title: 'Héloïse Charon', category: 'Portfolio', image: '/portfolio/portfolio-Heloise-C-2-_-DigitiNexus.webp', alt: 'Portfolio online dell\'artista Héloïse Charon realizzato da DigitiNexus', url: 'https://heloise-charon-portfolio-production.up.railway.app' },
 ];
 
 export const RecentWork: React.FC = () => {
@@ -65,7 +66,7 @@ export const RecentWork: React.FC = () => {
                     <div className="absolute inset-0 w-full h-full overflow-hidden">
                         <img 
                             src={item.image} 
-                            alt={item.title}
+                            alt={item.alt}
                             className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
                         />
                     </div>
