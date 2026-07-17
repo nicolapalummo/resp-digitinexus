@@ -54,7 +54,15 @@
   },
   "work": {
     "tag": "Work",
-    "title": "Recent success stories"
+    "title": "Recent success stories",
+    "categories": {
+      "centromoretti": "Dental Clinic",
+      "lunora": "Hospitality",
+      "astebalneari": "Consulting",
+      "fixary": "Startup",
+      "cfmedia": "Agency",
+      "heloise": "Portfolio"
+    }
   },
   "howItWorks": {
     "tag": "Our Process",

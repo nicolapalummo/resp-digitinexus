@@ -54,7 +54,15 @@
   },
   "work": {
     "tag": "Lavori",
-    "title": "Storie di successo recenti"
+    "title": "Storie di successo recenti",
+    "categories": {
+      "centromoretti": "Studio Dentistico",
+      "lunora": "Ospitalità",
+      "astebalneari": "Consulenza",
+      "fixary": "Startup",
+      "cfmedia": "Agenzia",
+      "heloise": "Portfolio"
+    }
   },
   "howItWorks": {
     "tag": "Il Nostro Processo",
