@@ -28,7 +28,6 @@ const themeMap: Record<string, 'dark' | 'light'> = {
   'reviews': 'light',
   'about': 'light',
   'why-me': 'light',
-  'method': 'dark',
   'services': 'dark',
   'faq': 'dark',
   'guides': 'dark',

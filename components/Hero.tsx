@@ -92,13 +92,13 @@ export const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.3, duration: 0.8 }}
-            className="md:hidden w-full aspect-[4/5] rounded-[32px] overflow-hidden relative shadow-2xl mb-12"
+            className="md:hidden w-full aspect-[3/4] rounded-[32px] overflow-hidden relative shadow-2xl mb-12"
         >
              <img 
-                src="/Logo DN Ombrelli 4.webp"
+                src="/hero-mobile-ombrelli.webp"
                 alt="DigitiNexus, agenzia web e design"
-                width={1536}
-                height={1024}
+                width={900}
+                height={1200}
                 fetchPriority="high"
                 className="w-full h-full object-cover"
             />

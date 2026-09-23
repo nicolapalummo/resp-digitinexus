@@ -173,42 +173,6 @@
       "description": "Our relationships don't end at launch. We stay close to our clients with ongoing updates, creative refinements, and proactive support to keep their websites growing and performing over time."
     }
   },
-  "method": {
-    "tag": "How we work",
-    "title": "Your website at the center, everything else around it",
-    "subtitle": "Four connected steps: the website is the foundation, then we bring traffic, turn it into leads and measure what actually works.",
-    "hubLabel": "Your website",
-    "hubCaption": "Everything starts here",
-    "step1": {
-      "title": "Website",
-      "meta": "Design and build",
-      "description": "We design and build your custom website: structure, content and speed made so visitors immediately understand what you do and choose you."
-    },
-    "step2": {
-      "title": "Traffic",
-      "meta": "Ads · SEO · GEO",
-      "description": "We bring the right people to your site: campaigns on Google, Meta and TikTok, search engine rankings and visibility inside AI answers."
-    },
-    "step3": {
-      "title": "Conversion and follow-up",
-      "meta": "Funnel",
-      "description": "We turn visits into leads: pages aligned with your ads, simple forms and bookings, email sequences for the people who are not ready on the first visit."
-    },
-    "step4": {
-      "title": "Measurement",
-      "meta": "Data",
-      "description": "We look at the numbers that matter: leads generated, cost per lead and the channels that work. Then we decide together where to push and what to fix."
-    },
-    "spokes": {
-      "ads": "Google Ads",
-      "social": "Meta & TikTok",
-      "seo": "SEO",
-      "geo": "AI and GEO",
-      "funnel": "Funnel & email",
-      "data": "Data"
-    },
-    "cta": "Let's talk about your project"
-  },
   "services": {
     "tag": "Services",
     "title": "What we'll help you with",
