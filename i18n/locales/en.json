@@ -30,27 +30,26 @@
   },
   "problem": {
     "tag": "Problems",
-    "title": "You have traction but your website still looks MVP",
-    "description": "There's a gap between how your product looks and how you present it",
+    "title": "Clients look for you. Then they choose someone else.",
+    "description": "Not because of your work, but because of how you show up online.",
     "issue1": {
-      "title": "People don't understand what you do",
-      "description": "If your website and marketing aren't crystal clear, potential customers won't get what you do or why it matters."
+      "title": "Your website doesn't represent you",
+      "description": "Visitors can't tell within seconds what you do and why they should choose you. A dated or unclear website makes even a solid business look small."
     },
     "issue2": {
-      "title": "You look amateur and like you're still testing",
-      "description": "First impressions matter. A DIY or unpolished design makes users bounce 127% faster, even if your product is solid."
+      "title": "The people looking for you don't find you",
+      "description": "When a potential client searches on Google, asks ChatGPT or scrolls social media, your name doesn't show up. Only the people who already know you find you."
     },
     "issue3": {
-      "title": "Your site isn't built to convert",
-      "description": "You've got a good product and decent traction. Your page structure and messaging should work as hard as your budget. Bring (or plan to bring) campaign traffic, and make the site turn clicks into inquiries."
+      "title": "The people who do arrive don't become clients",
+      "description": "The traffic is there, or it could be, but the site doesn't turn visits into inquiries, and whoever doesn't write to you straight away leaves without coming back."
     }
   },
   "intro": {
     "tag": "Intro",
-    "text1": "If that sounds like your situation, We can help.",
-    "text2": "DigitiNexus is a design-driven web agency that blends creativity, strategy, and technology to craft websites that truly stand out.",
-    "text3": "Every project we build doesn't just look beautiful — it performs beautifully too.",
-    "text4": "We combine website and advertising into one funnel: the right people find you, and when they arrive they find a site built to turn them into clients."
+    "text1": "If that sounds like your situation, we can help.",
+    "text2": "DigitiNexus is a web marketing agency that starts with the website. We design it around you, with the care for design that sets us apart, and then we put it to work: campaigns that bring in the right leads, visibility on Google and in AI answers from ChatGPT, Gemini and Claude, emails that turn visitors into clients.",
+    "text3": "One team, one path: every euro you invest lands on a page built to convert."
   },
   "work": {
     "tag": "Work",

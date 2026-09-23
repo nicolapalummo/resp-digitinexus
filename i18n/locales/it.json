@@ -30,27 +30,26 @@
   },
   "problem": {
     "tag": "Problemi",
-    "title": "Hai già clienti, ma il tuo sito web sembra ancora un MVP",
-    "description": "C'è un divario tra come appare il tuo prodotto e come lo presenti",
+    "title": "I clienti ti cercano. Poi scelgono qualcun altro.",
+    "description": "Non per il tuo lavoro, ma per come ti presenti online.",
     "issue1": {
-      "title": "Le persone non capiscono cosa fai",
-      "description": "Se il tuo sito web e il marketing non sono chiari, i potenziali clienti non capiranno cosa fai o perché è importante."
+      "title": "Il tuo sito non ti rappresenta",
+      "description": "Chi ti visita non capisce in pochi secondi cosa fai e perché scegliere te. Un sito datato o poco chiaro fa sembrare piccola anche un'attività solida."
     },
     "issue2": {
-      "title": "Sembri amatoriale e come se stessi ancora testando",
-      "description": "Le prime impressioni contano. Un design fai-da-te o non rifinito allontana gli utenti del 127% più velocemente, anche se il tuo prodotto è solido."
+      "title": "Chi ti cerca non ti trova",
+      "description": "Quando un potenziale cliente cerca su Google, chiede a ChatGPT o scorre i social, il tuo nome non compare. Ti trova solo chi ti conosce già."
     },
     "issue3": {
-      "title": "Il tuo sito non è costruito per convertire",
-      "description": "Porti (o potresti portare) traffico dalle campagne, ma il sito non trasforma i clic in contatti. La struttura della pagina e i messaggi devono lavorare tanto quanto il tuo budget."
+      "title": "Chi arriva non diventa cliente",
+      "description": "Il traffico c'è, o potrebbe esserci, ma il sito non trasforma le visite in contatti, e chi non ti scrive subito se ne va senza tornare."
     }
   },
   "intro": {
     "tag": "Introduzione",
     "text1": "Se questa è la tua situazione, possiamo aiutarti.",
-    "text2": "DigitiNexus è un'agenzia web orientata al design che unisce creatività, strategia e tecnologia per creare siti web che si distinguono davvero.",
-    "text3": "Ogni progetto che costruiamo non solo è bello da vedere — funziona anche alla perfezione.",
-    "text4": "Uniamo sito e pubblicità in un unico funnel: le persone giuste ti trovano, e quando arrivano trovano un sito costruito per farle diventare clienti."
+    "text2": "DigitiNexus è un'agenzia di web marketing che parte dal sito. Lo progettiamo su misura, con la cura per il design che ci contraddistingue, e poi lo facciamo lavorare: campagne che portano i lead giusti, visibilità su Google e nelle risposte delle AI come ChatGPT, Gemini e Claude, email che trasformano chi ti ha visitato in un cliente.",
+    "text3": "Un solo team, un unico percorso: ogni euro che investi arriva su una pagina costruita per convertire."
   },
   "work": {
     "tag": "Lavori",

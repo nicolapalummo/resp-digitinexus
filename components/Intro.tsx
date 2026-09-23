@@ -24,16 +24,13 @@ export const Intro: React.FC = () => {
                 {t('intro.text1')}
             </h2>
             
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light leading-tight mb-8 text-gray-200">
+            {/* Paragrafo lungo: corpo medio, non display, per restare leggibile */}
+            <p className="text-xl md:text-2xl lg:text-3xl font-light leading-relaxed mb-10 text-gray-400 max-w-4xl">
                 {t('intro.text2')}
-            </h2>
+            </p>
 
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-light leading-tight text-white">
                 {t('intro.text3')}
-            </h2>
-
-            <h2 className="mt-8 text-4xl md:text-5xl lg:text-6xl font-light leading-tight text-gray-200">
-                {t('intro.text4')}
             </h2>
         </motion.div>
       </div>
