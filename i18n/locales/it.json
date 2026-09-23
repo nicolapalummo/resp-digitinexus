@@ -24,7 +24,7 @@
   "hero": {
     "badge": "Oltre 25 progetti di successo",
     "title": "Distinguiti con",
-    "subtitle": "Costruisci fiducia, distinguiti e fai crescere la tua attività con un sito web e campagne che lavorano insieme per portarti clienti — non solo visite.",
+    "subtitle": "Progettiamo siti su misura e li alimentiamo con ads e visibilità su Google e sulle AI. Un solo team, un solo obiettivo: clienti, non solo visite.",
     "bookCall": "Parliamone",
     "viewWork": "Vedi i Lavori"
   },
@@ -138,7 +138,7 @@
     "tag": "Chi siamo",
     "title": "I Founder DigitiNexus",
     "text": [
-      "Siamo una giovane web agency nata dal desiderio di creare siti web che si distinguano davvero.",
+      "Siamo una giovane web agency nata per costruire presenze online che portano risultati, partendo dal sito.",
       "Stanchi di vedere progetti identici e facilmente dimenticabili, abbiamo unito competenze in branding, design e strategia digitale per dare vita a esperienze online che uniscono bellezza, funzionalità e performance.",
       "Dietro la nostra visione c'è un approccio analitico e strategico concreto: uniamo un background in Matematica & Economia a Lione (Nicola) e in Finanza & Business ad Amsterdam (Filippo). Questo ci permette di guardare ogni progetto non solo con gli occhi del design, ma con la precisione del dato e la logica del business.",
       "Ogni dettaglio, dalle proporzioni al colore, dalla tipografia alla navigazione, è pensato per comunicare in modo chiaro e lasciare un'impressione duratura."
@@ -173,6 +173,42 @@
       "title": "Costruito per il lungo termine",
       "description": "Le nostre relazioni non finiscono al lancio. Restiamo vicini ai nostri clienti con aggiornamenti continui, perfezionamenti creativi e supporto proattivo per mantenere i loro siti web in crescita e performanti nel tempo."
     }
+  },
+  "method": {
+    "tag": "Come lavoriamo",
+    "title": "Il sito al centro, tutto il resto intorno",
+    "subtitle": "Quattro passaggi collegati fra loro: il sito è la base, poi portiamo traffico, lo trasformiamo in contatti e misuriamo cosa funziona davvero.",
+    "hubLabel": "Il tuo sito",
+    "hubCaption": "Tutto parte da qui",
+    "step1": {
+      "title": "Sito",
+      "meta": "Design e sviluppo",
+      "description": "Progettiamo e sviluppiamo il sito su misura: struttura, contenuti e velocità pensati perché chi arriva capisca subito cosa fai e scelga te."
+    },
+    "step2": {
+      "title": "Traffico",
+      "meta": "Ads · SEO · GEO",
+      "description": "Portiamo le persone giuste sul sito: campagne su Google, Meta e TikTok, posizionamento sui motori di ricerca e visibilità nelle risposte delle AI."
+    },
+    "step3": {
+      "title": "Conversione e ritorno",
+      "meta": "Funnel",
+      "description": "Trasformiamo le visite in contatti: pagine allineate agli annunci, form e prenotazioni semplici, sequenze email per chi non è pronto al primo passaggio."
+    },
+    "step4": {
+      "title": "Misurazione",
+      "meta": "Dati",
+      "description": "Guardiamo i numeri che contano: contatti generati, costo per contatto e canali che funzionano. Poi decidiamo insieme dove spingere e cosa correggere."
+    },
+    "spokes": {
+      "ads": "Google Ads",
+      "social": "Meta & TikTok",
+      "seo": "SEO",
+      "geo": "AI e GEO",
+      "funnel": "Funnel & email",
+      "data": "Dati"
+    },
+    "cta": "Parliamo del tuo progetto"
   },
   "services": {
     "tag": "Servizi",
@@ -359,7 +395,7 @@
     "metaDescription": "Conosci DigitiNexus: la web agency fondata da Filippo Gentili e Nicola Palummo che progetta siti su misura per studi professionali, PMI e startup.",
     "kicker": "Chi siamo",
     "h1": "Chi c'è dietro DigitiNexus",
-    "intro": "Siamo una giovane web agency nata dal desiderio di creare siti web che si distinguano davvero.",
+    "intro": "Siamo una giovane web agency nata per costruire presenze online che portano risultati, partendo dal sito.",
     "story": [
       "Stanchi di vedere progetti identici e facilmente dimenticabili, abbiamo unito competenze in branding, design e strategia digitale per dare vita a esperienze online che uniscono bellezza, funzionalità e performance.",
       "Dietro la nostra visione c'è un approccio analitico e strategico concreto: uniamo un background in Matematica & Economia a Lione (Nicola) e in Finanza & Business ad Amsterdam (Filippo). Questo ci permette di guardare ogni progetto non solo con gli occhi del design, ma con la precisione del dato e la logica del business.",

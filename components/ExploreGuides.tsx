@@ -30,7 +30,7 @@ export const ExploreGuides: React.FC = () => {
       <div className="container mx-auto">
         {/* Tag - aligned to Intro, same style as the other sections */}
         <div className="inline-flex items-center gap-2 border border-white/20 rounded-lg px-3 py-1 text-xs uppercase tracking-wider text-orange-400 font-mono bg-white/5 mb-5 md:ml-[120px]">
-          <span className="opacity-50">9</span>
+          <span className="opacity-50">10</span>
           <span>{t('guides.tag')}</span>
         </div>
 

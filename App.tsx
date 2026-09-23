@@ -10,6 +10,7 @@ import { HowItWorks } from './components/HowItWorks';
 import { Reviews } from './components/Reviews';
 import { ChiSiamo } from './components/ChiSiamo';
 import { WhyMe } from './components/WhyMe';
+import { Method } from './components/Method';
 import { Services } from './components/Services';
 import { FAQ } from './components/FAQ';
 import { LetsTalk } from './components/LetsTalk';
@@ -65,6 +66,7 @@ function LandingPage() {
       <Reviews />
       <ChiSiamo />
       <WhyMe />
+      <Method />
       <Services />
       <FAQ />
       <ExploreGuides />

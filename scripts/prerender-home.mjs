@@ -50,6 +50,13 @@ function servicesHtml(s) {
   return items.map((sv) => `<article><h3>${esc(sv.title)}</h3>${sv.price ? `<p><strong>${esc(sv.price)}</strong></p>` : ''}<p>${esc(sv.description || '')}</p></article>`).join('');
 }
 
+function methodHtml(m) {
+  if (!m) return '';
+  const steps = ['step1', 'step2', 'step3', 'step4'].map((k) => m[k]).filter(Boolean);
+  if (!steps.length) return '';
+  return `<ol>${steps.map((st) => `<li><h3>${esc(st.title)}${st.meta ? ` (${esc(st.meta)})` : ''}</h3><p>${esc(st.description || '')}</p></li>`).join('')}</ol>`;
+}
+
 function reviewsHtml(r) {
   if (!r) return '';
   return ['review1', 'review2', 'review3', 'review4', 'review5', 'review6', 'review7', 'review8', 'review9'].map((k) => r[k]).filter(Boolean)
@@ -89,6 +96,11 @@ function buildContent(locale) {
     ${(Array.isArray(t.about?.text) ? t.about.text : [t.about?.text]).filter(Boolean).map((p) => `<p class="mt-3 text-white/70">${esc(p)}</p>`).join('')}
     <img src="/team-digitinexus-v2.webp" alt="${esc(t.about?.imageAlt || 'Team DigitiNexus')}" width="1537" height="1023" loading="lazy" />
     <p>Filippo Gentili &amp; Nicola Palummo</p>
+  </section>
+  <section class="max-w-5xl mx-auto px-6 py-10">
+    <h2 class="text-3xl font-medium">${esc(t.method?.title || '')}</h2>
+    ${t.method?.subtitle ? `<p class="mt-3 text-white/70">${esc(t.method.subtitle)}</p>` : ''}
+    ${methodHtml(t.method)}
   </section>
   <section class="max-w-5xl mx-auto px-6 py-10">
     <h2 class="text-3xl font-medium">${esc(t.services?.title || 'Servizi')}</h2>

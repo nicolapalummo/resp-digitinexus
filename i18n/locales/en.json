@@ -24,7 +24,7 @@
   "hero": {
     "badge": "Over 25 Successful Projects",
     "title": "Stand Out with",
-    "subtitle": "Build trust, stand out, and grow your business with a website and ad campaigns that work together to bring you clients — not just visits.",
+    "subtitle": "We design custom websites and power them with ads and visibility on Google and AI assistants. One team, one goal: clients, not just visits.",
     "bookCall": "Book a Call",
     "viewWork": "View Work"
   },
@@ -138,7 +138,7 @@
     "tag": "About us",
     "title": "The DigitiNexus Founders",
     "text": [
-      "We are a young web agency born from the desire to create websites that truly stand out.",
+      "We are a young web agency born to build online presences that deliver results, starting with the website.",
       "Tired of seeing identical, forgettable projects, we brought together branding, design and digital strategy to craft online experiences that combine beauty, function and performance.",
       "Behind our vision there is a concrete analytical and strategic approach: we combine a background in Mathematics & Economics in Lyon (Nicola) and Finance & Business in Amsterdam (Filippo). This lets us look at every project not only through the eyes of design, but with the precision of data and the logic of business.",
       "Every detail, from proportions and color to typography and navigation, is designed to communicate clearly and leave a lasting impression."
@@ -173,6 +173,42 @@
       "title": "Built for the Long Run",
       "description": "Our relationships don't end at launch. We stay close to our clients with ongoing updates, creative refinements, and proactive support to keep their websites growing and performing over time."
     }
+  },
+  "method": {
+    "tag": "How we work",
+    "title": "Your website at the center, everything else around it",
+    "subtitle": "Four connected steps: the website is the foundation, then we bring traffic, turn it into leads and measure what actually works.",
+    "hubLabel": "Your website",
+    "hubCaption": "Everything starts here",
+    "step1": {
+      "title": "Website",
+      "meta": "Design and build",
+      "description": "We design and build your custom website: structure, content and speed made so visitors immediately understand what you do and choose you."
+    },
+    "step2": {
+      "title": "Traffic",
+      "meta": "Ads · SEO · GEO",
+      "description": "We bring the right people to your site: campaigns on Google, Meta and TikTok, search engine rankings and visibility inside AI answers."
+    },
+    "step3": {
+      "title": "Conversion and follow-up",
+      "meta": "Funnel",
+      "description": "We turn visits into leads: pages aligned with your ads, simple forms and bookings, email sequences for the people who are not ready on the first visit."
+    },
+    "step4": {
+      "title": "Measurement",
+      "meta": "Data",
+      "description": "We look at the numbers that matter: leads generated, cost per lead and the channels that work. Then we decide together where to push and what to fix."
+    },
+    "spokes": {
+      "ads": "Google Ads",
+      "social": "Meta & TikTok",
+      "seo": "SEO",
+      "geo": "AI and GEO",
+      "funnel": "Funnel & email",
+      "data": "Data"
+    },
+    "cta": "Let's talk about your project"
   },
   "services": {
     "tag": "Services",
@@ -359,7 +395,7 @@
     "metaDescription": "Meet DigitiNexus: the web agency founded by Filippo Gentili and Nicola Palummo, designing custom websites for professional firms, SMEs and startups.",
     "kicker": "About us",
     "h1": "The people behind DigitiNexus",
-    "intro": "We are a young web agency born from the desire to create websites that truly stand out.",
+    "intro": "We are a young web agency born to build online presences that deliver results, starting with the website.",
     "story": [
       "Tired of seeing identical, forgettable projects, we combined skills in branding, design and digital strategy to craft online experiences that blend beauty, functionality and performance.",
       "Behind our vision there is a concrete analytical and strategic approach: we combine a background in Mathematics & Economics in Lyon (Nicola) and Finance & Business in Amsterdam (Filippo). This lets us look at every project not only through the eyes of design, but with the precision of data and the logic of business.",

@@ -45,7 +45,7 @@ Le pagine blog usano `components/blog/useDocumentMeta.ts` per title/meta.
 
 ## Convenzioni UI
 - **Header theme**: `components/Header.tsx` ha un `themeMap` (id sezione → `dark`/`light`) e un IntersectionObserver robusto (ri-parte al cambio rotta) che colora il testo dell'header. Le nuove sezioni con id vanno aggiunte a `themeMap`.
-- **Numeri tag sezioni** (landing, in ordine): Problem 1 · Intro 2 · RecentWork 3 · HowItWorks 4 · ChiSiamo 5 · WhyMe 6 · Services 7 · FAQ 8 · ExploreGuides 9.
+- **Numeri tag sezioni** (landing, in ordine): Problem 1 · Intro 2 · RecentWork 3 · HowItWorks 4 · ChiSiamo 5 · WhyMe 6 · Method 7 · Services 8 · FAQ 9 · ExploreGuides 10.
 - **Font**: Manrope **self-hosted** (`public/fonts/Manrope-Variable.woff2`, `@font-face` in `index.css`). Niente Google Fonts (GDPR). I sorgenti TTF in `assets/` sono **gitignored**.
 - **Favicon**: `public/favicon.svg` (vettoriale, primario — necessario per Safari, che non decodifica i PNG dentro `.ico`) + `favicon.ico` reale + PNG. Riferimenti in `index.html` con `?v=N` per **bustare la cache favicon di Safari** (per-pagina e ostinatissima): se cambi le icone, incrementa `v`.
 - **Rotte client-only** (`noindex`): `/confirmation` e 404 (`NotFound`). ⚠️ Su Vercel il `404.html` statico vince sul rewrite catch-all: ogni rotta reale DEVE avere la sua directory prerenderizzata in `dist/` (per questo `/confirmation` è emessa da prerender-home come shell statica), altrimenti risponde 404.
